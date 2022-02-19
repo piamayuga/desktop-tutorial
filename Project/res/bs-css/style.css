@@ -1,0 +1,31 @@
+:root {
+    --custom-blue: #285e88;
+    --custom-blue-text: #0f3A69;
+
+    --sidebar-width: 350px;
+}
+
+.offcanvas-start {
+    width: var(--sidebar-width) !important;
+}
+
+
+.bg-custom-primary {
+    background-color: var(--custom-blue) !important;
+}
+
+.text-custom-primary {
+    color: var(--custom-blue-text) !important;
+}
+
+
+@media (min-width:768px) {
+    .btn:hover {
+        transform: scale(1.08);
+        transition: all 0.3s ease-in-out !important;
+    }
+}
+.btn:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out !important;
+}
