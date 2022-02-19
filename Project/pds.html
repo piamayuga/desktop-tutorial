@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidential Communications Operations Office</title>
+  <!-- css -->
+  <link rel="icon" href="images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="res/bs-css/bootstrap.css">
+  <link rel="stylesheet" href="res/dataTables/css/dataTables.bootstrap5.min.css">
+
+  <!-- links -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <!-- sidebar -->
+  <div class="sidebar">
+
+    <div class="logo-details">
+      <i class='icon'>
+        <img src="images/pcoo_logo.png">
+      </i>
+      <div class="logo_name">PCOO</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+
+    <ul class="nav-list ">
+      <!-- search bar -->
+      <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li>
+      <!-- search bar -->
+
+      <!-- links -->
+      <li>
+        <a href="dashboard.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+
+      <li>
+        <a href="pds.html" class="highlight">
+          <i class='bx bx-spreadsheet'></i>
+          <span class="links_name">Personal Data Sheet</span>
+        </a>
+        <span class="tooltip">Personal Data Sheet</span>
+      </li>
+
+      <li>
+        <a href="einfo.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Employment Info</span>
+        </a>
+        <span class="tooltip">Employment Info</span>
+      </li>
+
+      <li>
+        <a href="erecords.html">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">Employment Records</span>
+        </a>
+        <span class="tooltip">Employment Records</span>
+      </li>
+
+      <li>
+        <a href="request.html">
+          <i class='bx bx-file-blank'></i>
+          <span class="links_name">Request Form</span>
+        </a>
+        <span class="tooltip">Request Form</span>
+      </li>
+
+      <li>
+        <a href="settings.html">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+      <!-- links -->
+
+      <li class="profile">
+        <div class="profile-details">
+          <img src="images/sample.png" alt="profileImg">
+          <div class="name_job">
+            <div class="name">Kyle De Mesa</div>
+            <div class="job">Secretary</div>
+          </div>
+        </div>
+
+        <i type="button" class='bx bx-log-out' id="log_out" onclick="location.href='index.html'"></i>
+
+      </li>
+
+    </ul>
+
+  </div>
+  <!-- sidebar -->
+
+  <main class="home-section">
+    <div class="text">Personal Data Sheet</div>
+    <!-- part one -->
+    <form action="" method="post" class="container-fluid px-4" id="one" autocomplete="off">
+      <h5>I. PERSONAL INFORMATION</h5>
+      <div class="row mb-2 gy-2">
+        <div class="col-md-4">
+          <label class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" required>
+        </div>
+        <div class="col-md-3">
+          <label class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" required>
+        </div>
+        <div class="col-md-3 col-6">
+          <label class="text-muted small ms-2">MIDDLE NAME</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="col-md-2 col-6">
+          <label class="text-muted small ms-2">SUFFIX (JR,SR)</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- left -->
+        <div class="col-md-6">
+          <div class="row mb-2 gy-2">
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
+              <input type="date" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">PLACE OF BIRTH <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">SEX <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">CIVIL STATUS <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">HEIGHT (m) <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">WEIGHT (kg) <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">GSIS ID NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">PAG-IBIG ID NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">PHILHEALTH NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">SSS NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">TIN NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+              <label class="text-muted small ms-2">AGENCY EMPLOYEE NO. <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">TELEPHONE NO. </label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">PHONE NO. </label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-6">
+              <label class="text-muted small ms-2">EMAIL ADDRESS </label>
+              <input type="email" class="form-control" required>
+            </div>
+
+          </div>
+        </div>
+        <!-- left -->
+
+        <!-- right -->
+        <div class="col-md-6 custom-border">
+
+          <div class="row gy-2">
+
+            <div class="col-4">
+              <label class="text-muted small ms-2">CITIZENSHIP <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+
+            <div class="col-4">
+              <label class="text-muted small ms-2"></label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="birth" selected>BY BIRTH</option>
+                <option value="naturalwalanghalongkemikal">BY NATURALIZATION</option>
+              </select>
+            </div>
+
+            <div class="col-4">
+              <label class="text-muted small ms-2">Pls. indicate country</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="birth" selected>PHILIPPINES</option>
+                <option value="naturalwalanghalongkemikal">ASDASD</option>
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">RESIDENTIAL ADDRESS</label>
+              <input type="text" class="form-control" placeholder="House/Block/Lot No.">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Street">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Subdivision/Village">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Barangay">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="City/Municipality">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Province">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="ZIP CODE" pattern="[0]{1}[9]{1}[0-9]{9}">
+            </div>
+
+            <div class="col-6"></div>
+            <!-- permanent address -->
+
+            <div class="col-6">
+              <label class="text-muted small ms-2">PERMANENT ADDRESS</label>
+              <input type="text" class="form-control" placeholder="House/Block/Lot No.">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Street">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Subdivision/Village">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Barangay">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="City/Municipality">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="Province">
+            </div>
+
+            <div class="col-6">
+              <label class="text-muted small ms-2"></label>
+              <input type="text" class="form-control" placeholder="ZIP CODE" pattern="[0]{1}[9]{1}[0-9]{9}">
+            </div>
+
+          </div>
+
+        </div>
+        <!-- right -->
+      </div>
+
+      <div class="col my-4 d-flex justify-content-end">
+        <button type="submit" form="one" class="me-md-5 me-2 px-4 btn btn-primary text-end" onclick="showTwo('two')">Next</button>
+      </div>
+    </form>
+    <!-- part one -->
+
+    <!-- part two -->
+    <form action="" method="post" class="container-fluid px-4" id="two" autocomplete="off" style="display:none;">
+      <h5>II. FAMILY BACKGROUND</h5>
+      asdasd
+    </form>
+    <!-- part two -->
+  </main>
+
+  <!-- scripts -->
+  <script>
+    function showTwo(two) {
+      document.getElementById('one').style.display = "none";
+      document.getElementById('two').style.display = "block";
+
+      // document.getElementById('btnOpen').style.backgroundColor = '#198754';
+      // document.getElementById('btnOpen').style.color = '#fff';
+
+      // document.getElementById('btnClose').style.backgroundColor = '#fff';
+      // document.getElementById('btnClose').style.color = '#0c63e4';
+    }
+  </script>
+  <script src="js/script.js"></script>
+  <script src="res/bs-js/bootstrap.bundle.js"></script>
+  <script src="res/dataTables/js/jquery-3.5.1.js"></script>
+  <script src="res/dataTables/js/jquery.dataTables.min.js"></script>
+  <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
+  <script src="res/dataTables/js/main.js"></script>
+
+</body>
+
+</html>
