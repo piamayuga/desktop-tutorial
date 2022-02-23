@@ -214,3 +214,23 @@ function deleteFieldDiv(eleId) {
   parentElem.removeChild(elem);
 }
 // Add field skills and hobbies
+
+// show Question one
+function showOneB() {
+  document.getElementById('oneTextDivB').style.display = 'block';
+}
+function hideOneB() {
+  document.getElementById('oneTextDivB').style.display = 'none';
+  document.getElementById('oneTextB').value = '';
+}
+// show Question one
+
+// show Question two
+function showTwoA() {
+  document.getElementById('twoTextDivA').style.display = 'block';
+}
+function hideTwoB() {
+  document.getElementById('twoTextDivA').style.display = 'none';
+  document.getElementById('twoTextA').value = '';
+}
+// show Question two
