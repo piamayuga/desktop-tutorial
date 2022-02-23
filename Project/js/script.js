@@ -229,7 +229,7 @@ function hideOneB() {
 function showTwoA() {
   document.getElementById('twoTextDivA').style.display = 'block';
 }
-function hideTwoB() {
+function hideTwoA() {
   document.getElementById('twoTextDivA').style.display = 'none';
   document.getElementById('twoTextA').value = '';
 }
