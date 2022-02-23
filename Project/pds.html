@@ -139,7 +139,8 @@
 
               <div class="col-6">
                 <label class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')"
+                  required>
               </div>
 
               <div class="col-6">
@@ -677,16 +678,19 @@
 
         <!-- step 5 -->
         <h4>V. WORK EXPERIENCE</h4>
-        <div class="small mb-3">(Include private employment. Start from your recent work) Description of duties should be indicated in the attached Work Experience sheet.</div>
+        <div class="small mb-3">(Include private employment. Start from your recent work) Description of duties should
+          be indicated in the attached Work Experience sheet.</div>
 
         <div class="row gy-2 gx-2" id="originWorkDiv">
 
           <div class="col-md-4 col-6">
             <label class="text-muted small ms-2">INCLUSIVE DATES</label>
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
 
-              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
             </div>
           </div>
 
@@ -724,7 +728,8 @@
         </div>
 
         <div class="col my-2 d-flex justify-content-center">
-          <button type="button" class="btn btn-sm btn-success" onclick="javascript:addWork()">Add Work Experience</button>
+          <button type="button" class="btn btn-sm btn-success" onclick="javascript:addWork()">Add Work
+            Experience</button>
         </div>
 
         <div class="col my-2 d-flex justify-content-between">
@@ -749,8 +754,10 @@
           <div class="col-md-3 col-6">
             <label class="text-muted small ms-2">INCLUSIVE DATES</label>
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
-              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -772,18 +779,22 @@
 
         <!-- step 7 -->
         <h4>VII. LEARNING AND DEVELOPMENT (L&D) INTERVENTIONS/TRAINING PROGRAMS ATTENDED</h4>
-        <div class="small mb-3">(Start from the most recent L&D/training program and include only the relevant L&D/training taken for the last five (5) years for Division Chief/Executive/Managerial positions)</div>
+        <div class="small mb-3">(Start from the most recent L&D/training program and include only the relevant
+          L&D/training taken for the last five (5) years for Division Chief/Executive/Managerial positions)</div>
 
         <div class="row gy-2 gx-2" id="originProgDiv">
           <div class="col-md-6">
-            <label class="text-muted small ms-2">TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS</label>
+            <label class="text-muted small ms-2">TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING
+              PROGRAMS</label>
             <input type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
             <label class="text-muted small ms-2">INCLUSIVE DATES</label>
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
-              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
+              <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -841,7 +852,9 @@
 
           <!-- Question 1 -->
           <div class="row my-2 pb-2 eq-border">
-            <div class="col-12 fs-6 px-4">Are you related by consanguinity or affinity to the appointing or recommending authority, or to chief of bureau or office or to the person who has immediate supervision over you in the Bureau or Department where you will be apppointed,
+            <div class="col-12 fs-6 px-4">Are you related by consanguinity or affinity to the appointing or recommending
+              authority, or to chief of bureau or office or to the person who has immediate supervision over you in the
+              Bureau or Department where you will be apppointed,
             </div>
 
             <!-- type A -->
@@ -893,7 +906,7 @@
                 <label class="form-check-label" for="yes2A">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no2A" name="asd" onclick="hideTwoB()" value="">
+                <input class="form-check-input" type="radio" id="no2A" name="asd" onclick="hideTwoA()" value="">
                 <label class="form-check-label" for="no2A">No</label>
               </div>
               <!-- show/hide div -->
@@ -906,21 +919,249 @@
             <!-- type A -->
 
             <!-- type B -->
+            <div class="col-md-6 mt-3 text-center">
+              <div>
+                b. Have you been criminally charged before any court?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes2B" name="asd" onclick="showTwoB()" value="">
+                <label class="form-check-label" for="yes2B">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no2B" name="asd" onclick="hideTwoB()" value="">
+                <label class="form-check-label" for="no2B">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="twoTextDivB" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details</label>
+                <label class="text-muted small ms-2">Date Filed: </label>
+                <input type="text" class="form-control" id="twoTextB">
+                <label class="text-muted small ms-2">Status of Case/s: </label>
+                <input type="text" class="form-control" id="twoTextB">
+              </div>
+              <!-- type B -->
 
-            <!-- type B -->
+            </div>
+
 
           </div>
           <!-- Question 2 -->
 
-        </div>
-        <!-- Exam type -->
-        
-        <div class="col my-2 d-flex justify-content-between">
-          <button type="button" class="ms-md-5 ms-2 px-4 btn btn-primary previous-btn">Previous</button>
-          <button type="button" class="me-md-5 me-2 px-4 btn btn-primary next-btn">Next</button>
-        </div>
+          <!-- Question 3 -->
+          <div class="row my-2 pb-2 eq-border">
 
-      </div>
+            <div class="col-md-12 mt-3 text-center">
+              <div>
+                Have you ever been convicted of any crime or violation of any law, decree, ordinance or
+                regulation by any court or tribunal?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes3" name="asd" onclick="showThree()" value="">
+                <label class="form-check-label" for="yes3">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no3" name="asd" onclick="hideThree()" value="">
+                <label class="form-check-label" for="no3">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="threeTextDiv" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details</label>
+                <input type="text" class="form-control" id="threeText">
+              </div>
+              <!-- show/hide div -->
+            </div>
+
+
+          </div>
+          <!-- Question 3 -->
+
+          <!-- Question 4 -->
+          <div class="row my-2 pb-2 eq-border">
+
+            <div class="col-md-12 mt-3 text-center">
+              <div>
+                Have you ever been separated from the service in any of the following modes: resignation,
+                retirement, dropped from the rolls, dismissal, termination, end of term, finished contract or
+                phased out (abolition) in the public or private sector?
+
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes4" name="asd" onclick="showFour()" value="">
+                <label class="form-check-label" for="yes3">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no4" name="asd" onclick="hideFour()" value="">
+                <label class="form-check-label" for="no4">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="fourTextDiv" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details</label>
+                <input type="text" class="form-control" id="fourText">
+              </div>
+              <!-- show/hide div -->
+            </div>
+
+          </div>
+          <!-- Question 4 -->
+
+          <!-- Question 5 -->
+          <div class="row my-2 pb-2 eq-border">
+
+            <!-- type A -->
+            <div class="col-md-6 mt-3 text-center">
+              <div>
+                a. Have you ever been a candidate in a national or local election held within the last year
+                (except Barangay election)?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes5A" name="asd" onclick="showFiveA()" value="">
+                <label class="form-check-label" for="yes5A">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no5A" name="asd" onclick="hideFiveA()" value="">
+                <label class="form-check-label" for="no5A">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="fiveTextDivA" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details</label>
+                <input type="text" class="form-control" id="fiveTextA">
+              </div>
+              <!-- show/hide div -->
+            </div>
+            <!-- type A -->
+
+            <!-- type B -->
+            <div class="col-md-6 mt-3 text-center">
+              <div>
+                b. Have you resigned from the government service during the three (3)-month period before
+                the last election to promote/actively campaign for a national or local candidate?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes5B" name="asd" onclick="showFiveB()" value="">
+                <label class="form-check-label" for="yes5B">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no5B" name="asd" onclick="hideFiveB()" value="">
+                <label class="form-check-label" for="no5B">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="fiveTextDivB" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details:</label>
+                <input type="text" class="form-control" id="fiveTextB">
+                
+              </div>
+              <!-- type B -->
+
+            </div>
+
+
+          </div>
+          <!-- Question 5 -->
+
+          <!-- question 6 -->
+          <div class="row my-2 pb-2 eq-border">
+
+            <div class="col-md-12 mt-3 text-center">
+              <div>
+                Have you acquired the status of an immigrant or permanent resident of another country?
+
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="yes6" name="asd" onclick="showSix()" value="">
+                <label class="form-check-label" for="yes6">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="no6" name="asd" onclick="hideSix()" value="">
+                <label class="form-check-label" for="no6">No</label>
+              </div>
+              <!-- show/hide div -->
+              <div class="col px-4 text-start" id="sixTextDiv" style="display: none;">
+                <label class="text-muted small ms-2">If YES, give details (country):</label>
+                <input type="text" class="form-control" id="sixText">
+              </div>
+              <!-- show/hide div -->
+            </div>
+
+          </div>
+          <!-- question 6 -->
+
+          <!-- Question 7 -->
+          <div class="row my-2 pb-2 eq-border">
+            <div class="col-12 fs-6 px-4">Pursuant to: (a) Indigenous People's Act (RA 8371); (b) Magna Carta for Disabled Persons 
+              (RA 7277); and (c) Solo Parents Welfare Act of 2000 (RA 8972), please answer the following
+            </div>
+
+            <!-- type A -->
+            <div class="col-md-4 mt-3 text-center">
+              <div>
+                a. Are you a member of any indigenous group?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenYesA" name="asd" onclick="showSevenA()" value="">
+                <label class="form-check-label" for="sevenYesA">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenNo" name="asd" onclick="hideSevenA()" value="">
+                <label class="form-check-label" for="sevenNo">No</label>
+              </div>
+              <div class="col px-4 text-start" id="sevenTextDivA" style="display: none;">
+                <label class="text-muted small ms-2">If YES, please specify: </label>
+                <input type="text" class="form-control" id="sevenTextA">
+              </div>
+            </div>
+            <!-- type A -->
+
+            <!-- type B -->
+            <div class="col-md-4 mt-3 text-center">
+              <div>
+                b. Are you a person with disability?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenesB" name="asd" onclick="showSevenB()" value="">
+                <label class="form-check-label" for="sevenYesB">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenNo" name="asd" onclick="hideSevenB()" value="">
+                <label class="form-check-label" for="sevenNo">No</label>
+              </div>
+              <div class="col px-4 text-start" id="sevenTextDivB" style="display: none;">
+                <label class="text-muted small ms-2">If YES, please specify ID No: </label>
+                <input type="text" class="form-control" id="sevenTextB">
+              </div>
+            </div>
+            <!-- type B -->
+
+            <!-- type C -->
+            <div class="col-md-4 mt-3 text-center">
+              <div>
+                b. Are you a person with disability?
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenYesC" name="asd" onclick="showSevenC()" value="">
+                <label class="form-check-label" for="sevenYesC">Yes</label>
+              </div>
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="radio" id="sevenNo" name="asd" onclick="hideSevenC()" value="">
+                <label class="form-check-label" for="sevenNo">No</label>
+              </div>
+              <div class="col px-4 text-start" id="sevenTextDivC" style="display: none;">
+                <label class="text-muted small ms-2">If YES, please specify ID No: </label>
+                <input type="text" class="form-control" id="sevenTextC">
+              </div>
+            </div>
+            <!-- type C -->
+
+          </div>
+          <!-- Question 7 -->
+
+          <!-- Exam type -->
+
+          <div class="col my-2 d-flex justify-content-between">
+            <button type="button" class="ms-md-5 ms-2 px-4 btn btn-primary previous-btn">Previous</button>
+            <button type="button" class="me-md-5 me-2 px-4 btn btn-primary next-btn">Next</button>
+          </div>
+
+        </div>
 
     </form>
     <!-- <div class="col my-2 d-flex justify-content-between">
@@ -931,14 +1172,95 @@
 
 
   <script>
-    function showTwoA() {
-      document.getElementById('twoTextDivA').style.display = 'block';
+    function showTwoB() {
+      document.getElementById('twoTextDivB').style.display = 'block';
     }
     function hideTwoB() {
-      document.getElementById('twoTextDivA').style.display = 'none';
-      document.getElementById('twoTextA').value = '';
+      document.getElementById('twoTextDivB').style.display = 'none';
+      document.getElementById('twoTextB').value = '';
     }
   </script>
+
+  <!-- question 3 -->
+  <script>
+    function showThree() {
+      document.getElementById('threeTextDiv').style.display = 'block';
+    }
+    function hideThree() {
+      document.getElementById('threeTextDiv').style.display = 'none';
+      document.getElementById('threeText').value = '';
+    }
+  </script>
+
+  <!-- question 4 -->
+  <script>
+    function showFour() {
+      document.getElementById('fourTextDiv').style.display = 'block';
+    }
+    function hideFour() {
+      document.getElementById('fourTextDiv').style.display = 'none';
+      document.getElementById('fourText').value = '';
+    }
+  </script>
+
+  <!-- question 5 -->
+  <script>
+    function showFiveA() {
+      document.getElementById('fiveTextDivA').style.display = 'block';
+    }
+    function hideFiveA() {
+      document.getElementById('fiveTextDivA').style.display = 'none';
+      document.getElementById('fiveTextA').value = '';
+    }
+
+    function showFiveB() {
+      document.getElementById('fiveTextDivB').style.display = 'block';
+    }
+    function hideFiveB() {
+      document.getElementById('fiveTextDivB').style.display = 'none';
+      document.getElementById('fiveTextB').value = '';
+    }
+  </script>
+
+  <!-- question 6 -->
+  <script>
+    function showSix() {
+      document.getElementById('sixTextDiv').style.display = 'block';
+    }
+    function hideSix() {
+      document.getElementById('sixTextDiv').style.display = 'none';
+      document.getElementById('sixText').value = '';
+    }
+  </script>
+
+  <!-- question 7 -->
+  <script>
+    function showSevenA() {
+      document.getElementById('sevenTextDivA').style.display = 'block';
+    }
+    function hideSevenA() {
+      document.getElementById('sevenTextDivA').style.display = 'none';
+      document.getElementById('sevenextA').value = '';
+    }
+
+    function showSevenB() {
+      document.getElementById('sevenTextDivB').style.display = 'block';
+    }
+    function hideSevenB() {
+      document.getElementById('sevenTextDivB').style.display = 'none';
+      document.getElementById('sevenTextB').value = '';
+    }
+
+    function showSevenC() {
+      document.getElementById('sevenTextDivC').style.display = 'block';
+    }
+    function hideSevenC() {
+      document.getElementById('sevenTextDivC').style.display = 'none';
+      document.getElementById('sevenTextC').value = '';
+    }
+  </script>
+
+
 
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
@@ -1007,9 +1329,11 @@
         <div class="col-md-4 col-6">
           <label class="text-muted small ms-2">INCLUSIVE DATES</label>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
 
-            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
           </div>
         </div>
 
@@ -1061,8 +1385,10 @@
         <div class="col-md-3 col-6">
           <label class="text-muted small ms-2">INCLUSIVE DATES</label>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
-            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
           </div>
         </div>
         <div class="col-md-3 col-6">
@@ -1086,8 +1412,10 @@
         <div class="col-md-3 col-6">
           <label class="text-muted small ms-2">INCLUSIVE DATES</label>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
-            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
+            <input type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
           </div>
         </div>
         <div class="col-md-3 col-6">
