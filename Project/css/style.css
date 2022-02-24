@@ -365,7 +365,7 @@ input::-webkit-inner-spin-button {
 /* type=number */
 
 /* multiple step form */
-/* .step {
+.step {
   visibility: hidden;
   height: 0;
   display: none;
@@ -376,7 +376,7 @@ input::-webkit-inner-spin-button {
   visibility: visible;
   height: auto;
   animation: animation .7s ease;
-} */
+}
 /* multiple step form */
 
 @keyframes animation {
