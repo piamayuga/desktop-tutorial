@@ -1,0 +1,16 @@
+model business process related
+database, query, connection
+read, update, write php
+
+view 
+ui front end etc
+
+controller
+php files
+
+
+view controller model
+
+model controller view
+
+online database
