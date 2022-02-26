@@ -1,0 +1,27 @@
+3 users
+admin
+hr
+employee
+
+Tab 1: Personal Data Sheet
+	can return filled up sheet (PDF)
+
+Tab 2: Employment Information 
+(employee can view only) (HR can view and edit)
+- Engagement duration
+- Employment Status/ Classification
+- Designation
+- Salary
+- Leave Credits for Permanent employees
+
+
+Tab 3: Employment Records/ Digitized 201 Files
+(employee can upload and can be viewed)
+- Training Certificates
+- Licenses, IDs
+- Diploma
+
+Tab 4: Request for forms
+- Cert of Employment
+- Service records
+- Other HR Docs
