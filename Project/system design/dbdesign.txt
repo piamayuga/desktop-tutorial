@@ -1,0 +1,90 @@
+pcoo database
+(*) required
+
+create acc
+employee
+- employeeID PRIMARY KEY *
+- username *
+- password *
+- email *
+- firstName *
+- middleName
+- lastName *
+- suffix 
+- phoneNumber *
+- gender * Male / Female
+- 
+
+employeePersonalDatasheet
+- employeeID PRIMARY KEY *
+- surname *
+- firstName *
+- middleName
+- suffix
+- dateOfBirth *
+- placeOfBirth *
+- gender *
+- civil status 
+	[0] 'single',
+	[1] 'married',
+	[2] 'divorced',
+	[3] 'widowed'
+	(possible changes) *
+- height float *
+- weight float *
+- bloodtype short *
+- gsId  INT 11digits *
+- pagibigId INT 12digits *
+- philhealthId INT 12 digits*
+- sssId INT * 
+- tinId INT *
+- agencyEmployeeId INT *
+- telephoneNumber
+- phoneNumber
+- emailAddress EMAIL *
+- citizenship 
+	[0] 'filipino',
+	[1] 'dual citizenship'
+	(possible changes) *
+
+- residentialAddress 
+	{
+	- houseNumber
+	- street
+	- subdivision
+	- barangay
+	- city
+	- province 
+		[0] NCR
+	- zipCode INT 4digits *
+}
+
+can be same with permanent address
+
+- permanentAddress 
+	{
+	- houseNumber
+	- street
+	- subdivision
+	- barangay
+	- city
+	- province 
+		[0] NCR
+	- zipCode INT 4digits *
+}
+
+
+HR
+- hrID * PRIMARY KEY
+- employeeID * FOREIGN KEY 
+- username *
+- password *
+- email *
+
+admin
+- adminID * PRIMARY KEY
+- employeeID * FOREIGN KEY 
+- username *
+- password *
+- email *
+
