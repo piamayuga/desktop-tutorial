@@ -214,3 +214,105 @@ function deleteFieldDiv(eleId) {
   parentElem.removeChild(elem);
 }
 // Add field skills and hobbies
+
+// show Question one
+function showOneB() {
+  document.getElementById('oneTextDivB').style.display = 'block';
+}
+function hideOneB() {
+  document.getElementById('oneTextDivB').style.display = 'none';
+  document.getElementById('oneTextB').value = '';
+}
+// show Question one
+
+// show Question two
+function showTwoA() {
+  document.getElementById('twoTextDivA').style.display = 'block';
+}
+function hideTwoA() {
+  document.getElementById('twoTextDivA').style.display = 'none';
+  document.getElementById('twoTextA').value = '';
+}
+
+function showTwoB() {
+  document.getElementById('twoTextDivB').style.display = 'block';
+}
+function hideTwoB() {
+  document.getElementById('twoTextDivB').style.display = 'none';
+  document.getElementById('twoTextB').value = '';
+}
+// show Question two
+
+// show Question three
+function showThree() {
+  document.getElementById('threeTextDiv').style.display = 'block';
+}
+function hideThree() {
+  document.getElementById('threeTextDiv').style.display = 'none';
+  document.getElementById('threeText').value = '';
+}
+// show Question three
+
+// show Question four
+function showFour() {
+  document.getElementById('fourTextDiv').style.display = 'block';
+}
+function hideFour() {
+  document.getElementById('fourTextDiv').style.display = 'none';
+  document.getElementById('fourText').value = '';
+}
+// show Question four
+
+// show Question five
+function showFiveA() {
+  document.getElementById('fiveTextDivA').style.display = 'block';
+}
+function hideFiveA() {
+  document.getElementById('fiveTextDivA').style.display = 'none';
+  document.getElementById('fiveTextA').value = '';
+}
+
+function showFiveB() {
+  document.getElementById('fiveTextDivB').style.display = 'block';
+}
+function hideFiveB() {
+  document.getElementById('fiveTextDivB').style.display = 'none';
+  document.getElementById('fiveTextB').value = '';
+}
+// show Question five
+
+// show Question six
+function showSix() {
+  document.getElementById('sixTextDiv').style.display = 'block';
+}
+function hideSix() {
+  document.getElementById('sixTextDiv').style.display = 'none';
+  document.getElementById('sixText').value = '';
+}
+// show Question six
+
+// show Question seven
+function showSevenA() {
+  document.getElementById('sevenTextDivA').style.display = 'block';
+}
+function hideSevenA() {
+  document.getElementById('sevenTextDivA').style.display = 'none';
+  document.getElementById('sevenextA').value = '';
+}
+
+function showSevenB() {
+  document.getElementById('sevenTextDivB').style.display = 'block';
+}
+function hideSevenB() {
+  document.getElementById('sevenTextDivB').style.display = 'none';
+  document.getElementById('sevenTextB').value = '';
+}
+
+function showSevenC() {
+  document.getElementById('sevenTextDivC').style.display = 'block';
+}
+function hideSevenC() {
+  document.getElementById('sevenTextDivC').style.display = 'none';
+  document.getElementById('sevenTextC').value = '';
+}
+// show Question seven
