@@ -107,27 +107,28 @@
   <main class="home-section">
     <div class="text">Personal Data Sheet</div>
 
-    <form action="" method="post" class="container-xl px-4" id="one" autocomplete="off">
+    <!-- connection of form to pds_controller.php -->
+    <form action="pds_controller.php" method="post" class="container-xl px-4" id="one" autocomplete="off">
 
       <div class="step step-1 active">
         <h4>I. PERSONAL INFORMATION</h4>
         <!-- name -->
         <div class="row mb-2 gy-2 gx-2">
           <div class="col-md-4">
-            <label class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" required>
+            <label for="surname" class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
+            <input type="text" name="pds_surname" id="surname" class="form-control" required>
           </div>
           <div class="col-md-3">
-            <label class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" required>
+            <label for="firstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
+            <input type="text" name="pds_first_name" id="firstName" class="form-control" required>
           </div>
           <div class="col-md-3 col-6">
-            <label class="text-muted small ms-2">MIDDLE NAME</label>
-            <input type="text" class="form-control">
+            <label for="middleName" class="text-muted small ms-2">MIDDLE NAME</label>
+            <input type="text" name="pds_middle_name" id="middleName" class="form-control">
           </div>
           <div class="col-md-2 col-6">
-            <label class="text-muted small ms-2">SUFFIX (JR,SR)</label>
-            <input type="text" class="form-control">
+            <label for="suffixName" class="text-muted small ms-2">SUFFIX (JR,SR)</label>
+            <input type="text" name="pds_suffix_name" id="suffixName" class="form-control">
           </div>
         </div>
         <!-- name -->
