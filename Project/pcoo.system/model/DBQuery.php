@@ -1,25 +1,12 @@
 <?php
-    class Query {
+    class DBQuery {
         // trying this https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
 
-        // servername => localhost
-        // username => root
-        // password => empty
-        // database name => staff
-        $conn = mysqli_connect("localhost", "root", "", "staff");
-            
-        // Check connection
-        if($conn === false){
-            die("ERROR: Could not connect. " 
-                . mysqli_connect_error());
-        }
-
-
-
-        public function pds_add_employee_sheet {
+        
+        public function pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix_name) {
             // Performing insert query execution
-            // here our table name is college
-            $sql = "INSERT INTO college  VALUES ('$surname', 
+            // here our table name is employee
+            $sql = "INSERT INTO employee VALUES ('$surname', 
             '$first_name','$last_name','$suffix_name')";
             
             if(mysqli_query($conn, $sql)){
@@ -37,8 +24,7 @@
         }
         
             
-        // Close connection
-        mysqli_close($conn);
+        
     }
     
 
