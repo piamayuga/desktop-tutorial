@@ -17,6 +17,7 @@
                     . mysqli_connect_error());
                 return false;
             } else {
+                
                 return true;
             }
 
