@@ -22,10 +22,11 @@
     $read-> setSuffixName($suffix_name);
 
     
-
     $dbConnection->check_database_connection($check_db_connection);
 
     if ($check_db_connection == true) {
+        echo 'connected';
+
         $surname = $read-> getSurname();
         $first_name = $read-> getFirstName();
         $middle_name = $read-> getMiddleName();
