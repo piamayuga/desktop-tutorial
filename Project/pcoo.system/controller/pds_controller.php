@@ -170,8 +170,6 @@
 
 
 
-
-
     $read-> pds_construct($surname, $first_name, $middle_name, $suffix_name);
     
     $read-> setSurname($surname);

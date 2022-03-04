@@ -188,12 +188,12 @@
 
               <div class="col-6">
                 <label for="pagibigId" class="text-muted small ms-2">PAG-IBIG ID NO. <span class="text-danger">*</span></label>
-                <input name="pds_pagibig_id" id="pagibigId" type="text" class="form-control" required>
+                <input name="pds_pagibig_id" onInput="lengthValidation(this)" maxLength="12" id="pagibigId" type="number" class="form-control" required>
               </div>
 
               <div class="col-6">
                 <label for="philhealthId" class="text-muted small ms-2">PHILHEALTH NO. <span class="text-danger">*</span></label>
-                <input name="pds_philhealth_id" id="philhealthId" type="text" class="form-control" required>
+                <input name="pds_philhealth_id" onInput="lengthValidation(this)" maxLength="12" id="philhealthId" type="text" class="form-control" required>
               </div>
 
               <div class="col-6">
@@ -213,12 +213,12 @@
 
               <div class="col-6">
                 <label for="telephoneNumber" class="text-muted small ms-2">TELEPHONE NO. </label>
-                <input name="pds_telephone_number" id="telephoneNumber" type="number" maxlength="9" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+                <input name="pds_telephone_number" id="telephoneNumber" onInput="lengthValidation(this)" type="number" maxlength="9" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
               </div>
 
               <div class="col-6">
                 <label for="phoneNumber" class="text-muted small ms-2">PHONE NO. </label>
-                <input name="pds_phone_number" id="phoneNumber" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+                <input name="pds_phone_number" onInput="lengthValidation(this)" id="phoneNumber" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
               </div>
               <div class="col-6">
                 <label for="emailAdd" class="text-muted small ms-2">EMAIL ADDRESS </label>

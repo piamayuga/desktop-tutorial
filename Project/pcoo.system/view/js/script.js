@@ -7,6 +7,14 @@ closeBtn.addEventListener("click", () => {
   menuBtnChange();//calling the function(optional)
 });
 
+// VALIDATIONS FOR INPUT
+function lengthValidation(object) {
+  if (object.value.length > object.maxLength) {
+    object.value = object.value.slice(0, object.maxLength);
+  } 
+
+}
+
 searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
   sidebar.classList.toggle("open");
   menuBtnChange(); //calling the function(optional)

@@ -6,8 +6,7 @@
         // username => root
         // password => empty
         // database name => staff
-        $conn = mysqli_connect("localhost", "root", "", "staff");
-            
+        $conn = mysqli_connect("localhost", "root", "", "staff");           
 
 
         public function boolean check_database_connection($check_db_connection) {
