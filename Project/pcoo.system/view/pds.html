@@ -188,12 +188,12 @@
 
               <div class="col-6">
                 <label for="pagibigId" class="text-muted small ms-2">PAG-IBIG ID NO. <span class="text-danger">*</span></label>
-                <input name="pds_pagibig_id" id="pagibigId" type="text" class="form-control" required>
+                <input name="pds_pagibig_id" onInput="lengthValidation(this)" maxLength="12" id="pagibigId" type="number" class="form-control" required>
               </div>
 
               <div class="col-6">
                 <label for="philhealthId" class="text-muted small ms-2">PHILHEALTH NO. <span class="text-danger">*</span></label>
-                <input name="pds_philhealth_id" id="philhealthId" type="text" class="form-control" required>
+                <input name="pds_philhealth_id" onInput="lengthValidation(this)" maxLength="12" id="philhealthId" type="text" class="form-control" required>
               </div>
 
               <div class="col-6">
@@ -213,12 +213,12 @@
 
               <div class="col-6">
                 <label for="telephoneNumber" class="text-muted small ms-2">TELEPHONE NO. </label>
-                <input name="pds_telephone_number" id="telephoneNumber" type="number" maxlength="9" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+                <input name="pds_telephone_number" id="telephoneNumber" onInput="lengthValidation(this)" type="number" maxlength="9" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
               </div>
 
               <div class="col-6">
                 <label for="phoneNumber" class="text-muted small ms-2">PHONE NO. </label>
-                <input name="pds_phone_number" id="phoneNumber" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+                <input name="pds_phone_number" onInput="lengthValidation(this)" id="phoneNumber" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
               </div>
               <div class="col-6">
                 <label for="emailAdd" class="text-muted small ms-2">EMAIL ADDRESS </label>
@@ -649,24 +649,24 @@
           </div>
           <div class="col-md-3 col-6 mt-md-0 mt-2">
             <label for="rating" class="text-muted small ms-2">RATING (if Applicable)</label>
-            <input name="pds_rating" id="rating" type="text" class="form-control">
+            <input name="pds_career_rating" id="rating" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6 mt-md-0 mt-2">
             <label for="examinationDate" class="text-muted small ms-2">DATE OF EXAMINATION</label>
-            <input name="pds_examination_date" id="examinationDate" type="text" class="form-control">
+            <input name="pds_career_examination_date" id="examinationDate" type="text" class="form-control">
           </div>
 
           <div class="col-md-6 mt-2">
             <label for="examinationPlace" class="text-muted small ms-2">PLACE OF EXAMINATION</label>
-            <input name="pds_examination_place" id="examinationPlace" type="text" class="form-control">
+            <input name="pds_career_examination_place" id="examinationPlace" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6 mt-2">
             <label for="number" class="text-muted small ms-2">NUMBER</label>
-            <input name="pds_number" id="number" type="text" class="form-control">
+            <input name="pds_career_number" id="number" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6 mt-2">
             <label for="validityDate" class="text-muted small ms-2">DATE OF VALIDITY</label>
-            <input name="pds_validity_date" id="validityDate" type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input name="pds_career_validity_date" id="validityDate" type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
           </div>
         </div>
         <div class="col my-2 d-flex justify-content-center">
@@ -686,37 +686,37 @@
           <div class="col-md-4 col-6">
             <label  for="inclusiveDatesFrom" class="text-muted small ms-2">INCLUSIVE DATES</label>
             <div class="input-group">
-              <input name="pds_inclusive_dates_from" id="inclusiveDatesFrom" type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input name="pds_work_inclusive_dates_from" id="inclusiveDatesFrom" type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
 
-              <input name="pds_inclusive_dates_to" id="inclusiveDatesTo" type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input name="pds_work_inclusive_dates_to" id="inclusiveDatesTo" type="text" class="form-control" placeholder="TO" onfocus="(this.type='date')" onblur="(this.type='text')">
             </div>
           </div>
 
           <div class="col-md-4 col-6">
             <label for="positionTitle"  class="text-muted small ms-2">POSITION TITLE</label>
-            <input  name="pds_position_title" id="positionTitle" type="text" class="form-control">
+            <input  name="pds_work_position_title" id="positionTitle" type="text" class="form-control">
           </div>
 
           <div class="col-md-4 col-6">
             <label for="department" class="text-muted small ms-2">DEPARTMENT / AGENCY / OFFICE / COMPANY</label>
-            <input  name="pds_department" id="department" type="text" class="form-control">
+            <input  name="pds_work_department" id="department" type="text" class="form-control">
           </div>
 
           <div class="col-md-3 col-6">
             <label  for="monthlySalary" class="text-muted small ms-2">MONTHLY SALARY</label>
-            <input name="pds_monthly_salary" id="monthlySalary" type="text" class="form-control">
+            <input name="pds_work_monthly_salary" id="monthlySalary" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
             <label for="salary" class="text-muted small ms-2">SALARY/ JOB/ PAY GRADE </label>
-            <input name="pds_salary" id="salary" type="text" class="form-control">
+            <input name="pds_work_salary" id="salary" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
             <label for="statusAppointment" class="text-muted small ms-2">STATUS OF APPOINTMENT</label>
-            <input name="pds_status_appointment" id="statusAppointment" type="text" class="form-control">
+            <input name="pds_work_status_appointment" id="statusAppointment" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
             <label for="govtService" class="text-muted small ms-2">GOV'TSERVICE</label>
-            <select name="pds_govt_service" id="govtService" class="form-select">
+            <select name="pds_work_govt_service" id="govtService" class="form-select">
               <option value="" hidden selected></option>
               <option value="" selected>YES</option>
               <option value="" selected>NO</option>
@@ -857,11 +857,11 @@
                 a. within the third degree?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yesA" name="q1a" value="option1">
+                <input class="form-check-input" type="radio" id="yesA" name="pds_q1a" value="option1">
                 <label class="form-check-label" for="yesA">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="noA" name="q1a" value="option2">
+                <input class="form-check-input" type="radio" id="noA" name="pds_q1a" value="option2">
                 <label class="form-check-label" for="noA">No</label>
               </div>
             </div>
@@ -871,11 +871,11 @@
                 b. within the fourth degree (for Local Government Unit - Career Employees)?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="oneYesB" name="q1b" onclick="showOneB()" value="">
+                <input class="form-check-input" type="radio" id="oneYesB" name="pds_q1b" onclick="showOneB()" value="">
                 <label class="form-check-label" for="oneYesB">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="oneNo" name="q1b" onclick="hideOneB()" value="">
+                <input class="form-check-input" type="radio" id="oneNo" name="pds_q1b" onclick="hideOneB()" value="">
                 <label class="form-check-label" for="oneNo">No</label>
               </div>
               <div class="col px-4 text-start" id="oneTextDivB" style="display: none;">
@@ -896,11 +896,11 @@
                 a. Have you ever been found guilty of any administrative offense?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes2A" name="q2a" onclick="showTwoA()" value="">
+                <input class="form-check-input" type="radio" id="yes2A" name="pds_q2a" onclick="showTwoA()" value="">
                 <label class="form-check-label" for="yes2A">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no2A" name="q2a" onclick="hideTwoA()" value="">
+                <input class="form-check-input" type="radio" id="no2A" name="pds_q2a" onclick="hideTwoA()" value="">
                 <label class="form-check-label" for="no2A">No</label>
               </div>
               <!-- show/hide div -->
@@ -918,11 +918,11 @@
                 b. Have you been criminally charged before any court?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes2B" name="q2b" onclick="showTwoB()" value="">
+                <input class="form-check-input" type="radio" id="yes2B" name="pds_q2b" onclick="showTwoB()" value="">
                 <label class="form-check-label" for="yes2B">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no2B" name="q2b" onclick="hideTwoB()" value="">
+                <input class="form-check-input" type="radio" id="no2B" name="pds_q2b" onclick="hideTwoB()" value="">
                 <label class="form-check-label" for="no2B">No</label>
               </div>
               <!-- show/hide div -->
@@ -951,11 +951,11 @@
                 regulation by any court or tribunal?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes3" name="q3" onclick="showThree()" value="">
+                <input class="form-check-input" type="radio" id="yes3" name="pds_q3" onclick="showThree()" value="">
                 <label class="form-check-label" for="yes3">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no3" name="q3" onclick="hideThree()" value="">
+                <input class="form-check-input" type="radio" id="no3" name="pds_q3" onclick="hideThree()" value="">
                 <label class="form-check-label" for="no3">No</label>
               </div>
               <!-- show/hide div -->
@@ -974,11 +974,11 @@
                 phased out (abolition) in the public or private sector?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes4" name="q4" onclick="showFour()" value="">
+                <input class="form-check-input" type="radio" id="yes4" name="pds_q4" onclick="showFour()" value="">
                 <label class="form-check-label" for="yes4">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no4" name="q4" onclick="hideFour()" value="">
+                <input class="form-check-input" type="radio" id="no4" name="pds_q4" onclick="hideFour()" value="">
                 <label class="form-check-label" for="no4">No</label>
               </div>
               <!-- show/hide div -->
@@ -1003,11 +1003,11 @@
                 (except Barangay election)?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes5A" name="q5a" onclick="showFiveA()" value="">
+                <input class="form-check-input" type="radio" id="yes5A" name="pds_q5a" onclick="showFiveA()" value="">
                 <label class="form-check-label" for="yes5A">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no5A" name="q5a" onclick="hideFiveA()" value="">
+                <input class="form-check-input" type="radio" id="no5A" name="pds_q5a" onclick="hideFiveA()" value="">
                 <label class="form-check-label" for="no5A">No</label>
               </div>
               <!-- show/hide div -->
@@ -1026,11 +1026,11 @@
                 the last election to promote/actively campaign for a national or local candidate?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes5B" name="q5b" onclick="showFiveB()" value="">
+                <input class="form-check-input" type="radio" id="yes5B" name="pds_q5b" onclick="showFiveB()" value="">
                 <label class="form-check-label" for="yes5B">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no5B" name="q5b" onclick="hideFiveB()" value="">
+                <input class="form-check-input" type="radio" id="no5B" name="pds_q5b" onclick="hideFiveB()" value="">
                 <label class="form-check-label" for="no5B">No</label>
               </div>
               <!-- show/hide div -->
@@ -1055,11 +1055,11 @@
                 Have you acquired the status of an immigrant or permanent resident of another country?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="yes6" name="q6" onclick="showSix()" value="">
+                <input class="form-check-input" type="radio" id="yes6" name="pds_q6" onclick="showSix()" value="">
                 <label class="form-check-label" for="yes6">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="no6" name="q6" onclick="hideSix()" value="">
+                <input class="form-check-input" type="radio" id="no6" name="pds_q6" onclick="hideSix()" value="">
                 <label class="form-check-label" for="no6">No</label>
               </div>
               <!-- show/hide div -->
@@ -1085,11 +1085,11 @@
                 a. Are you a member of any indigenous group?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenYesA" name="q7a" onclick="showSevenA()" value="">
+                <input class="form-check-input" type="radio" id="sevenYesA" name="pds_q7a" onclick="showSevenA()" value="">
                 <label class="form-check-label" for="sevenYesA">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenNoA" name="q7a" onclick="hideSevenA()" value="">
+                <input class="form-check-input" type="radio" id="sevenNoA" name="pds_q7a" onclick="hideSevenA()" value="">
                 <label class="form-check-label" for="sevenNoA">No</label>
               </div>
               <div class="col px-4 text-start" id="sevenTextDivA" style="display: none;">
@@ -1105,11 +1105,11 @@
                 b. Are you a person with disability?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenYesB" name="q7b" onclick="showSevenB()" value="">
+                <input class="form-check-input" type="radio" id="sevenYesB" name="pds_q7b" onclick="showSevenB()" value="">
                 <label class="form-check-label" for="sevenYesB">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenNoB" name="q7b" onclick="hideSevenB()" value="">
+                <input class="form-check-input" type="radio" id="sevenNoB" name="pds_q7b" onclick="hideSevenB()" value="">
                 <label class="form-check-label" for="sevenNoB">No</label>
               </div>
               <div class="col px-4 text-start" id="sevenTextDivB" style="display: none;">
@@ -1125,11 +1125,11 @@
                 c. Are you a solo parent?
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenYesC" name="q7c" onclick="showSevenC()" value="">
+                <input class="form-check-input" type="radio" id="sevenYesC" name="pds_q7c" onclick="showSevenC()" value="">
                 <label class="form-check-label" for="sevenYesC">Yes</label>
               </div>
               <div class="form-check form-check-inline form-switch">
-                <input class="form-check-input" type="radio" id="sevenNoC" name="q7c" onclick="hideSevenC()" value="">
+                <input class="form-check-input" type="radio" id="sevenNoC" name="pds_q7c" onclick="hideSevenC()" value="">
                 <label class="form-check-label" for="sevenNoC">No</label>
               </div>
               <div class="col px-4 text-start" id="sevenTextDivC" style="display: none;">
