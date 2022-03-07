@@ -1,3 +1,14 @@
+// Login - show password
+function showPass() {
+  var sp = document.getElementById("password");
+  if (sp.type === "password") {
+    sp.type = "text";
+  } else {
+    sp.type = "password";
+  }
+}
+// Login - show password
+
 // sidebar
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
