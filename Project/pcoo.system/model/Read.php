@@ -73,6 +73,84 @@
         private $name_child;
         private $child_birth_date;
 
+        // Elementary Information
+        private $elementary_school_name;
+        private $elementary_basic_education;
+        private $elementary_period_attendance_from;
+        private $elementary_period_attendance_to;
+        private $elementary_highest_level;
+        private $elementary_year_graduated;
+        private $elementary_scholarship;
+
+        // Secondary
+        private $secondary_school_name;
+        private $secondary_basic_education;
+        private $secondary_period_attendance_from;
+        private $secondary_period_attendance_to;
+        private $secondary_highest_level;
+        private $secondary_year_graduated;
+        private $secondary_scholarship;
+
+        // Vocational / Trade Course
+        private $vocational_school_name;
+        private $vocational_basic_education;
+        private $vocational_period_attendance_from;
+        private $vocational_period_attendance_to;
+        private $vocational_highest_level;
+        private $vocational_year_graduated;
+        private $vocational_scholarship;
+
+        // College
+        private $college_school_name;
+        private $college_basic_education;
+        private $college_period_attendance_from;
+        private $college_period_attendance_to;
+        private $college_highest_level;
+        private $college_year_graduated;
+        private $college_scholarship;
+
+        // Graduate Studies
+        private $graduate_school_name;
+        private $graduate_basic_education;
+        private $graduate_period_attendance_from;
+        private $graduate_period_attendance_to;
+        private $graduate_highest_level;
+        private $graduate_year_graduated;
+        private $graduate_scholarship;
+
+        // Civil Service Eligibility
+        private $career_service;
+        private $career_rating;
+        private $career_examination_date;
+        private $career_examination_place;
+        private $career_number;
+        private $career_validity_date;
+
+        // Work Experience
+        private $work_inclusive_dates_from;
+        private $work_inclusive_dates_to;
+        private $work_position_title;
+        private $work_department;
+        private $work_monthly_salary;
+        private $work_salary;
+        private $work_status_appointment;
+        private $work_govt_service;
+
+        // VOLUNTARY WORK OR INVOLVEMENT IN CIVIC / NON-GOVERNMENT / PEOPLE / VOLUNTARY ORG/S
+        private $voluntary_organization_name;
+        private $voluntary_organization_address;
+        private $voluntary_inclusive_date_from;
+        private $voluntary_inclusive_date_to;
+        private $voluntary_number_hours;
+        private $voluntary_position;
+
+         // LEARNING AND DEVELOPMENT (L&D) INTERVENTIONS/TRAINING PROGRAMS ATTENDED
+        private $training_program;
+        private $training_inclusive_date_from;
+        private $training_inclusive_date_to;
+        private $training_number_hours;
+        private $training_ld_type; // LD TYPE
+        private $training_conducted;
 
         // Reading the inputs in pds_controller
         public function pds_construct ($surname, $first_name, $middle_name, $suffix_name) {
@@ -88,7 +166,7 @@
         }
 
         public function setSurname($surname) {
-            $this->surname = $surname
+            $this->surname = $surname;
         }
 
         public function getFirstName() {
@@ -96,7 +174,7 @@
         }
 
         public function setFirstName($first_name) {
-            $this->first_name = $first_name
+            $this->first_name = $first_name;
         }
 
         public function getMiddleName() {
@@ -442,32 +520,576 @@
         public function setSpouseTelephoneNumber($spouse_telephone_number) {
             $this-> spouse_telephone_number = $spouse_telephone_number;
         }
-        
-        
 
-        
-        
-        // Father Information
-        private $father_surname;
-        private $father_first_name;
-        private $father_middle_name;
-        private $father_suffix;
+        public function getFatherSurname() {
+            return $this-> father_surname;
+        }
 
-        // Mother Information
-        private $mother_surname;
-        private $mother_first_name;
-        private $mother_middle_name;
-        private $mother_suffix;
+        public function setFatherSurname($father_surname) {
+            $this-> father_surname = $father_surname;
+        }
 
-        // Child Information
-        private $name_child;
-        private $child_birth_date;
+        public function getFatherFirstName() {
+            return $this-> father_first_name;
+        }
 
+        public function setFatherFirstName($father_first_name) {
+            $this-> father_first_name = $father_first_name;
+        }
+
+        public function getFatherMiddleName() {
+            return $this-> father_middle_name;
+        }
+
+        public function setFatherMiddleName($father_middle_name) {
+            $this-> father_middle_name = $father_middle_name;
+        }
+
+        public function getFatherSuffix() {
+            return $this-> father_suffix;
+        }
+
+        public function setFatherSuffix($father_suffix) {
+            $this-> father_suffix = $father_suffix;
+        }
+
+        public function getMotherSurname() {
+            return $this-> mother_surname;
+        }
+
+        public function setMotherSurname($mother_surname) {
+            $this-> mother_surname = $mother_surname;
+        }
+
+        public function getMotherFirstName() {
+            return $this-> mother_first_name;
+        }
+
+        public function setMotherFirstName($mother_first_name) {
+            $this-> mother_first_name = $mother_first_name;
+        }
+
+        public function getMotherMiddleName() {
+            return $this-> mother_middle_name;
+        }
+
+        public function setMotherMiddleName($mother_middle_name) {
+            $this-> mother_middle_name = $mother_middle_name;
+        }
+
+        public function getMotherSuffix() {
+            return $this-> mother_suffix;
+        }
+
+        public function setMotherSuffix($mother_suffix) {
+            $this-> mother_suffix = $mother_suffix;
+        }
+
+        public function getNameChild() {
+            return $this-> name_child;
+        }
+
+        public function setNameChild($name_child) {
+            $this-> name_child = $name_child;
+        }
+
+        public function getChildBirthDate() {
+            return $this-> child_birth_date;
+        }
+
+        public function setChildBirthDate($child_birth_date) {
+            $this-> child_birth_date = $child_birth_date;
+        }
+
+        public function getElementarySchoolName() {
+            return $this-> elementary_school_name;
+        }
+
+        public function setElementarySchoolName($elementary_school_name) {
+            $this-> elementary_school_name = $elementary_school_name;
+        }
+
+        public function getElementaryBasicEducation() {
+            return $this-> elementary_basic_education;
+        }
+
+        public function setElementaryBasicEducation($elementary_basic_education) {
+            $this-> elementary_basic_education = $elementary_basic_education;
+        }
+
+        public function getElementaryPeriodAttendanceFrom() {
+            return $this-> elementary_period_attendance_from;
+        }
+
+        public function setElementaryPeriodAttendanceFrom($elementary_period_attendance_from) {
+            $this-> elementary_period_attendance_from = $elementary_period_attendance_from;
+        }
+
+        public function getElementaryPeriodAttendanceTo() {
+            return $this-> elementary_period_attendance_to;
+        }
+
+        public function setElementaryPeriodAttendanceTo($elementary_period_attendance_to) {
+            $this-> elementary_period_attendance_to = $elementary_period_attendance_to;
+        }
+
+        public function getElementaryHighestLevel() {
+            return $this-> elementary_highest_level;
+        }
+
+        public function setElementaryHighestLevel($elementary_highest_level) {
+            $this-> elementary_highest_level = $elementary_highest_level;
+        }
+
+        public function getElementaryYearGraduated() {
+            return $this-> elementary_year_graduated;
+        }
+
+        public function setElementaryYearGraduated($elementary_year_graduated) {
+            $this-> elementary_year_graduated = $elementary_year_graduated;
+        }
+
+        public function getElementaryScholarship() {
+            return $this-> elementary_scholarship;
+        }
+
+        public function setElementaryScholarship($elementary_scholarship) {
+            $this-> elementary_scholarship = $elementary_scholarship;
+        }
+
+        public function getSecondarySchoolName() {
+            return $this-> secondary_school_name;
+        }
+
+        public function setSecondarySchoolName($secondary_school_name) {
+            $this-> secondary_school_name = $secondary_school_name;
+        }
+
+        public function getSecondaryBasicEducation() {
+            return $this-> secondary_basic_education;
+        }
+
+        public function setSecondaryBasicEducation($secondary_basic_education) {
+            $this-> secondary_basic_education = $secondary_basic_education;
+        }
+
+        public function getSecondaryPeriodAttendanceFrom() {
+            return $this-> secondary_period_attendance_from;
+        }
+
+        public function setSecondaryPeriodAttendanceFrom($secondary_period_attendance_from) {
+            $this-> secondary_period_attendance_from = $secondary_period_attendance_from;
+        }
+
+        public function getSecondaryPeriodAttendanceTo() {
+            return $this-> secondary_period_attendance_to;
+        }
+
+        public function setSecondaryPeriodAttendanceTo($secondary_period_attendance_to) {
+            $this-> secondary_period_attendance_to = $secondary_period_attendance_to;
+        }
+
+        public function getSecondaryHighestLevel() {
+            return $this-> secondary_highest_level;
+        }
+
+        public function setSecondaryHighestLevel($secondary_highest_level) {
+            $this-> secondary_highest_level = $secondary_highest_level;
+        }
+
+        public function getSecondaryYearGraduated() {
+            return $this-> secondary_year_graduated;
+        }
+
+        public function setSecondaryYearGraduated($secondary_year_graduated) {
+            $this-> secondary_year_graduated = $secondary_year_graduated;
+        }
+
+        public function getSecondaryScholarship() {
+            return $this-> secondary_scholarship;
+        }
+
+        public function setSecondaryScholarship($secondary_scholarship) {
+            $this-> secondary_scholarship = $secondary_scholarship;
+        }
+
+        public function getVocationalSchoolName() {
+            return $this-> vocational_school_name;
+        }
+
+        public function setVocationalSchoolName($vocational_school_name) {
+            $this-> vocational_school_name = $vocational_school_name;
+        }
+
+        public function getVocationalBasicEducation() {
+            return $this-> vocational_basic_education;
+        }
+
+        public function setVocationalBasicEducation($vocational_basic_education) {
+            $this-> vocational_basic_education = $vocational_basic_education;
+        }
+
+        public function getVocationalPeriodAttendanceFrom() {
+            return $this-> vocational_period_attendance_from;
+        }
+
+        public function setVocationalPeriodAttendanceFrom($vocational_period_attendance_from) {
+            $this-> vocational_period_attendance_from = $vocational_period_attendance_from;
+        }
+
+        public function getVocationalPeriodAttendanceTo() {
+            return $this-> vocational_period_attendance_to;
+        }
+
+        public function setVocationalPeriodAttendanceTo($vocational_period_attendance_to) {
+            $this-> vocational_period_attendance_to = $vocational_period_attendance_to;
+        }
+
+        public function getVocationalHighestLevel() {
+            return $this-> vocational_highest_level;
+        }
+
+        public function setVocationalHighestLevel($vocational_highest_level) {
+            $this-> vocational_highest_level = $vocational_highest_level;
+        }
+
+        public function getVocationalYearGraduated() {
+            return $this-> vocational_year_graduated;
+        }
+
+        public function setVocationalYearGraduated($vocational_year_graduated) {
+            $this-> vocational_year_graduated = $vocational_year_graduated;
+        }
+
+        public function getVocationalScholarship() {
+            return $this-> vocational_scholarship;
+        }
+
+        public function setVocationalScholarship($vocational_scholarship) {
+            $this-> vocational_scholarship = $vocational_scholarship;
+        }
+
+        public function getCollegeSchoolName() {
+            return $this-> college_school_name;
+        }
+
+        public function setCollegeSchoolName($college_school_name) {
+            $this-> college_school_name = $college_school_name;
+        }
+
+        public function getCollegeBasicEducation() {
+            return $this-> college_basic_education;
+        }
+
+        public function setCollegeBasicEducation($college_basic_education) {
+            $this-> college_basic_education = $college_basic_education;
+        }
+
+        public function getCollegePeriodAttendanceFrom() {
+            return $this-> college_period_attendance_from;
+        }
+
+        public function setCollegePeriodAttendanceFrom($college_period_attendance_from) {
+            $this-> college_period_attendance_from = $college_period_attendance_from;
+        }
+
+        public function getCollegePeriodAttendanceTo() {
+            return $this-> college_period_attendance_from;
+        }
+
+        public function setCollegePeriodAttendanceTo($college_period_attendance_to) {
+            $this-> college_period_attendance_to = $college_period_attendance_to;
+        }
+
+        public function getCollegeHighestLevel() {
+            return $this-> college_highest_level;
+        }
+
+        public function setCollegeHighestLevel($college_highest_level) {
+            $this-> college_highest_level = $college_highest_level;
+        }
+
+        public function getCollegeYearGraduated() {
+            return $this-> college_year_graduated;
+        }
+
+        public function setCollegeYearGraduated($college_year_graduated) {
+            $this-> college_year_graduated = $college_year_graduated;
+        }
+
+        public function getCollegeScholarship() {
+            return $this-> college_scholarship;
+        }
+
+        public function setCollegeScholarship($college_scholarship) {
+            $this-> college_scholarship = $college_scholarship;
+        }
+
+        public function getGraduateSchoolName() {
+            return $this-> graduate_school_name;
+        }
+
+        public function setGraduateSchoolName($graduate_school_name) {
+            $this-> graduate_school_name = $graduate_school_name;
+        }
+
+        public function getGraduateBasicEducation() {
+            return $this-> graduate_basic_education;
+        }
+
+        public function setGraduateBasicEducation($graduate_basic_education) {
+            $this-> graduate_basic_education = $graduate_basic_education;
+        }
         
+        public function getGraduatePeriodAttendanceFrom() {
+            return $this-> graduate_period_attendance_from;
+        }
 
-        
+        public function setGraduatePeriodAttendanceFrom($graduate_period_attendance_from) {
+            $this-> graduate_period_attendance_from = $graduate_period_attendance_from;
+        }
 
+        public function getGraduatePeriodAttendanceTo() {
+            return $this-> graduate_period_attendance_to;
+        }
+
+        public function setGraduatePeriodAttendanceTo($graduate_period_attendance_to) {
+            $this-> graduate_period_attendance_to = $graduate_period_attendance_to;
+        }
+
+        public function getGraduateHighestLevel() {
+            return $this-> graduate_highest_level;
+        }
+
+        public function setGraduateHighestLevel($graduate_highest_level) {
+            $this-> graduate_highest_level = $graduate_highest_level;
+        }
+
+        public function getGraduateYearGraduated() {
+            return $this-> graduate_year_graduated;
+        }
+
+        public function setGraduateYearGraduated($graduate_year_graduated) {
+            $this-> graduate_year_graduated = $graduate_year_graduated;
+        }
+
+        public function getGraduateScholarship() {
+            return $this-> graduate_scholarship;
+        }
+
+        public function setGraduateScholarship($graduate_scholarship) {
+            $this-> graduate_scholarship = $graduate_scholarship;
+        }
+
+        public function getCareerService() {
+            return $this-> career_service;
+        }
+
+        public function setCareerService($career_service) {
+            $this-> career_service = $career_service;
+        }
+
+        public function getCareerRating() {
+            return $this-> career_rating;
+        }
+
+        public function setCareerRating($career_rating) {
+            $this-> career_rating = $career_rating;
+        }
+
+        public function getCareerExaminationDate() {
+            return $this-> career_examination_date;
+        }
+
+        public function setCareerExaminationDate($career_examination_date) {
+            $this-> career_examination_date = $career_examination_date;
+        }
+
+        public function getCareerExaminationPlace() {
+            return $this-> career_examination_place;
+        }
+
+        public function setCareerExaminationPlace($career_examination_place) {
+            $this-> career_examination_place = $career_examination_place;
+        }
+
+        public function getCareerNumber() {
+            return $this-> career_number;
+        }
+
+        public function setCareerNumber($career_number) {
+            $this-> career_number = $career_number;
+        }
+
+        public function getCareerValidityDate() {
+            return $this-> career_validity_date;
+        }
+
+        public function setCareerValidityDate($career_validity_date) {
+            $this-> career_validity_date = $career_validity_date;
+        }
+
+        public function getWorkInclusiveDatesFrom() {
+            return $this-> work_inclusive_dates_from;
+        }
+
+        public function setWorkInclusiveDatesFrom($work_inclusive_dates_from) {
+            $this-> work_inclusive_dates_from = $work_inclusive_dates_from;
+        }
+
+        public function getWorkInclusiveDatesTo() {
+            return $this-> work_inclusive_dates_to;
+        }
+
+        public function setWorkInclusiveDatesTo($work_inclusive_dates_to) {
+            $this-> work_inclusive_dates_to = $work_inclusive_dates_to;
+        }
+
+        public function getWorkPositionTitle() {
+            return $this-> work_position_title;
+        }
+
+        public function setWorkPositionTitle($work_position_title) {
+            $this-> work_position_title = $work_position_title;
+        }
+
+        public function getWorkDepartment() {
+            return $this-> work_department;
+        }
+
+        public function setWorkDepartment($work_department) {
+            $this-> work_department = $work_department;
+        }
         
+        public function getWorkMonthlySalary() {
+            return $this-> work_monthly_salary;
+        }
+
+        public function setWorkMonthlySalary($work_monthly_salary) {
+            $this-> work_monthly_salary = $work_monthly_salary;
+        }
+
+        public function getWorkSalary() {
+            return $this-> work_salary;
+        }
+
+        public function setWorkSalary($work_salary) {
+            $this-> work_salary = $work_salary;
+        }
+
+        public function getWorkStatusAppointment() {
+            return $this-> work_status_appointment;
+        }
+
+        public function setWorkStatusAppointment($work_status_appointment) {
+            $this-> work_status_appointment = $work_status_appointment;
+        }
+
+        public function getWorkGovtService() {
+            return $this-> work_govt_service;
+        }
+
+        public function setWorkGovtService($work_govt_service) {
+            $this-> work_govt_service = $work_govt_service;
+        }
+
+        public function getVoluntaryOrganiztionName() {
+            return $this-> voluntary_organization_name;
+        }
+
+        public function setVoluntaryOrganiztionName($voluntary_organization_name) {
+            $this-> voluntary_organization_name = $voluntary_organization_name;
+        }
+
+        public function getVoluntaryOrganiztionAddress() {
+            return $this-> voluntary_organization_address;
+        }
+
+        public function setVoluntaryOrganiztionAddress($voluntary_organization_address) {
+            $this-> voluntary_organization_address = $voluntary_organization_address;
+        }
+
+        public function getVoluntaryInclusiveDateFrom() {
+            return $this-> voluntary_inclusive_date_from;
+        }
+
+        public function setVoluntaryInclusiveDateFrom($voluntary_inclusive_date_from) {
+            $this-> voluntary_inclusive_date_from = $voluntary_inclusive_date_from;
+        }
+
+        public function getVoluntaryInclusiveDateTo() {
+            return $this-> voluntary_inclusive_date_to;
+        }
+
+        public function setVoluntaryInclusiveDateTo($voluntary_inclusive_date_to) {
+            $this-> voluntary_inclusive_date_to = $voluntary_inclusive_date_to;
+        }
+
+        public function getVoluntaryNumberHours() {
+            return $this-> voluntary_number_hours;
+        }
+
+        public function setVoluntaryNumberHours($voluntary_number_hours) {
+            $this-> voluntary_number_hours = $voluntary_number_hours;
+        }
+
+        public function getVoluntaryPosition() {
+            return $this-> voluntary_position;
+        }
+
+        public function setVoluntaryPosition($voluntary_position) {
+            $this-> voluntary_position = $voluntary_position;
+        }
+
+        public function getTrainingProgram() {
+            return $this-> training_program;
+        }
+
+        public function setTrainingProgram($training_program) {
+            $this-> training_program = $training_program;
+        }
+
+        public function getTrainingInclusiveDateFrom() {
+            return $this-> training_inclusive_date_from;
+        }
+
+        public function setTrainingInclusiveDateFrom($training_inclusive_date_from) {
+            $this-> training_inclusive_date_from = $training_inclusive_date_from;
+        }
+
+        public function getTrainingInclusiveDateTo() {
+            return $this-> training_inclusive_date_to;
+        }
+
+        public function setTrainingInclusiveDateTo($training_inclusive_date_to) {
+            $this-> training_inclusive_date_to = $training_inclusive_date_to;
+        }
+
+        public function getTrainingNumberHours() {
+            return $this-> training_number_hours;
+        }
+
+        public function setTrainingNumberHours($training_number_hours) {
+            $this-> training_number_hours = $training_number_hours;
+        }
+
+        public function getTrainingLdType() {
+            return $this-> training_ld_type;
+        }
+
+        public function setTrainingLdType($training_ld_type) {
+            $this-> training_ld_type = $training_ld_type;
+        }
+
+        public function getTrainingConducted() {
+            return $this-> training_conducted;
+        }
+
+        public function setTrainingConducted($training_conducted) {
+            $this-> training_conducted = $training_conducted;
+        }
+
+
         
         
         
