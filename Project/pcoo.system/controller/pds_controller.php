@@ -171,11 +171,143 @@
 
 
     $read-> pds_construct($surname, $first_name, $middle_name, $suffix_name);
-    
     $read-> setSurname($surname);
     $read-> setFirstName($first_name);
     $read-> setMiddleName($middle_name);
     $read-> setSuffixName($suffix_name);
+
+    $read-> setBirthDate($birth_date);
+    $read-> setBirthPlace($birth_place);
+    $read-> setSex($sex);
+    $read-> setCivilStatus($civil_status);
+    $read-> setHeight($height);
+    $read-> setWeight($weight);
+    $read-> setBloodType($blood_type);
+
+    $read-> setGsisId($gsis_id);
+    $read-> setPagibigId($pagibig_id);
+    $read-> setPhilhealthId($philhealth_id);
+    $read-> setSssId($sss_id);
+    $read-> setTinId($tin_id);
+    $read-> setEmployeeNumber($employee_number);
+
+    $read-> setTelephoneNumber($telephone_number);
+    $read-> setCellphoneNumber($cellphone_number);
+    $read-> setEmailAdd($email_add);
+    $read-> setCitizenship($citizenship);
+    $read-> setImmigrant($immigrant);
+    $read-> setCountry($country);
+
+    $read-> setResidentialAddress($residential_address);
+    $read-> setResidentialStreet($residential_street);
+    $read-> setResidentialSubdivision($residential_subdivision);
+    $read-> setResidentialBarangay($residential_barangay);
+    $read-> setResidentialCity($residential_city);
+    $read-> setResidentialProvince($residential_province);
+    $read-> setResidentialZipCode($residential_zip_code);
+
+    $read-> setPermanentAddress($permanent_address);
+    $read-> setPermanentStreet($permanent_street);
+    $read-> setPermanentSubdivision($permanent_subdivision);
+    $read-> setPermanentBarangay($permanent_barangay);
+    $read-> setPermanentCity($permanent_city);
+    $read-> setPermanentProvince($permanent_province);
+    $read-> setPermanentZipCode($permanent_zip_code);
+
+    $read-> setSpouseSurname($spouse_surname);
+    $read-> setSpouseFirstName($spouse_first_name);
+    $read-> setSpouseMiddleName($spouse_middle_name);
+    $read-> setSpouseSuffix($spouse_suffix);
+    $read-> setSpouseOccupation($spouse_occupation);
+    $read-> setSpouseBusinessName($spouse_business_name);
+    $read-> setSpouseBusinessAddress($spouse_business_address);
+    $read-> setSpouseTelephoneNumber($spouse_telephone_number);
+    
+    $read-> setFatherSurname($father_surname);
+    $read-> setFatherFirstName($father_first_name);
+    $read-> setFatherMiddleName($father_middle_name);
+    $read-> setFatherSuffix($father_suffix);
+
+    $read-> setMotherSurname($mother_surname);
+    $read-> setMotherFirstName($mother_first_name);
+    $read-> setMotherMiddleName($mother_middle_name);
+    $read-> setMotherSuffix($mother_suffix);
+
+    $read-> setNameChild($name_child);
+    $read-> setChildBirthDate($child_birth_date);
+
+    $read-> setElementarySchoolName($elementary_school_name);
+    $read-> setElementaryBasicEducation($elementary_basic_education);
+    $read-> setElementaryPeriodAttendanceFrom($elementary_period_attendance_from);
+    $read-> setElementaryPeriodAttendanceTo($elementary_period_attendance_to);
+    $read-> setElementaryHighestLevel($elementary_highest_level);
+    $read-> setElementaryYearGraduated($elementary_year_graduated);
+    $read-> setElementaryScholarship($elementary_scholarship);
+
+    $read-> setSecondarySchoolName($secondary_school_name);
+    $read-> setSecondaryBasicEducation($secondary_basic_education);
+    $read-> setSecondaryPeriodAttendanceFrom($secondary_period_attendance_from);
+    $read-> setSecondaryPeriodAttendanceTo($secondary_period_attendance_to);
+    $read-> setSecondaryHighestLevel($secondary_highest_level);
+    $read-> setSecondaryYearGraduated($secondary_year_graduated);
+    $read-> setSecondaryScholarship($secondary_scholarship);
+
+    $read-> setVocationalSchoolName($vocational_school_name);
+    $read-> setVocationalBasicEducation($vocational_basic_education);
+    $read-> setVocationalPeriodAttendanceFrom($vocational_period_attendance_from);
+    $read-> setVocationalPeriodAttendanceTo($vocational_period_attendance_to);
+    $read-> setVocationalHighestLevel($vocational_highest_level);
+    $read-> setVocationalYearGraduated($vocational_year_graduated);
+    $read-> setVocationalScholarship($vocational_scholarship);
+
+    $read-> setCollegeSchoolName($college_school_name);
+    $read-> setCollegeBasicEducation($college_basic_education);
+    $read-> setCollegePeriodAttendanceFrom($college_period_attendance_from);
+    $read-> setCollegePeriodAttendanceTo($college_period_attendance_to);
+    $read-> setCollegeHighestLevel($college_highest_level);
+    $read-> setCollegeYearGraduated($college_year_graduated);
+    $read-> setCollegeScholarship($college_scholarship);
+
+    $read-> setGraduateSchoolName($graduate_school_name);
+    $read-> setGraduateBasicEducation($graduate_basic_education);
+    $read-> setGraduatePeriodAttendanceFrom($graduate_period_attendance_from);
+    $read-> setGraduatePeriodAttendanceTo($graduate_period_attendance_to);
+    $read-> setGraduateHighestLevel($graduate_highest_level);
+    $read-> setGraduateYearGraduated($graduate_year_graduated);
+    $read-> setGraduateScholarship($graduate_scholarship);
+
+    $read-> setCareerService($career_service);
+    $read-> setCareerRating($career_rating);
+    $read-> setCareerExaminationDate($career_examination_date);
+    $read-> setCareerExaminationPlace($career_examination_place);
+    $read-> setCareerNumber($career_number);
+    $read-> setCareerValidityDate($career_validity_date);
+
+    $read-> setWorkInclusiveDatesFrom($work_inclusive_dates_from);
+    $read-> setWorkInclusiveDatesTo($work_inclusive_dates_to);
+    $read-> setWorkPositionTitle($work_position_title);
+    $read-> setWorkDepartment($work_department);
+    $read-> setWorkMonthlySalary($work_monthly_salary);
+    $read-> setWorkSalary($work_salary);
+    $read-> setWorkStatusAppointment($work_status_appointment);
+    $read-> setWorkGovtService($work_govt_service);
+
+    $read-> setVoluntaryOrganiztionName($voluntary_organization_name);
+    $read-> setVoluntaryOrganiztionAddress($voluntary_organization_address);
+    $read-> setVoluntaryInclusiveDateFrom($voluntary_inclusive_date_from);
+    $read-> setVoluntaryInclusiveDateTo($voluntary_inclusive_date_to);
+    $read-> setVoluntaryNumberHours($voluntary_number_hours);
+    $read-> setVoluntaryPosition($voluntary_position);
+
+    $read-> setTrainingProgram($training_program);
+    $read-> setTrainingInclusiveDateFrom($training_inclusive_date_from);
+    $read-> setTrainingInclusiveDateTo($training_inclusive_date_to);
+    $read-> setTrainingNumberHours($training_number_hours);
+    $read-> setTrainingLdType($training_ld_type);
+    $read-> setTrainingConducted($training_conducted);
+
+    
+
 
     
     $dbConnection->check_database_connection($check_db_connection);
@@ -188,7 +320,148 @@
         $middle_name = $read-> getMiddleName();
         $suffix_name = $read-> getSuffixName();
 
-        $dbQuery-> pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix_name);
+        $birth_date = $read -> getBirthDate();
+        $birth_place = $read -> getBirthPlace();
+        $sex = $read -> getSex();
+        $civil_status = $read -> getCivilStatus();
+        $height = $read -> getHeight();
+        $weight = $read -> getWeight();
+        $blood_type = $read -> getBloodType();
+        
+        $gsis_id = $read -> getGsisId();
+        $pagibig_id = $read -> getPagibigId();
+        $philhealth_id = $read -> getPhilhealthId();
+        $sss_id = $read -> getSssId();
+        $tin_id = $read -> getTinId();
+        $employee_number = $read -> getEmployeeNumber();
+
+        $telephone_number = $read -> getTelephoneNumber();
+        $cellphone_number = $read -> getCellphoneNumber();
+        $email_add = $read -> getEmailAdd();
+        $citizenship = $read -> getCitizenship();
+        $immigrant = $read -> getImmigrant();
+        $country = $read -> getCountry();
+
+        $residential_address = $read -> getResidentialAddress();
+        $residential_street = $read -> getResidentialStreet();
+        $residential_subdivision = $read -> getResidentialSubdivision();
+        $residential_barangay = $read -> getResidentialBarangay();
+        $residential_city = $read -> getResidentialCity();
+        $residential_province = $read -> getResidentialProvince();
+        $residential_zip_code = $read -> getResidentialZipCode();
+
+        $permanent_address = $read -> getPermanentAddress();
+        $permanent_street = $read -> getPermanentStreet();
+        $permanent_subdivision = $read -> getPermanentSubdivision();
+        $permanent_barangay = $read -> getPermanentBarangay();
+        $permanent_city = $read -> getPermanentCity();
+        $permanent_province = $read -> getPermanentProvince();
+        $permanent_zip_code = $read -> getPermanentZipCode();
+
+        $spouse_surname = $read -> getSpouseSurname();
+        $spouse_first_name = $read -> getSpouseFirstName();
+        $spouse_middle_name = $read -> getSpouseMiddleName();
+        $spouse_suffix = $read -> getSpouseSuffix();
+        $spouse_occupation = $read -> getSpouseOccupation();
+        $spouse_business_name = $read -> getSpouseBusinessName();
+        $spouse_business_address = $read -> getSpouseBusinessAddress();
+        $spouse_telephone_number = $read -> getSpouseTelephoneNumber();
+
+        $father_surname = $read -> getFatherSurname();
+        $father_first_name = $read -> getFatherFirstName();
+        $father_middle_name = $read -> getFatherMiddleName();
+        $father_suffix = $read -> getFatherSuffix();
+
+        $mother_surname = $read -> getMotherSurname();
+        $mother_first_name = $read -> getMotherFirstName();
+        $mother_middle_name = $read -> getMotherMiddleName();
+        $mother_suffix = $read -> getMotherSuffix();
+
+        $name_child = $read -> getNameChild();
+        $child_birth_date = $read -> getChildBirthDate();
+
+        $elementary_school_name = $read -> getElementarySchoolName();
+        $elementary_basic_education = $read -> getElementaryBasicEducation();
+        $elementary_period_attendance_from = $read -> getElementaryPeriodAttendanceFrom();
+        $elementary_period_attendance_to = $read -> getElementaryPeriodAttendanceTo();
+        $elementary_highest_level = $read -> getElementaryHighestLevel();
+        $elementary_year_graduated = $read -> getElementaryYearGraduated();
+        $elementary_scholarship = $read -> getElementaryScholarship();
+
+        $secondary_school_name = $read -> getSecondarySchoolName();
+        $secondary_basic_education = $read -> getSecondaryBasicEducation();
+        $secondary_period_attendance_from = $read -> getSecondaryPeriodAttendanceFrom();
+        $secondary_period_attendance_to = $read -> getSecondaryPeriodAttendanceTo();
+        $secondary_highest_level = $read -> getSecondaryHighestLevel();
+        $secondary_year_graduated = $read -> getSecondaryYearGraduated();
+        $secondary_scholarship = $read -> getSecondaryScholarship();
+
+        $vocational_school_name = $read -> getVocationalSchoolName();
+        $vocational_basic_education = $read -> getVocationalBasicEducation();
+        $vocational_period_attendance_from = $read -> getVocationalPeriodAttendanceFrom();
+        $vocational_period_attendance_to = $read -> getVocationalPeriodAttendanceTo();
+        $vocational_highest_level = $read -> getVocationalHighestLevel();
+        $vocational_year_graduated = $read -> getVocationalYearGraduated();
+        $vocational_scholarship = $read -> getVocationalScholarship();
+
+        $college_school_name = $read -> getCollegeSchoolName();
+        $college_basic_education = $read -> getCollegeBasicEducation();
+        $college_period_attendance_from = $read -> getCollegePeriodAttendanceFrom();
+        $college_period_attendance_to = $read -> getCollegePeriodAttendanceTo();
+        $college_highest_level = $read -> getCollegeHighestLevel();
+        $college_year_graduated = $read -> getCollegeYearGraduated();
+        $college_scholarship = $read -> getCollegeScholarship();
+
+        $graduate_school_name = $read -> getGraduateSchoolName();
+        $graduate_basic_education = $read -> getGraduateBasicEducation();
+        $graduate_period_attendance_from = $read -> getGraduatePeriodAttendanceFrom();
+        $graduate_period_attendance_to = $read -> getGraduatePeriodAttendanceTo();
+        $graduate_highest_level = $read -> getGraduateHighestLevel();
+        $graduate_year_graduated = $read -> getGraduateYearGraduated();
+        $graduate_scholarship = $read -> getGraduateScholarship();
+
+        $career_service = $read -> getCareerService();
+        $career_rating = $read -> getCareerRating();
+        $career_examination_date = $read -> getCareerExaminationDate();
+        $career_examination_place = $read -> getCareerExaminationPlace();
+        $career_number = $read -> getCareerNumber();
+        $career_validity_date = $read -> getCareerValidityDate();
+
+        $work_inclusive_dates_from = $read -> getWorkInclusiveDatesFrom();
+        $work_inclusive_dates_to = $read -> getWorkInclusiveDatesTo();
+        $work_position_title = $read -> getWorkPositionTitle();
+        $work_department = $read -> getWorkDepartment();
+        $work_monthly_salary = $read -> getWorkMonthlySalary();
+        $work_salary = $read -> getWorkSalary();
+        $work_status_appointment = $read -> getWorkStatusAppointment();
+        $work_govt_service = $read -> getWorkGovtService();
+
+        $voluntary_organization_name = $read -> getVoluntaryOrganiztionName();
+        $voluntary_organization_address = $read -> getVoluntaryOrganiztionAddress();
+        $voluntary_inclusive_date_from = $read -> getVoluntaryInclusiveDateFrom();
+        $voluntary_inclusive_date_to = $read -> getVoluntaryInclusiveDateTo();
+        $voluntary_number_hours = $read -> getVoluntaryNumberHours();
+        $voluntary_position = $read -> getVoluntaryPosition();
+
+        $training_program = $read -> getTrainingProgram();
+        $training_inclusive_date_from = $read -> getTrainingInclusiveDateFrom();
+        $training_inclusive_date_to = $read -> getTrainingInclusiveDateTo();
+        $training_number_hours = $read -> getTrainingNumberHours();
+        $training_ld_type = $read -> getTrainingLdType();
+        $training_conducted = $read -> getTrainingConducted();
+
+
+
+
+
+
+
+        
+
+
+
+
+        $dbQuery-> pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix_name,$birth_date,$birth_place,$sex,$civil_status,$height,$weight,$blood_type,$gsis_id,$pagibig_id,$philhealth_id,$sss_id,$tin_id,$employee_number,$telephone_number,$cellphone_number,$email_add,$citizenship,$immigrant,$country,$residential_address,$residential_street,$residential_subdivision,$residential_barangay,$residential_city,$residential_province,$residential_zip_code, $permanent_address,$permanent_street,$permanent_subdivision,$permanent_barangay,$permanent_city,$permanent_province,$permanent_zip_code,$spouse_surname,$spouse_first_name,$spouse_middle_name,$spouse_suffix,$spouse_occupation,$spouse_business_name, $spouse_business_address,$spouse_telephone_number,$father_surname,$father_first_name,$father_middle_name,$father_suffix,$mother_surname,$mother_first_name,$mother_middle_name,$mother_suffix,$name_child,$child_birth_date,$elementary_school_name,$elementary_basic_education,$elementary_period_attendance_from,$elementary_period_attendance_to,$elementary_highest_level,$elementary_year_graduated,$elementary_scholarship,$secondary_school_name,$secondary_basic_education,$secondary_period_attendance_from,$secondary_period_attendance_to,$secondary_highest_level,$secondary_year_graduated,$secondary_scholarship,$vocational_school_name,$vocational_basic_education,$vocational_period_attendance_from,$vocational_period_attendance_to,$vocational_highest_level,$vocational_year_graduated,$vocational_scholarship,$college_school_name,$college_basic_education,$college_period_attendance_from,$college_period_attendance_to,$college_highest_level,$college_year_graduated,$college_scholarship,$graduate_school_name,$graduate_basic_education,$graduate_period_attendance_from,$graduate_period_attendance_to,$graduate_highest_level,$graduate_year_graduated,$graduate_scholarship,$career_service,$career_rating,$career_examination_date,$career_examination_place,$career_number,$career_validity_date,$work_inclusive_dates_from,$work_inclusive_dates_to,$work_position_title,$work_department,$work_monthly_salary,$work_salary,$work_status_appointment,$work_govt_service,$voluntary_organization_name,$voluntary_organization_address,$voluntary_inclusive_date_from,$voluntary_inclusive_date_to,$voluntary_number_hours,$voluntary_position,$training_program,$training_inclusive_date_from,$training_inclusive_date_to,$training_number_hours,$training_ld_type,$training_conducted);
  
     } 
 
