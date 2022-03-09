@@ -110,21 +110,29 @@
     <!-- connection of form to pds_controller.php -->
     <form action="pds_controller.php" method="post" class="container-xl px-4" id="one" autocomplete="off">
 
+      <!-- letters only -->
+      <script>
+      function lettersOnly(input){
+        var regex = /[^a-z]/gi;
+        input.value = input.value.replace(regex, "");
+      }
+
+      </script>
       <div class="step step-1 active">
         <h4>I. PERSONAL INFORMATION</h4>
         <!-- name -->
         <div class="row mb-2 gy-2 gx-2">
           <div class="col-md-4">
             <label for="surname" class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
-            <input type="text" name="pds_surname" id="surname" class="form-control" required>
+            <input type="text" name="pds_surname" id="surname" class="form-control" onkeyup="lettersOnly(this)" required>
           </div>
           <div class="col-md-3">
             <label for="firstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
-            <input type="text" name="pds_first_name" id="firstName" class="form-control" required>
+            <input type="text" name="pds_first_name" id="firstName" class="form-control" onkeyup="lettersOnly(this)" required>
           </div>
           <div class="col-md-3 col-6">
             <label for="middleName" class="text-muted small ms-2">MIDDLE NAME</label>
-            <input type="text" name="pds_middle_name" id="middleName" class="form-control">
+            <input type="text" name="pds_middle_name" id="middleName" onkeyup="lettersOnly(this)" class="form-control">
           </div>
           <div class="col-md-2 col-6">
             <label for="suffixName" class="text-muted small ms-2">SUFFIX (JR,SR)</label>
@@ -268,27 +276,27 @@
 
               <div class="col-6">
                 <label for="residentialStreet" class="text-muted small ms-2"></label>
-                <input name="pds_residential_street" id="residentialStreet" type="text" class="form-control" placeholder="Street">
+                <input name="pds_residential_street" id="residentialStreet" type="text" class="form-control" placeholder="Street" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="residentialSubdivision" class="text-muted small ms-2"></label>
-                <input name="pds_residential_subdivision" id="residentialSubdivision" type="text" class="form-control" placeholder="Subdivision/Village">
+                <input name="pds_residential_subdivision" id="residentialSubdivision" type="text" class="form-control" placeholder="Subdivision/Village" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="residentialBarangay" class="text-muted small ms-2"></label>
-                <input  name="pds_residential_barangay" id="residentialBarangay" type="text" class="form-control" placeholder="Barangay">
+                <input  name="pds_residential_barangay" id="residentialBarangay" type="text" class="form-control" placeholder="Barangay" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="residentialCity"class="text-muted small ms-2"></label>
-                <input  name="pds_residential_city" id="residentialCity" type="text" class="form-control" placeholder="City/Municipality">
+                <input  name="pds_residential_city" id="residentialCity" type="text"  class="form-control" placeholder="City/Municipality" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="residentialProvince" class="text-muted small ms-2"></label>
-                <input name="pds_residential_province" id="residentialProvince" type="text" class="form-control" placeholder="Province">
+                <input name="pds_residential_province" id="residentialProvince" type="text" class="form-control" placeholder="Province" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
@@ -307,27 +315,27 @@
 
               <div class="col-6">
                 <label for="permanentStreet" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_street" id="permanentStreet" type="text" class="form-control" placeholder="Street">
+                <input name="pds_permanent_street" id="permanentStreet" type="text" class="form-control" placeholder="Street" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="permanentSubdivision" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_subdivision" id="permanentSubdivision" type="text" class="form-control" placeholder="Subdivision/Village">
+                <input name="pds_permanent_subdivision" id="permanentSubdivision" type="text" class="form-control" placeholder="Subdivision/Village"onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="permanentBarangay" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_barangay" id="permanentBarangay" type="text" class="form-control" placeholder="Barangay">
+                <input name="pds_permanent_barangay" id="permanentBarangay" type="text" class="form-control" placeholder="Barangay"onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="permanentCity" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_city" id="permanentCity" type="text" class="form-control" placeholder="City/Municipality">
+                <input name="pds_permanent_city" id="permanentCity" type="text" class="form-control" placeholder="City/Municipality" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="permanentProvince" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_province" id="permanentProvince" type="text" class="form-control" placeholder="Province">
+                <input name="pds_permanent_province" id="permanentProvince" type="text" class="form-control" placeholder="Province" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
@@ -352,15 +360,15 @@
         <div class="row mb-2 gy-2 gx-2">
           <div class="col-md-4">
             <label for="spouseSurname" class="text-muted small ms-2">SPOUSE'S SURNAME <span class="text-danger">*</span></label>
-            <input name="pds_spouse_surname" id="spouseSurname" type="text" class="form-control" required>
+            <input name="pds_spouse_surname" id="spouseSurname" type="text" class="form-control" required onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3">
             <label  for="spouseFirstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
-            <input name="pds_spouse_first_name" id="spouseFirstName" type="text" class="form-control" required>
+            <input name="pds_spouse_first_name" id="spouseFirstName" type="text" class="form-control" required onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="spouseMiddleName" class="text-muted small ms-2">MIDDLE NAME</label>
-            <input name="pds_spouse_middle_name" id="spouseMiddleName" type="text" class="form-control">
+            <input name="pds_spouse_middle_name" id="spouseMiddleName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-2 col-6">
             <label for="spouseSuffix" class="text-muted small ms-2">SUFFIX (JR,SR)</label>
@@ -369,11 +377,11 @@
 
           <div class="col-6">
             <label for="spouseOccupation" class="text-muted small ms-2">OCCUPATION</label>
-            <input name="pds_spouse_occupation" id="spouseOccupation" type="text" class="form-control">
+            <input name="pds_spouse_occupation" id="spouseOccupation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="spouseBusinessName" class="text-muted small ms-2">EMPLOYER/BUSINESS NAME</label>
-            <input name="pds_spouse_business_name" id="spouseBusinessName" type="text" class="form-control">
+            <input name="pds_spouse_business_name" id="spouseBusinessName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="spouseBusinessAddress" class="text-muted small ms-2">BUSINESS ADDRESS</label>
@@ -381,7 +389,7 @@
           </div>
           <div class="col-6">
             <label for="spouseTelephoneNumber" class="text-muted small ms-2">TELEPHONE NO.</label>
-            <input name="pds_spouse_telephone_number" id="spouseTelephoneNumber" type="text" class="form-control">
+            <input name="pds_spouse_telephone_number" id="spouseTelephoneNumber" type="text" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}">
           </div>
 
         </div>
@@ -394,15 +402,15 @@
             <div class="row gy-2 gx-2">
               <div class="col-6">
                 <label for="fatherSurname" class="text-muted small ms-2">FATHER'S SURNAME <span class="text-danger">*</span></label>
-                <input name="pds_father_surname" id="fatherSurname" type="text" class="form-control" required>
+                <input name="pds_father_surname" id="fatherSurname" type="text" class="form-control" required onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="fatherFirstName" class="text-muted small ms-2">FATHER'S FIRST NAME <span class="text-danger">*</span></label>
-                <input name="pds_father_first_name" id="fatherFirstName" type="text" class="form-control" required>
+                <input name="pds_father_first_name" id="fatherFirstName" type="text" class="form-control" required onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="fatherMiddleName" class="text-muted small ms-2">FATHER'S MIDDLE NAME </label>
-                <input name="pds_father_middle_name" id="fatherMiddleName" type="text" class="form-control">
+                <input name="pds_father_middle_name" id="fatherMiddleName" type="text" class="form-control" onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="fatherSuffix" class="text-muted small ms-2">SUFFIX (JR,SR)</label>
@@ -416,19 +424,19 @@
             <div class="row gy-2 gx-2">
               <div class="col-6">
                 <label for="motherMaidenName" class="text-muted small ms-2">MOTHER'S MAIDEN NAME <span class="text-danger">*</span></label>
-                <input name="pds_mother_maiden_name" id="motherMaidenName" type="text" class="form-control" required>
+                <input name="pds_mother_maiden_name" id="motherMaidenName" type="text" class="form-control" required onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="motherSurname" class="text-muted small ms-2">MOTHER'S SURNAME <span class="text-danger">*</span></label>
-                <input name="pds_mother_surname" id="motherSurname" type="text" class="form-control" required>
+                <input name="pds_mother_surname" id="motherSurname" type="text" class="form-control" required onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="motherFirstName" class="text-muted small ms-2">MOTHER'S FIRST NAME <span class="text-danger">*</span></label>
-                <input name="pds_mother_first_name" id="motherFirstName" type="text" class="form-control" required>
+                <input name="pds_mother_first_name" id="motherFirstName" type="text" class="form-control" required onkeyup="lettersOnly(this)">
               </div>
               <div class="col-6">
                 <label for="motherMiddleName" class="text-muted small ms-2">MOTHER'S MIDDLE NAME </label>
-                <input name="pds_mother_middle_name" id="motherMiddleName" type="text" class="form-control">
+                <input name="pds_mother_middle_name" id="motherMiddleName" type="text" class="form-control" onkeyup="lettersOnly(this)">
               </div>
             </div>
           </div>
@@ -441,7 +449,7 @@
 
             <div class="col-6">
               <label for="nameChild" class="text-muted small ms-2">NAME of CHILDREN (Write full name and list all)</label>
-              <input name="pds_name_child" id="nameChild" type="text" class="form-control">
+              <input name="pds_name_child" id="nameChild" type="text" class="form-control" onkeyup="lettersOnly(this)">
             </div>
 
             <div class="col-6">
@@ -469,11 +477,11 @@
           <h6 class="ms-1 mt-2">ELEMENTARY</h6>
           <div class="col-6">
             <label for="elementarySchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_elementary_school_name" id="elementarySchoolName"  type="text" class="form-control">
+            <input name="pds_elementary_school_name" id="elementarySchoolName"  type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="elementaryBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
-            <input name="pds_elementary_basic_education" id="elementaryBasicEducation" type="text" class="form-control">
+            <input name="pds_elementary_basic_education" id="elementaryBasicEducation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="elementaryPeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
@@ -484,7 +492,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="elementaryHighestLevel" class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input name="pds_elementary_highest_level" id="elementaryHighestLevel" type="text" class="form-control">
+            <input name="pds_elementary_highest_level" id="elementaryHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="elementaryYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -492,7 +500,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="elementaryScholarship" class="text-muted small ms-2">SCHOLARSHIP/HONORSRECEIVED</label>
-            <input name="pds_elementary_scholarship" id="elementaryScholarship" type="text" class="form-control">
+            <input name="pds_elementary_scholarship" id="elementaryScholarship" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
         <!-- Elementary -->
@@ -502,11 +510,11 @@
           <h6 class="ms-1 mt-2">SECONDARY</h6>
           <div class="col-6">
             <label for="secondarySchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_secondary_school_name" id="secondarySchoolName" type="text" class="form-control">
+            <input name="pds_secondary_school_name" id="secondarySchoolName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="secondaryBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
-            <input name="pds_secondary_basic_education" id="secondaryBasicEducation" type="text" class="form-control">
+            <input name="pds_secondary_basic_education" id="secondaryBasicEducation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="secondaryPeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
@@ -517,7 +525,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="secondaryHighestLevel" class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input name="pds_secondary_highest_level" id="secondaryHighestLevel" type="text" class="form-control">
+            <input name="pds_secondary_highest_level" id="secondaryHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label  for="secondaryYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -525,7 +533,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="secondaryScholarship" class="text-muted small ms-2">SCHOLARSHIP/HONORSRECEIVED</label>
-            <input name="pds_secondary_scholarship" id="secondaryScholarship" type="text" class="form-control">
+            <input name="pds_secondary_scholarship" id="secondaryScholarship" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
         <!-- Secondary -->
@@ -535,11 +543,11 @@
           <h6 class="ms-1 mt-2">VOCATIONAL / TRADE COURSE</h6>
           <div class="col-6">
             <label for="vocationalSchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_vocational_school_name" id="vocationalSchoolName" type="text" class="form-control">
+            <input name="pds_vocational_school_name" id="vocationalSchoolName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="vocationalBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
-            <input name="pds_vocational_basic_education" id="vocationalBasicEducation" type="text" class="form-control">
+            <input name="pds_vocational_basic_education" id="vocationalBasicEducation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="vocationalPeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
@@ -550,7 +558,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="vocationalHighestLevel" class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input name="pds_vocational_highest_level" id="vocationalHighestLevel" type="text" class="form-control">
+            <input name="pds_vocational_highest_level" id="vocationalHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="vocationalYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -558,7 +566,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="vocationalScholarship" class="text-muted small ms-2">SCHOLARSHIP/HONORSRECEIVED</label>
-            <input name="pds_vocational_scholarship" id="vocationalScholarship" type="text" class="form-control">
+            <input name="pds_vocational_scholarship" id="vocationalScholarship" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
         <!-- VOCATIONAL / TRADE COURSE -->
@@ -568,11 +576,11 @@
           <h6 class="ms-1 mt-2">COLLEGE</h6>
           <div class="col-6">
             <label for="collegeSchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_college_school_name" id="collegeSchoolName"  type="text" class="form-control">
+            <input name="pds_college_school_name" id="collegeSchoolName"  type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="collegeBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
-            <input name="pds_college_basic_education" id="collegeBasicEducation" type="text" class="form-control">
+            <input name="pds_college_basic_education" id="collegeBasicEducation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="collegePeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
@@ -583,7 +591,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="collegeHighestLevel"  class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input  name="pds_college_highest_level" id="collegeHighestLevel" type="text" class="form-control">
+            <input  name="pds_college_highest_level" id="collegeHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="collegeYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -591,7 +599,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="collegeScholarship" class="text-muted small ms-2">SCHOLARSHIP/HONORSRECEIVED</label>
-            <input name="pds_college_scholarship" id="collegeScholarship" type="text" class="form-control">
+            <input name="pds_college_scholarship" id="collegeScholarship" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
         <!-- COLLEGE -->
@@ -601,11 +609,11 @@
           <h6 class="ms-1 mt-2">GRADUATE STUDIES</h6>
           <div class="col-6">
             <label for="graduateSchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_graduate_school_name" id="graduateSchoolName" type="text" class="form-control">
+            <input name="pds_graduate_school_name" id="graduateSchoolName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="graduateBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
-            <input name="pds_graduate_basic_education" id="graduateBasicEducation" type="text" class="form-control">
+            <input name="pds_graduate_basic_education" id="graduateBasicEducation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="graduatePeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
@@ -616,7 +624,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="graduateHighestLevel" class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input name="pds_graduate_highest_level" id="graduateHighestLevel" type="text" class="form-control">
+            <input name="pds_graduate_highest_level" id="graduateHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="graduateYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -624,7 +632,7 @@
           </div>
           <div class="col-md-3 col-6">
             <label for="graduateScholarship" class="text-muted small ms-2">SCHOLARSHIP/HONORSRECEIVED</label>
-            <input name="pds_graduate_scholarship" id="graduateScholarship" type="text" class="form-control">
+            <input name="pds_graduate_scholarship" id="graduateScholarship" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
         <!-- GRADUATE STUDIES -->
@@ -658,7 +666,7 @@
 
           <div class="col-md-6 mt-2">
             <label for="examinationPlace" class="text-muted small ms-2">PLACE OF EXAMINATION</label>
-            <input name="pds_career_examination_place" id="examinationPlace" type="text" class="form-control">
+            <input name="pds_career_examination_place" id="examinationPlace" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6 mt-2">
             <label for="number" class="text-muted small ms-2">NUMBER</label>
@@ -694,12 +702,12 @@
 
           <div class="col-md-4 col-6">
             <label for="positionTitle"  class="text-muted small ms-2">POSITION TITLE</label>
-            <input  name="pds_work_position_title" id="positionTitle" type="text" class="form-control">
+            <input  name="pds_work_position_title" id="positionTitle" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
 
           <div class="col-md-4 col-6">
             <label for="department" class="text-muted small ms-2">DEPARTMENT / AGENCY / OFFICE / COMPANY</label>
-            <input  name="pds_work_department" id="department" type="text" class="form-control">
+            <input  name="pds_work_department" id="department" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
 
           <div class="col-md-3 col-6">
@@ -743,7 +751,7 @@
         <div class="row gy-2 gx-2" id="originOrgDiv">
           <div class="col-md-6">
             <label for="voluntaryOrganizationName" class="text-muted small ms-2">NAME OF ORGANIZATION</label>
-            <input name="pds_voluntary_organization_name" id="voluntaryOrganizationName" type="text" class="form-control">
+            <input name="pds_voluntary_organization_name" id="voluntaryOrganizationName" type="text" class="form-control"onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-6">
             <label for="voluntaryOrganizationAddress" class="text-muted small ms-2">ADDRESS OF ORGANIZATION</label>
@@ -762,7 +770,7 @@
           </div>
           <div class="col-md-6">
             <label for="voluntaryPosition" class="text-muted small ms-2">POSITION / NATURE OF WORK</label>
-            <input name="pds_voluntary_position" id="voluntaryPosition" type="text" class="form-control">
+            <input name="pds_voluntary_position" id="voluntaryPosition" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
 
@@ -782,7 +790,7 @@
           <div class="col-md-6">
             <label for="trainingProgram" class="text-muted small ms-2">TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING
               PROGRAMS</label>
-            <input name="pds_training_program" id="trainingProgram" type="text" class="form-control">
+            <input name="pds_training_program" id="trainingProgram" type="text" class="form-control" onkeyup="lettersOnly(this)"> 
           </div>
           <div class="col-md-3 col-6">
             <label for="trainingInclusiveDateFrom" class="text-muted small ms-2">INCLUSIVE DATES</label>
@@ -797,11 +805,11 @@
           </div>
           <div class="col-md-6">
             <label for="trainingLdType" class="text-muted small ms-2">Type of LD ( Managerial/ Supervisory/ Technical/etc)</label>
-            <input name="pds_training_ld_type" id="trainingLdType" type="text" class="form-control">
+            <input name="pds_training_ld_type" id="trainingLdType" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-6">
             <label for="trainingConducted" class="text-muted small ms-2">CONDUCTED/ SPONSORED BY (Write in full)</label>
-            <input name="pds_training_conducted" id="trainingConducted" type="text" class="form-control">
+            <input name="pds_training_conducted" id="trainingConducted" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
 
@@ -824,15 +832,15 @@
         <div class="row gy-2 gx-2" id="originFieldDiv">
           <div class="col-lg-4 col-md-6">
             <label for="specialSkills" class="text-muted small ms-2">SPECIAL SKILLS and HOBBIES </label>
-            <input name="pds_special_skills" id="specialSkills" type="text" class="form-control">
+            <input name="pds_special_skills" id="specialSkills" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-lg-4 col-md-6">
             <label for="recognition" class="text-muted small ms-2">NON-ACADEMIC DISTINCTIONS / RECOGNITION </label>
-            <input name="pds_recognition" id="recognition" type="text" class="form-control">
+            <input name="pds_recognition" id="recognition" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-lg-4 col-md-6">
             <label for="membershipAssociation" class="text-muted small ms-2">MEMBERSHIP IN ASSOCIATION/ORGANIZATION </label>
-            <input name="pds_membership_association" id="membershipAssociation" type="text" class="form-control">
+            <input name="pds_membership_association" id="membershipAssociation" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
 
@@ -1157,8 +1165,8 @@
 
         <div class="row gy-2 gx-2 mb-1">
           <div class="col-8 col-md-5 order-0">
-            <label for="referenceName" class="text-muted small ms-2">NAME</label>
-            <input name="pds_reference_name" id="referenceName" type="text" class="form-control">
+            <label for="referenceName" class="text-muted small ms-2">NAME </label>
+            <input name="pds_reference_name" id="referenceName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
             <label for="referenceAddress" class="text-muted small ms-2">ADDRESS</label>
@@ -1173,7 +1181,7 @@
         <div class="row gy-2 gx-2 mb-1">
           <div class="col-8 col-md-5 order-0">
             <label class="text-muted small ms-2">NAME</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
             <label class="text-muted small ms-2">ADDRESS</label>
@@ -1188,7 +1196,7 @@
         <div class="row gy-2 gx-2 mb-5">
           <div class="col-8 col-md-5 order-0">
             <label class="text-muted small ms-2">NAME</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
             <label class="text-muted small ms-2">ADDRESS</label>
@@ -1221,7 +1229,7 @@
 
           <div class="col-md-6">
             <label for="governmentPlaceIssuance" class="text-muted small ms-2">Place of Issuance: </label>
-            <input name="pds_government_place_issuance" id="governmentPlaceIssuance" type="text" class="form-control">
+            <input name="pds_government_place_issuance" id="governmentPlaceIssuance" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
         </div>
 
@@ -1290,7 +1298,7 @@
 
         <div class="col-md-6 mt-2">
           <label class="text-muted small ms-2">PLACE OF EXAMINATION</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-md-3 col-6 mt-2">
           <label class="text-muted small ms-2">NUMBER</label>
@@ -1324,7 +1332,7 @@
 
         <div class="col-md-4 col-6">
           <label class="text-muted small ms-2">DEPARTMENT / AGENCY / OFFICE / COMPANY</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
 
         <div class="col-md-3 col-6">
@@ -1337,7 +1345,7 @@
         </div>
         <div class="col-md-3 col-6">
           <label class="text-muted small ms-2">STATUS OF APPOINTMENT</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-md-3 col-6">
           <label class="text-muted small ms-2">GOV'TSERVICE</label>
@@ -1356,7 +1364,7 @@
       <div class="row gx-2 mt-2 pt-2 border-top">
         <div class="col-md-6">
           <label class="text-muted small ms-2">NAME OF ORGANIZATION</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-md-6">
           <label class="text-muted small ms-2">ADDRESS OF ORGANIZATION</label>
@@ -1375,7 +1383,7 @@
         </div>
         <div class="col-md-6">
           <label class="text-muted small ms-2">POSITION / NATURE OF WORK</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
       </div>
     </div>
@@ -1385,7 +1393,7 @@
       <div class="row gx-2 mt-2 pt-2 border-top">
         <div class="col-md-6">
           <label class="text-muted small ms-2">TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING PROGRAMS</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-md-3 col-6">
           <label class="text-muted small ms-2">INCLUSIVE DATES</label>
@@ -1400,11 +1408,11 @@
         </div>
         <div class="col-md-6">
           <label class="text-muted small ms-2">Type of LD ( Managerial/ Supervisory/ Technical/etc)</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-md-6">
           <label class="text-muted small ms-2">CONDUCTED/ SPONSORED BY (Write in full)</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
       </div>
     </div>
@@ -1414,15 +1422,15 @@
       <div class="row gx-2 border-top">
         <div class="col-lg-4 col-md-6">
           <label class="text-muted small ms-2">SPECIAL SKILLS and HOBBIES </label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-lg-4 col-md-6">
           <label class="text-muted small ms-2">NON-ACADEMIC DISTINCTIONS / RECOGNITION </label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
         <div class="col-lg-4 col-md-6">
           <label class="text-muted small ms-2">MEMBERSHIP IN ASSOCIATION/ORGANIZATION </label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" onkeyup="lettersOnly(this)">
         </div>
       </div>
     </div>
