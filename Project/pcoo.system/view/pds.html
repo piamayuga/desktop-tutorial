@@ -29,7 +29,7 @@
 
     <ul class="nav-list ">
       <!-- search bar -->
-      <li>
+      <li class="">
         <i class='bx bx-search'></i>
         <input type="text" placeholder="Search...">
         <span class="tooltip">Search</span>
@@ -110,14 +110,6 @@
     <!-- connection of form to pds_controller.php -->
     <form action="pds_controller.php" method="post" class="container-xl px-4" id="one" autocomplete="off">
 
-      <!-- letters only -->
-      <script>
-      function lettersOnly(input){
-        var regex = /[^a-z]/gi;
-        input.value = input.value.replace(regex, "");
-      }
-
-      </script>
       <div class="step step-1 active">
         <h4>I. PERSONAL INFORMATION</h4>
         <!-- name -->

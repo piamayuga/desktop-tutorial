@@ -17,15 +17,6 @@ closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open");
   menuBtnChange();//calling the function(optional)
 });
-
-// VALIDATIONS FOR INPUT
-function lengthValidation(object) {
-  if (object.value.length > object.maxLength) {
-    object.value = object.value.slice(0, object.maxLength);
-  } 
-
-}
-
 searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
   sidebar.classList.toggle("open");
   menuBtnChange(); //calling the function(optional)
@@ -39,6 +30,22 @@ function menuBtnChange() {
   }
 }
 //sidebar
+
+// letters only
+function lettersOnly(input) {
+  var regex = /[^a-z]/gi;
+  input.value = input.value.replace(regex, "");
+}
+// letters only
+
+// VALIDATIONS FOR INPUT
+function lengthValidation(object) {
+  if (object.value.length > object.maxLength) {
+    object.value = object.value.slice(0, object.maxLength);
+  }
+
+}
+// VALIDATIONS FOR INPUT
 
 // multiple step form
 const steps = Array.from(document.querySelectorAll("form .step"));
@@ -88,6 +95,7 @@ var ctz = document.getElementById("citizenship");
 var immigrant = document.getElementById("immigrant");
 var country = document.getElementById("country");
 var text = document.getElementById("text_country");
+
 if (ctz.value !== "dual") {
   immigrant.style.opacity = "0.4";
   country.style.opacity = "0.4";

@@ -29,13 +29,6 @@
     </div>
 
     <ul class="nav-list ">
-      <!-- search bar -->
-      <li>
-        <i class='bx bx-search'></i>
-        <input type="text" placeholder="Search...">
-        <span class="tooltip">Search</span>
-      </li>
-      <!-- search bar -->
 
       <!-- links -->
       <li>
@@ -97,7 +90,7 @@
         </div>
 
         <i type="button" class='bx bx-log-out' id="log_out" onclick="location.href='index.html'"></i>
-        
+
       </li>
 
     </ul>
@@ -107,7 +100,40 @@
 
   <main class="home-section">
     <div class="text">Employment Information</div>
+    
+    <form action="" method="post" class="container-xl" autocomplete="off">
+      <p class="text-primary mb-3">(View only)</p>
 
+      <div class="row gy-2">
+        <div class="col-md-6">
+          <label for="engagement_duration" class="text-muted small ms-2">Engagement Duration</label>
+          <input type="text" name="engagement_duration" id="engagement_duration" class="form-control" value="sample" disabled>
+        </div>
+        <div class="col-md-6"></div>
+
+        <div class="col-md-6">
+          <label for="employment_status" class="text-muted small ms-2">Employment Status</label>
+          <input type="text" name="employment_status" id="employment_status" class="form-control" value="sample" disabled>
+        </div>
+
+        <div class="col-md-6">
+          <label for="designation" class="text-muted small ms-2">Designation</label>
+          <input type="text" name="designation" id="designation" class="form-control" value="sample" disabled>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="salary" class="text-muted small ms-2">Salary</label>
+          <input type="text" name="salary" id="salary" class="form-control" value="sample" disabled>
+        </div>
+        <div class="col-md-6"></div>
+
+        <div class="col">
+          <label for="credits" class="text-muted small ms-2">Credits for Permanent employees</label>
+          <textarea class="form-control" name="credits" id="credits" rows="5" disabled></textarea>
+        </div>
+      </div>
+
+    </form>
   </main>
 
   <!-- scripts -->
