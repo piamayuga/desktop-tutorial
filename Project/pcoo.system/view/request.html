@@ -90,7 +90,7 @@
         </div>
 
         <i type="button" class='bx bx-log-out' id="log_out" onclick="location.href='index.html'"></i>
-        
+
       </li>
 
     </ul>
@@ -99,10 +99,146 @@
   <!-- sidebar -->
 
   <main class="home-section">
+
     <div class="text">Request Form</div>
+
+    <div class="container-xl px-4">
+
+      <section class="col-md-6 mb-4">
+        <label class="text-muted lead ms-2" for="">Select Request Type</label>
+        <select class="form-select" id="select_request" name="" onchange="request_type()">
+          <option value="" selected hidden></option>
+          <option value="ID Request Form">ID Request Form</option>
+          <option value="Personnel Request Form">Personnel Request Form</option>
+        </select>
+      </section>
+
+      <!-- ID Request Form -->
+      <section class="py-2 border-4 border-top border-primary rounded" id="id_request_div" style="display: none;">
+        <h4 class="text-primary">ID Request Form</h5>
+          <h6 class="mt-3">Personal Information (required)</h6>
+
+          <form action="" id="id_request_form" class="row gy-2 gx-2" autocomplete="off">
+            <div class="col-md-4">
+              <label for="reqID_surname" class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
+              <input type="text" name="reqID_surname" id="reqID_surname" class="form-control" onkeyup="lettersOnly(this)" required>
+            </div>
+            <div class="col-md-4">
+              <label for="reqID_firstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
+              <input type="text" name="reqID_first_name" id="reqID_firstName" class="form-control" onkeyup="lettersOnly(this)" required>
+            </div>
+            <div class="col-md-4">
+              <label for="reqID_middleName" class="text-muted small ms-2">MIDDLE NAME</label>
+              <input type="text" name="reqID_middle_name" id="reqID_middleName" onkeyup="lettersOnly(this)" class="form-control">
+            </div>
+
+            <div class="col-6 col-md-4">
+              <label for="reqID_birthDate" class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
+              <input type="text" name="reqID_birth_date" id="reqID_birthDate" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+            </div>
+            <div class="col-4 col-md-4">
+              <label for="reqID_contact" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
+              <input name="reqID_contact" onInput="lengthValidation(this)" id="reqID_contact" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+            </div>
+            <div class="col-2 col-md-4">
+              <label for="bloodType" class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
+              <input name="pds_blood_type" id="bloodType" type="text" class="form-control" required>
+            </div>
+
+            <div class="col-12">
+              <label for="reqID_address" class="text-muted small ms-2">ADDRESS <span class="text-danger">*</span></label>
+              <input name="reqID_address" id="reqID_address" type="text" class="form-control">
+            </div>
+
+            <div class="col-6">
+              <label for="reqID_position" class="text-muted small ms-2">POSITION <span class="text-danger">*</span></label>
+              <input name="reqID_position" id="reqID_position" type="text" class="form-control">
+            </div>
+            <div class="col-6">
+              <label for="reqID_GSIS/SSS" class="text-muted small ms-2">GSIS/SSS No <span class="text-danger">*</span></label>
+              <input name="reqID_GSIS/SSS" id="reqID_GSIS/SSS" type="text" class="form-control">
+            </div>
+            <div class="col-6">
+              <label for="reqID_tin" class="text-muted small ms-2">TAX IDENTIFICATION NO. <span class="text-danger">*</span></label>
+              <input name="reqID_tin" id="reqID_tin" type="text" class="form-control">
+            </div>
+            <div class="col-6">
+              <label for="reqID_fund" class="text-muted small ms-2">FUND SOURCE <span class="text-danger">*</span></label>
+              <input name="reqID_fund" id="reqID_fund" type="text" class="form-control">
+            </div>
+
+            <label class="text-muted small ms-2">APPOINTMENT STATUS: <span class="text-danger">*</span></label>
+            <!-- PERMANENT -->
+            <div class="col-4 ">
+              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                <input class="form-check-input" type="radio" id="reqID_permanent" name="appointmentStatus" onclick="showPermanent()" value="">
+                <label class="form-check-label" for="reqID_permanent">PERMANENT</label>
+              </div>
+              <div id="reqID_appointment_show_permanent" style="display:none">
+                <label class="text-muted small ms-2">Date of appointment:</label>
+                <input class="form-control" type="date" name="" id="reqID_appointment_text_permanent">
+              </div>
+            </div>
+            <!-- PERMANENT -->
+
+            <!-- ISS/COTERMINOUS -->
+            <div class="col-4">
+              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                <input class="form-check-input" type="radio" id="reqID_iss" name="appointmentStatus" onclick="showISS()" value="">
+                <label class="form-check-label" for="reqID_iss">ISS/COTERMINOUS</label>
+              </div>
+              <div id="reqID_appointment_show_iss" style="display: none;">
+                <label class="text-muted small ms-2">Date of appointment:</label>
+                <input class="form-control" type="date" name="" id="reqID_appointment_text_iss">
+              </div>
+            </div>
+            <!-- ISS/COTERMINOUS -->
+
+            <!-- CONTRACT OF SERVICE -->
+            <div class="col-4">
+              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                <input class="form-check-input" type="radio" id="reqID_contractService" name="appointmentStatus" onclick="showcontractService()" value="">
+                <label class="form-check-label" for="reqID_contractService">CONTRACT OF SERVICE</label>
+              </div>
+              <div id="reqID_appointment_show_contractService" style="display: none;">
+                <label class="text-muted small ms-2">Date of appointment:</label>
+                <input class="form-control" type="text" name="" id="reqID_appointment_text_contractService">
+              </div>
+            </div>
+            <!-- CONTRACT OF SERVICE -->
+
+            <div class="col-md-6">
+              <label for="reqID_contactPerson" class="text-muted small ms-2">CONTACT PERSON <span class="text-danger">*</span></label>
+              <input name="reqID_contactPerson" id="reqID_contactPerson" type="text" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+              <label for="reqID_contactPersonNo" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
+              <input name="reqID_contactPersonNo" id="reqID_contactPersonNo" type="text" class="form-control">
+            </div>
+
+            <div class="col my-4 d-flex justify-content-end">
+              <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+      </section>
+      <!-- ID Request Form -->
+
+
+      <!-- Personnel Request Form -->
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display: none;">
+        <h5 class="text-primary">Personnel Request Form</h5>
+
+        <form action="" id="personnel_request_form" class="row gy-2 gx-2" autocomplete="off">
+        </form>
+      </section>
+      <!-- Personnel Request Form -->
+    </div>
 
   </main>
 
+
+  
   <!-- scripts -->
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
@@ -110,6 +246,7 @@
   <script src="res/dataTables/js/jquery.dataTables.min.js"></script>
   <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
   <script src="res/dataTables/js/main.js"></script>
+  
 
 </body>
 

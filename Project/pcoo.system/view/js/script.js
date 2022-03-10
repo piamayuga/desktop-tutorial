@@ -9,6 +9,23 @@ function showPass() {
 }
 // Login - show password
 
+// request type dropdown -- tab4
+var dropdown = document.getElementById("select_request");
+var idReqDiv = document.getElementById("id_request_div");
+var perReqDiv = document.getElementById("personnel_request_div");
+
+function request_type() {
+  if (dropdown.value == "ID Request Form") {
+    idReqDiv.style.display = "block";
+    perReqDiv.style.display = "none";
+  }
+  else if (dropdown.value == "Personnel Request Form") {
+    perReqDiv.style.display = "block";
+    idReqDiv.style.display = "none";
+  }
+}
+// request type dropdown -- tab4
+
 // sidebar
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
@@ -46,6 +63,7 @@ function lengthValidation(object) {
 
 }
 // VALIDATIONS FOR INPUT
+
 
 // multiple step form
 const steps = Array.from(document.querySelectorAll("form .step"));
@@ -343,3 +361,27 @@ function hideSevenC() {
   document.getElementById('sevenTextC').value = '';
 }
 // show Question seven
+
+// appoinment status
+function showPermanent() {
+  document.getElementById('reqID_appointment_show_permanent').style.display = 'block';
+  document.getElementById('reqID_appointment_show_iss').style.display = 'none';
+  document.getElementById('reqID_appointment_show_contractService').style.display = 'none';
+  document.getElementById('reqID_appointment_text_iss').value = '';
+  document.getElementById('reqID_appointment_text_contractService').value = '';
+}
+function showISS() {
+  document.getElementById('reqID_appointment_show_iss').style.display = 'block';
+  document.getElementById('reqID_appointment_show_permanent').style.display = 'none';
+  document.getElementById('reqID_appointment_show_contractService').style.display = 'none';
+  document.getElementById('reqID_appointment_text_permanent').value = '';
+  document.getElementById('reqID_appointment_text_contractService').value = '';
+}
+function showcontractService() {
+  document.getElementById('reqID_appointment_show_permanent').style.display = 'none';
+  document.getElementById('reqID_appointment_show_iss').style.display = 'none';
+  document.getElementById('reqID_appointment_show_contractService').style.display = 'block';
+  document.getElementById('reqID_appointment_text_permanent').value = '';
+  document.getElementById('reqID_appointment_text_iss').value = '';
+}
+// appoinment status
