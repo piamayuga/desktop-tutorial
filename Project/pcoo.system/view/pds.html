@@ -29,7 +29,7 @@
 
     <ul class="nav-list ">
       <!-- search bar -->
-      <li class="">
+      <li class="d-none">
         <i class='bx bx-search'></i>
         <input type="text" placeholder="Search...">
         <span class="tooltip">Search</span>
@@ -139,7 +139,7 @@
             <div class="row mb-2 gy-2 gx-2">
 
               <div class="col-6">
-                <label for="birthDate"class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
+                <label for="birthDate" class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
                 <input type="text" name="pds_birth_date" id="birthDate" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
               </div>
 
@@ -159,7 +159,7 @@
 
               <div class="col-6">
                 <label for="civilStatus" class="text-muted small ms-2">CIVIL STATUS <span class="text-danger">*</span></label>
-                <select  name="pds_civil_status" id="civilStatus" class="form-select" required>
+                <select name="pds_civil_status" id="civilStatus" class="form-select" required>
                   <option value="" selected hidden></option>
                   <option value="">SINGLE</option>
                   <option value="">MARRIED</option>
@@ -177,7 +177,7 @@
               </div>
 
               <div class="col-6">
-                <label for="bloodType"class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
+                <label for="bloodType" class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
                 <input name="pds_blood_type" id="bloodType" type="text" class="form-control" required>
               </div>
 
@@ -278,12 +278,12 @@
 
               <div class="col-6">
                 <label for="residentialBarangay" class="text-muted small ms-2"></label>
-                <input  name="pds_residential_barangay" id="residentialBarangay" type="text" class="form-control" placeholder="Barangay" onkeyup="lettersOnly(this)">
+                <input name="pds_residential_barangay" id="residentialBarangay" type="text" class="form-control" placeholder="Barangay" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
-                <label for="residentialCity"class="text-muted small ms-2"></label>
-                <input  name="pds_residential_city" id="residentialCity" type="text"  class="form-control" placeholder="City/Municipality" onkeyup="lettersOnly(this)">
+                <label for="residentialCity" class="text-muted small ms-2"></label>
+                <input name="pds_residential_city" id="residentialCity" type="text" class="form-control" placeholder="City/Municipality" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
@@ -312,12 +312,12 @@
 
               <div class="col-6">
                 <label for="permanentSubdivision" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_subdivision" id="permanentSubdivision" type="text" class="form-control" placeholder="Subdivision/Village"onkeyup="lettersOnly(this)">
+                <input name="pds_permanent_subdivision" id="permanentSubdivision" type="text" class="form-control" placeholder="Subdivision/Village" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
                 <label for="permanentBarangay" class="text-muted small ms-2"></label>
-                <input name="pds_permanent_barangay" id="permanentBarangay" type="text" class="form-control" placeholder="Barangay"onkeyup="lettersOnly(this)">
+                <input name="pds_permanent_barangay" id="permanentBarangay" type="text" class="form-control" placeholder="Barangay" onkeyup="lettersOnly(this)">
               </div>
 
               <div class="col-6">
@@ -355,7 +355,7 @@
             <input name="pds_spouse_surname" id="spouseSurname" type="text" class="form-control" required onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3">
-            <label  for="spouseFirstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
+            <label for="spouseFirstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
             <input name="pds_spouse_first_name" id="spouseFirstName" type="text" class="form-control" required onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
@@ -469,7 +469,7 @@
           <h6 class="ms-1 mt-2">ELEMENTARY</h6>
           <div class="col-6">
             <label for="elementarySchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_elementary_school_name" id="elementarySchoolName"  type="text" class="form-control" onkeyup="lettersOnly(this)">
+            <input name="pds_elementary_school_name" id="elementarySchoolName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="elementaryBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
@@ -478,7 +478,7 @@
           <div class="col-md-3 col-6">
             <label for="elementaryPeriodAttendanceFrom" class="text-black-50 small ms-2">PERIOD OF ATTENDANCE</label>
             <div class="input-group">
-              <input name="pds_elementary_period_attendance_from" id="elementaryPeriodAttendanceFrom"  type="text" class="form-control" placeholder="FROM">
+              <input name="pds_elementary_period_attendance_from" id="elementaryPeriodAttendanceFrom" type="text" class="form-control" placeholder="FROM">
               <input name="pds_elementary_period_attendance_to" id="elementaryPeriodAttendanceTo" type="text" class="form-control" placeholder="TO">
             </div>
           </div>
@@ -520,7 +520,7 @@
             <input name="pds_secondary_highest_level" id="secondaryHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
-            <label  for="secondaryYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
+            <label for="secondaryYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
             <input name="pds_secondary_year_graduated" id="secondaryYearGraduated" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
@@ -568,7 +568,7 @@
           <h6 class="ms-1 mt-2">COLLEGE</h6>
           <div class="col-6">
             <label for="collegeSchoolName" class="text-muted small ms-2">NAME OF SCHOOL</label>
-            <input name="pds_college_school_name" id="collegeSchoolName"  type="text" class="form-control" onkeyup="lettersOnly(this)">
+            <input name="pds_college_school_name" id="collegeSchoolName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-6">
             <label for="collegeBasicEducation" class="text-muted small ms-2">BASIC EDUCATION/DEGREE/COURSE</label>
@@ -582,8 +582,8 @@
             </div>
           </div>
           <div class="col-md-3 col-6">
-            <label for="collegeHighestLevel"  class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
-            <input  name="pds_college_highest_level" id="collegeHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
+            <label for="collegeHighestLevel" class="text-muted small ms-2">HIGHEST LEVEL/UNITS EARNED</label>
+            <input name="pds_college_highest_level" id="collegeHighestLevel" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="collegeYearGraduated" class="text-muted small ms-2">YEAR GRADUATED</label>
@@ -684,7 +684,7 @@
         <div class="row gy-2 gx-2" id="originWorkDiv">
 
           <div class="col-md-4 col-6">
-            <label  for="inclusiveDatesFrom" class="text-muted small ms-2">INCLUSIVE DATES</label>
+            <label for="inclusiveDatesFrom" class="text-muted small ms-2">INCLUSIVE DATES</label>
             <div class="input-group">
               <input name="pds_work_inclusive_dates_from" id="inclusiveDatesFrom" type="text" class="form-control" placeholder="FROM" onfocus="(this.type='date')" onblur="(this.type='text')">
 
@@ -693,17 +693,17 @@
           </div>
 
           <div class="col-md-4 col-6">
-            <label for="positionTitle"  class="text-muted small ms-2">POSITION TITLE</label>
-            <input  name="pds_work_position_title" id="positionTitle" type="text" class="form-control" onkeyup="lettersOnly(this)">
+            <label for="positionTitle" class="text-muted small ms-2">POSITION TITLE</label>
+            <input name="pds_work_position_title" id="positionTitle" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
 
           <div class="col-md-4 col-6">
             <label for="department" class="text-muted small ms-2">DEPARTMENT / AGENCY / OFFICE / COMPANY</label>
-            <input  name="pds_work_department" id="department" type="text" class="form-control" onkeyup="lettersOnly(this)">
+            <input name="pds_work_department" id="department" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
 
           <div class="col-md-3 col-6">
-            <label  for="monthlySalary" class="text-muted small ms-2">MONTHLY SALARY</label>
+            <label for="monthlySalary" class="text-muted small ms-2">MONTHLY SALARY</label>
             <input name="pds_work_monthly_salary" id="monthlySalary" type="text" class="form-control">
           </div>
           <div class="col-md-3 col-6">
@@ -743,7 +743,7 @@
         <div class="row gy-2 gx-2" id="originOrgDiv">
           <div class="col-md-6">
             <label for="voluntaryOrganizationName" class="text-muted small ms-2">NAME OF ORGANIZATION</label>
-            <input name="pds_voluntary_organization_name" id="voluntaryOrganizationName" type="text" class="form-control"onkeyup="lettersOnly(this)">
+            <input name="pds_voluntary_organization_name" id="voluntaryOrganizationName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-6">
             <label for="voluntaryOrganizationAddress" class="text-muted small ms-2">ADDRESS OF ORGANIZATION</label>
@@ -782,7 +782,7 @@
           <div class="col-md-6">
             <label for="trainingProgram" class="text-muted small ms-2">TITLE OF LEARNING AND DEVELOPMENT INTERVENTIONS/TRAINING
               PROGRAMS</label>
-            <input name="pds_training_program" id="trainingProgram" type="text" class="form-control" onkeyup="lettersOnly(this)"> 
+            <input name="pds_training_program" id="trainingProgram" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-3 col-6">
             <label for="trainingInclusiveDateFrom" class="text-muted small ms-2">INCLUSIVE DATES</label>
@@ -1157,45 +1157,45 @@
 
         <div class="row gy-2 gx-2 mb-1">
           <div class="col-8 col-md-5 order-0">
-            <label for="referenceName" class="text-muted small ms-2">NAME </label>
+            <label for="referenceName" class="text-muted small ms-2">Name </label>
             <input name="pds_reference_name" id="referenceName" type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
-            <label for="referenceAddress" class="text-muted small ms-2">ADDRESS</label>
+            <label for="referenceAddress" class="text-muted small ms-2">Address</label>
             <input name="pds_reference_address" id="referenceAddress" type="text" class="form-control">
           </div>
           <div class="col-4 col-md-2 order-1 order-md-2">
-            <label for="referenceContactNumber" class="text-muted small ms-2">CONTACT NO.</label>
+            <label for="referenceContactNumber" class="text-muted small ms-2">Contact No.</label>
             <input name="pds_reference_contact_number" id="referenceContactNumber" type="text" class="form-control">
           </div>
         </div>
-        
+
         <div class="row gy-2 gx-2 mb-1">
           <div class="col-8 col-md-5 order-0">
-            <label class="text-muted small ms-2">NAME</label>
+            <label class="text-muted small ms-2">Name</label>
             <input type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
-            <label class="text-muted small ms-2">ADDRESS</label>
+            <label class="text-muted small ms-2">Address</label>
             <input type="text" class="form-control">
           </div>
           <div class="col-4 col-md-2 order-1 order-md-2">
-            <label class="text-muted small ms-2">CONTACT NO.</label>
+            <label class="text-muted small ms-2">Contact No.</label>
             <input type="text" class="form-control">
           </div>
         </div>
 
         <div class="row gy-2 gx-2 mb-5">
           <div class="col-8 col-md-5 order-0">
-            <label class="text-muted small ms-2">NAME</label>
+            <label class="text-muted small ms-2">Name</label>
             <input type="text" class="form-control" onkeyup="lettersOnly(this)">
           </div>
           <div class="col-md-5 order-2 order-md-1">
-            <label class="text-muted small ms-2">ADDRESS</label>
+            <label class="text-muted small ms-2">Address</label>
             <input type="text" class="form-control">
           </div>
           <div class="col-4 col-md-2 order-1 order-md-2">
-            <label class="text-muted small ms-2">CONTACT NO.</label>
+            <label class="text-muted small ms-2">Contact No.</label>
             <input type="text" class="form-control">
           </div>
         </div>
@@ -1205,7 +1205,7 @@
 
         <div class="row gx-2 eq-border pb-4">
           <div class="col-md-6">
-            <label  for="governmentIssuedId" class="text-muted small ms-2">Government Issued ID: </label>
+            <label for="governmentIssuedId" class="text-muted small ms-2">Government Issued ID: </label>
             <input name="pds_government_issued_id" id="governmentIssuedId" type="text" class="form-control">
           </div>
 
@@ -1213,10 +1213,10 @@
             <label for="idLicensePassportNumber" class="text-muted small ms-2">ID/License/Passport No.: </label>
             <input name="pds_id_license_passport_number" id="IdLicensePassportNumber" type="text" class="form-control">
           </div>
-          
+
           <div class="col-md-6">
             <label for="governmentDateIssuance" class="text-muted small ms-2">Date of Issuance: </label>
-            <input  name="pds_government_date_issuance" id="governmentDateIssuance" type="text" class="form-control">
+            <input name="pds_government_date_issuance" id="governmentDateIssuance" type="text" class="form-control">
           </div>
 
           <div class="col-md-6">
@@ -1234,24 +1234,27 @@
           </div>
         </div>
 
+        <div class="col my-4 mb-5 d-flex justify-content-between">
+          <button type="button" class="ms-md-5 ms-2 px-4 btn btn-primary previous-btn">Previous</button>
+          <button type="submit" class="me-md-5 me-2 px-4 btn btn-primary submit-btn">Submit</button>
+        </div>
       </div>
 
     </form>
-    <!-- <div class="col my-2 mb-5 d-flex justify-content-between">
-      <button type="button" class="ms-md-5 ms-2 px-4 btn btn-primary previous-btn">Previous</button>
-      <button type="submit" class="me-md-5 me-2 px-4 btn btn-primary submit-btn">Submit</button>
-    </div> -->
+
+    
   </main>
 
+  <!-- alert -->
+  <div class="alert alert-warning alert-dismissible fade show custom-alert pb-0" role="alert">
+    <h5><i class='bx bx-error'></i> WARNING:</h5>
+    <p class="px-2 small">Any misrepresentation made in the Personal Data Sheet and the Work Experience Sheet shall cause the filing of administrative/criminal case/s against the person concerned.</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <!-- alert -->
 
-  <script src="js/script.js"></script>
-  <script src="res/bs-js/bootstrap.bundle.js"></script>
-  <script src="res/dataTables/js/jquery-3.5.1.js"></script>
-  <script src="res/dataTables/js/jquery.dataTables.min.js"></script>
-  <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
-  <script src="res/dataTables/js/main.js"></script>
 
-  <!-- HTML TEMPLATES-FOR-DYNAMIC-ADD -->
+  <!-- -----------------------------------HTML TEMPLATES-FOR-DYNAMIC-ADD----------------------------------- -->
   <div class="d-none">
     <!-- Template for Adding Child -- IGNORE-->
     <div id="childTemp" class="d-none">
@@ -1427,7 +1430,15 @@
       </div>
     </div>
   </div>
-  <!-- HTML TEMPLATES-FOR-DYNAMIC-ADD -->
+  <!-- -----------------------------------HTML TEMPLATES-FOR-DYNAMIC-ADD----------------------------------- -->
+
+  <!-- ----------------------------------------Scripts---------------------------------------- -->
+  <script src="js/script.js"></script>
+  <script src="res/bs-js/bootstrap.bundle.js"></script>
+  <script src="res/dataTables/js/jquery-3.5.1.js"></script>
+  <script src="res/dataTables/js/jquery.dataTables.min.js"></script>
+  <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
+  <script src="res/dataTables/js/main.js"></script>
 </body>
 
 </html>

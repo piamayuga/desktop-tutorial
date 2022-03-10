@@ -377,6 +377,7 @@ input::-webkit-inner-spin-button {
   height: auto;
   animation: animation .7s ease;
 }
+
 /* multiple step form */
 
 @keyframes animation {
@@ -430,3 +431,15 @@ input::-webkit-inner-spin-button {
 }
 
 /* multiple step form */
+
+/* alert */
+.custom-alert {
+  position: absolute;
+  min-width: 350px;
+  bottom: 20px;
+  opacity: .9;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99;  
+}
+/* alert */
