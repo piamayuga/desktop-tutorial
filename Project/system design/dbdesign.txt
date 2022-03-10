@@ -1,80 +1,183 @@
 pcoo database
 (*) required
 
-create acc
-employee
-- employeeID PRIMARY KEY *
-- username *
-- password *
-- email *
-- firstName *
-- middleName
-- lastName *
-- suffix 
-- phoneNumber *
-- gender * Male / Female
-- 
 
-employeePersonalDatasheet
+employeeTbl
 - employeeID PRIMARY KEY *
 - surname *
-- firstName *
+- middle_name
 - middleName
-- suffix
-- dateOfBirth *
-- placeOfBirth *
-- gender *
-- civil status 
-	[0] 'single',
-	[1] 'married',
-	[2] 'divorced',
-	[3] 'widowed'
-	(possible changes) *
+- suffix_name
+
+- birth_date*
+- birth_place*
+- sex*
+- civil_status 	
 - height float *
 - weight float *
-- bloodtype short *
-- gsId  INT 11digits *
-- pagibigId INT 12digits *
-- philhealthId INT 12 digits*
-- sssId INT * 
-- tinId INT *
-- agencyEmployeeId INT *
-- telephoneNumber
-- phoneNumber
-- emailAddress EMAIL *
+- blood_type short *
+
+- gsis_id INT 11digits *
+- pagibig_id INT 12digits *
+- philhealth_id INT 12 digits*
+- sss_id INT * 
+- tin_id INT *
+- employee_number INT *
+
+- telephone_number
+- cellphone_number
+- email_add EMAIL *
 - citizenship 
-	[0] 'filipino',
-	[1] 'dual citizenship'
-	(possible changes) *
+- immigrant
+- country
+
 
 - residentialAddress 
 	{
-	- houseNumber
-	- street
-	- subdivision
-	- barangay
-	- city
-	- province 
-		[0] NCR
-	- zipCode INT 4digits *
+	- residential_house_number
+	- residential_street
+	- residential_subdivision
+	- residential_barangay
+	- residential_city
+	- residential_province
+	- residential_zip_code INT 4digits *
 }
 
 can be same with permanent address
 
 - permanentAddress 
 	{
-	- houseNumber
-	- street
-	- subdivision
-	- barangay
-	- city
-	- province 
-		[0] NCR
-	- zipCode INT 4digits *
+	- permanent_house_number
+	- permanent_street
+	- permanent_subdivision
+	- permanent_barangay
+	- permanent_city
+	- permanent_province
+	- permanent_zip_code INT 4digits *
 }
 
+spouse_surname
+spouse_first_name
+spouse_middle_name
+spouse_suffix
+spouse_occupation
+spouse_business_name
+spouse_business_address
+spouse_telephone_number
 
-HR
+father_surname
+father_first_name
+father_middle_name
+father_suffix
+
+mother_surname
+mother_first_name
+mother_middle_name
+mother_suffix
+
+name_child
+child_birth_date
+
+elementary_school_name
+elementary_basic_education
+elementary_period_attendance_from
+elementary_period_attendance_to
+elementary_highest_level
+elementary_year_graduated
+elementary_scholarship
+
+secondary_school_name
+secondary_basic_education
+secondary_period_attendance_from
+secondary_period_attendance_to
+secondary_highest_level
+secondary_year_graduated
+secondary_scholarship
+
+vocational_school_name
+vocational_basic_education
+vocational_period_attendance_from
+vocational_period_attendance_to
+vocational_highest_level
+vocational_year_graduated
+vocational_scholarship
+
+college_school_name
+college_basic_education
+college_period_attendance_from
+college_period_attendance_to
+college_highest_level
+college_year_graduated
+college_scholarship
+
+graduate_school_name
+graduate_basic_education
+graduate_period_attendance_from
+graduate_period_attendance_to
+graduate_highest_level
+graduate_year_graduated
+graduate_scholarship
+
+career_service
+career_rating
+career_examination_date
+career_examination_place
+career_number
+career_validity_date
+
+work_inclusive_dates_from
+work_inclusive_dates_to
+work_position_title
+work_department
+work_monthly_salary
+work_salary
+work_status_appointment
+work_govt_service
+
+voluntary_organization_name
+voluntary_organization_address
+voluntary_inclusive_date_from
+voluntary_inclusive_date_to
+voluntary_number_hours
+voluntary_position
+
+training_program
+training_inclusive_date_from
+training_inclusive_date_to
+training_number_hours
+training_ld_type
+training_conducted
+special_skills
+recognition
+membership_association
+
+q1a
+q1b
+q2a
+q2b
+q3
+q4
+q5a
+q5b
+q6
+q7a
+q7b
+q7c
+
+reference_name
+reference_address
+reference_contact_number
+
+government_issued_id
+id_license_passport_number
+government_date_issuance
+government_place_issuance
+
+oath
+
+
+
+hrTbl
 - hrID * PRIMARY KEY
 - employeeID * FOREIGN KEY 
 - username *
