@@ -36,7 +36,7 @@
     private $country =  $_REQUEST['pds_country'];
 
     // Residential Address
-    private $residential_address =  $_REQUEST['pds_residential_address'];
+    private $residential_house_number =  $_REQUEST['pds_residential_house_number'];
     private $residential_street =  $_REQUEST['pds_residential_street'];
     private $residential_subdivision =  $_REQUEST['pds_residential_subdivision'];
     private $residential_barangay =  $_REQUEST['pds_residential_barangay'];
@@ -45,7 +45,7 @@
     private $residential_zip_code =  $_REQUEST['pds_residential_zip_code'];
     
     // Permanent Address
-    private $permanent_address =  $_REQUEST['pds_permanent_address'];
+    private $permanent_house_number =  $_REQUEST['pds_permanent_house_number'];
     private $permanent_street =  $_REQUEST['pds_permanent_street'];
     private $permanent_subdivision =  $_REQUEST['pds_permanent_subdivision'];
     private $permanent_barangay =  $_REQUEST['pds_permanent_barangay'];
@@ -166,11 +166,54 @@
     private $training_conducted =  $_REQUEST['pds_training_conducted'];
 
     // Other Information
+    private $special_skills =  $_REQUEST['pds_special_skills'];
+    private $recognition =  $_REQUEST['pds_recognition'];
+    private $membership_association =  $_REQUEST['pds_membership_association'];
 
+    // Exam Type
+    // Question 1 Type A
+    private $q1a =  $_REQUEST['pds_q1a'];
+    // Question 1 Type B
+    private $q1b =  $_REQUEST['pds_q1b'];
+    // Question 2 Type A
+    private $q2a =  $_REQUEST['pds_q2a'];
+    // Question 2 Type B
+    private $q2b =  $_REQUEST['pds_q2b'];
+    // Question 3
+    private $q3 =  $_REQUEST['pds_q3'];
+    // Question 4
+    private $q4 =  $_REQUEST['pds_q4'];
+    // Question 5 Type A
+    private $q5a =  $_REQUEST['pds_q5a'];
+    // Question 5 Type B
+    private $q5b =  $_REQUEST['pds_q5b'];
+    // Question 6
+    private $q6 =  $_REQUEST['pds_q6'];
+    // Question 7 Type A
+    private $q7a =  $_REQUEST['pds_q7a'];
+    // Question 7 Type B
+    private $q7b =  $_REQUEST['pds_q7b'];
+    // Question 7 Type C
+    private $q7c =  $_REQUEST['pds_q7c'];
+
+    // References (can be one or more)
+    private $reference_name =  $_REQUEST['pds_reference_name'];
+    private $reference_address =  $_REQUEST['pds_reference_address'];
+    private $reference_contact_number =  $_REQUEST['pds_reference_contact_number'];
+
+    // Government Issued ID
+    private $government_issued_id =  $_REQUEST['pds_government_issued_id'];
+    private $id_license_passport_number =  $_REQUEST['pds_id_license_passport_number'];
+    private $government_date_issuance =  $_REQUEST['pds_government_date_issuance'];
+    private $government_place_issuance =  $_REQUEST['pds_government_place_issuance'];
+
+    // Declaration under oath
+    private $oath =  $_REQUEST['pds_oath'];
 
 
 
     $read-> pds_construct($surname, $first_name, $middle_name, $suffix_name);
+    
     $read-> setSurname($surname);
     $read-> setFirstName($first_name);
     $read-> setMiddleName($middle_name);
@@ -198,7 +241,7 @@
     $read-> setImmigrant($immigrant);
     $read-> setCountry($country);
 
-    $read-> setResidentialAddress($residential_address);
+    $read-> setResidentialHouseNumber($residential_house_number);
     $read-> setResidentialStreet($residential_street);
     $read-> setResidentialSubdivision($residential_subdivision);
     $read-> setResidentialBarangay($residential_barangay);
@@ -206,7 +249,7 @@
     $read-> setResidentialProvince($residential_province);
     $read-> setResidentialZipCode($residential_zip_code);
 
-    $read-> setPermanentAddress($permanent_address);
+    $read-> setPermanentHouseNumber($permanent_house_number);
     $read-> setPermanentStreet($permanent_street);
     $read-> setPermanentSubdivision($permanent_subdivision);
     $read-> setPermanentBarangay($permanent_barangay);
@@ -306,9 +349,35 @@
     $read-> setTrainingLdType($training_ld_type);
     $read-> setTrainingConducted($training_conducted);
 
-    
+    $read-> setSpecialSkills($special_skills);
+    $read-> setRecognition($recognition);
+    $read-> setMembershipAssociation($membership_association);
+
+    $read-> setQ1a($q1a);
+    $read-> setQ1b($q1b);
+    $read-> setQ2a($q2a);
+    $read-> setQ2b($q2b);
+    $read-> setQ3($q3);
+    $read-> setQ4($q4);
+    $read-> setQ5a($q5a);
+    $read-> setQ5b($q5b);
+    $read-> setQ6($q6);
+    $read-> setQ7a($q7a);
+    $read-> setQ7b($q7b);
+    $read-> setQ7c($q7c);
 
 
+    $read-> setReferenceName($reference_name);
+    $read-> setReferenceAddress($reference_address);
+    $read-> setReferenceContactNumber($reference_contact_number);
+
+
+    $read-> setGovernmentIssuedId($government_issued_id);
+    $read-> setIdLicensePassportNumber($id_license_passport_number);
+    $read-> setGovernmentDateIssuance($government_date_issuance);
+    $read-> setGovernmentPlaceIssuance($government_place_issuance);
+
+    $read-> setOath($oath);
     
     $dbConnection->check_database_connection($check_db_connection);
 
@@ -342,7 +411,7 @@
         $immigrant = $read -> getImmigrant();
         $country = $read -> getCountry();
 
-        $residential_address = $read -> getResidentialAddress();
+        $residential_house_number = $read -> getResidentialHouseNumber();
         $residential_street = $read -> getResidentialStreet();
         $residential_subdivision = $read -> getResidentialSubdivision();
         $residential_barangay = $read -> getResidentialBarangay();
@@ -350,7 +419,7 @@
         $residential_province = $read -> getResidentialProvince();
         $residential_zip_code = $read -> getResidentialZipCode();
 
-        $permanent_address = $read -> getPermanentAddress();
+        $permanent_house_number = $read -> getPermanentHouseNumber();
         $permanent_street = $read -> getPermanentStreet();
         $permanent_subdivision = $read -> getPermanentSubdivision();
         $permanent_barangay = $read -> getPermanentBarangay();
@@ -450,6 +519,34 @@
         $training_ld_type = $read -> getTrainingLdType();
         $training_conducted = $read -> getTrainingConducted();
 
+        $special_skills = $read -> getSpecialSkills();
+        $recognition = $read -> getRecognition();
+        $membership_association = $read -> getMembershipAssociation();
+
+        $q1a = $read -> getQ1a();
+        $q1b = $read -> getQ1b();
+        $q2a = $read -> getQ2a();
+        $q2b = $read -> getQ2b();
+        $q3 = $read -> getQ3();
+        $q4 = $read -> getQ4();
+        $q5a = $read -> getQ5a();
+        $q5b = $read -> getQ5b();
+        $q6 = $read -> getQ6();
+        $q7a = $read -> getQ7a();
+        $q7b = $read -> getQ7b();
+        $q7c = $read -> getQ7c();
+ 
+        $reference_name = $read -> getReferenceName();
+        $reference_address = $read -> getReferenceAddress();
+        $reference_contact_number = $read -> getReferenceContactNumber();
+
+        $government_issued_id = $read -> getGovernmentIssuedId();
+        $id_license_passport_number = $read -> getIdLicensePassportNumber();
+        $government_date_issuance = $read -> getGovernmentDateIssuance();
+        $government_place_issuance = $read -> getGovernmentPlaceIssuance();
+
+
+        $oath = $read -> getOath();
 
 
 
@@ -457,8 +554,8 @@
 
         $dbQuery-> pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix_name,$birth_date,$birth_place,$sex,$civil_status,
         $height,$weight,$blood_type,$gsis_id,$pagibig_id,$philhealth_id,$sss_id,$tin_id,$employee_number,$telephone_number,$cellphone_number,
-        $email_add,$citizenship,$immigrant,$country,$residential_address,$residential_street,$residential_subdivision,$residential_barangay,
-        $residential_city,$residential_province,$residential_zip_code, $permanent_address,$permanent_street,$permanent_subdivision,$permanent_barangay,
+        $email_add,$citizenship,$immigrant,$country,$residential_house_number,$residential_street,$residential_subdivision,$residential_barangay,
+        $residential_city,$residential_province,$residential_zip_code, $permanent_house_number,$permanent_street,$permanent_subdivision,$permanent_barangay,
         $permanent_city,$permanent_province,$permanent_zip_code,$spouse_surname,$spouse_first_name,$spouse_middle_name,$spouse_suffix,$spouse_occupation,
         $spouse_business_name, $spouse_business_address,$spouse_telephone_number,$father_surname,$father_first_name,$father_middle_name,$father_suffix,
         $mother_surname,$mother_first_name,$mother_middle_name,$mother_suffix,$name_child,$child_birth_date,$elementary_school_name,$elementary_basic_education,
@@ -472,7 +569,9 @@
         $career_examination_date,$career_examination_place,$career_number,$career_validity_date,$work_inclusive_dates_from,$work_inclusive_dates_to,
         $work_position_title,$work_department,$work_monthly_salary,$work_salary,$work_status_appointment,$work_govt_service,$voluntary_organization_name,
         $voluntary_organization_address,$voluntary_inclusive_date_from,$voluntary_inclusive_date_to,$voluntary_number_hours,$voluntary_position,$training_program,
-        $training_inclusive_date_from,$training_inclusive_date_to,$training_number_hours,$training_ld_type,$training_conducted);
+        $training_inclusive_date_from,$training_inclusive_date_to,$training_number_hours,$training_ld_type,$training_conducted, $special_skills, $recognition, 
+        $membership_association, $q1a, $q1b, $q2a, $q2b, $q3, $q4, $q5a, $q5b, $q6, $q7a, $q7b, $q7c, $reference_name, $reference_address, $reference_contact_number,
+        $government_issued_id, $id_license_passport_number, $government_date_issuance, $government_place_issuance, $oath);
  
     } 
 
