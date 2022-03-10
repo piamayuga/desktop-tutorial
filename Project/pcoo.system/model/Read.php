@@ -28,7 +28,7 @@
         private $country;
 
         // Residential Address
-        private $residential_address;
+        private $residential_house_number;
         private $residential_street;
         private $residential_subdivision;
         private $residential_barangay;
@@ -37,7 +37,7 @@
         private $residential_zip_code;
 
         // Permanent Address
-        private $permanent_address;
+        private $permanent_house_number;
         private $permanent_street;
         private $permanent_subdivision;
         private $permanent_barangay;
@@ -152,12 +152,63 @@
         private $training_ld_type; // LD TYPE
         private $training_conducted;
 
+        // Other Information
+        private $special_skills;
+        private $recognition;
+        private $membership_association;
+
+        // Exam Type
+        // Question 1 Type A
+        private $q1a;
+        // Question 1 Type B
+        private $q1b;
+        // Question 2 Type A
+        private $q2a;
+        // Question 2 Type B
+        private $q2b;
+        // Question 3
+        private $q3;
+        // Question 4
+        private $q4;
+        // Question 5 Type A
+        private $q5a;
+        // Question 5 Type B
+        private $q5b;
+        // Question 6
+        private $q6;
+        // Question 7 Type A
+        private $q7a;
+        // Question 7 Type B
+        private $q7b;
+        // Question 7 Type C
+        private $q7c;
+
+        // References (can be one or more)
+        private $reference_name;
+        private $reference_address;
+        private $reference_contact_number;
+
+        // Government Issued ID
+        private $government_issued_id;
+        private $id_license_passport_number;
+        private $government_date_issuance;
+        private $government_place_issuance;
+
+        // Declaration under oath
+        private $oath;
+     
+
+
         // Reading the inputs in pds_controller
         public function pds_construct ($surname, $first_name, $middle_name, $suffix_name) {
             $this-> surname = $surname;
             $this-> first_name = $first_name;
             $this-> middle_name = $middle_name;
             $this-> suffix_name = $suffix_name;
+
+        }
+
+        public function forCapitalization() {
 
         }
 
@@ -345,12 +396,12 @@
             $this-> country = $country;
         }
         
-        public function getResidentialAddress() {
-            return $this-> residential_address;
+        public function getResidentialHouseNumber() {
+            return $this-> residential_house_number;
         }
 
-        public function setResidentialAddress($residential_address) {
-            $this-> residential_address = $residential_address;
+        public function setResidentialHouseNumber($residential_house_number) {
+            $this-> residential_house_number = $residential_house_number;
         }
 
         public function getResidentialStreet() {
@@ -401,12 +452,12 @@
             $this-> residential_zip_code = $residential_zip_code;
         }
         
-        public function getPermanentAddress() {
-            return $this-> permanent_address;
+        public function getPermanentHouseNumber() {
+            return $this-> permanent_house_number;
         }
 
-        public function setPermanentAddress($permanent_address) {
-            $this-> permanent_address = $permanent_address;
+        public function setPermanentHouseNumber($permanent_house_number) {
+            $this-> permanent_house_number = $permanent_house_number;
         }
         
         public function getPermanentStreet() {
@@ -1089,10 +1140,189 @@
             $this-> training_conducted = $training_conducted;
         }
 
+        public function getSpecialSkills() {
+            return $this-> special_skills;
+        }
 
+        public function setSpecialSkills($special_skills) {
+            $this-> special_skills = $special_skills;
+        }
         
+        public function getRecognition() {
+            return $this-> recognition;
+        }
+
+        public function setRecognition($recognition) {
+            $this-> recognition = $recognition;
+        }
+
+        public function getMembershipAssociation() {
+            return $this-> membership_association;
+        }
+
+        public function setMembershipAssociation($membership_association) {
+            $this-> membership_association = $membership_association;
+        }
+
+        public function getQ1a() {
+            return $this-> q1a;
+        }
+
+        public function setQ1a($q1a) {
+            $this-> q1a = $q1a;
+        }
         
+        public function getQ1b() {
+            return $this-> q1b;
+        }
+
+        public function setQ1b($q1b) {
+            $this-> q1b = $q1b;
+        }
         
+        public function getQ2a() {
+            return $this-> q2a;
+        }
+
+        public function setQ2a($q2a) {
+            $this-> q2a = $q2a;
+        }
+        
+        public function getQ2b() {
+            return $this-> q2b;
+        }
+
+        public function setQ2b($q2b) {
+            $this-> q2b = $q2b;
+        }
+
+        public function getQ3() {
+            return $this-> q3;
+        }
+
+        public function setQ3($q3) {
+            $this-> q3 = $q3;
+        }
+
+        public function getQ4() {
+            return $this-> q4;
+        }
+
+        public function setQ4($q3) {
+            $this-> q4 = $q4;
+        }
+
+        public function getQ5a() {
+            return $this-> q5a;
+        }
+
+        public function setQ5a($q5a) {
+            $this-> q5a = $q5a;
+        }
+        
+        public function getQ5b() {
+            return $this-> q5b;
+        }
+
+        public function setQ5b($q5b) {
+            $this-> q5b = $q5b;
+        }
+        
+        public function getQ6() {
+            return $this-> q6;
+        }
+
+        public function setQ6($q6) {
+            $this-> q6 = $q6;
+        }
+
+        public function getQ7a() {
+            return $this-> q7a;
+        }
+
+        public function setQ7a($q7a) {
+            $this-> q7a = $q7a;
+        }
+
+        public function getQ7b() {
+            return $this-> q7b;
+        }
+
+        public function setQ7b($q7b) {
+            $this-> q7b = $q7b;
+        }
+        
+        public function getQ7c() {
+            return $this-> q7c;
+        }
+
+        public function setQ7c($q7c) {
+            $this-> q7c = $q7c;
+        }
+
+        public function getReferenceName() {
+            return $this-> reference_name;
+        }
+
+        public function setReferenceName($reference_name) {
+            $this-> reference_name = $reference_name;
+        }
+        
+        public function getReferenceAddress() {
+            return $this-> reference_address;
+        }
+
+        public function setReferenceAddress($reference_address) {
+            $this-> reference_address = $reference_address;
+        }
+
+        public function getReferenceContactNumber() {
+            return $this-> reference_contact_number;
+        }
+
+        public function setReferenceContactNumber($reference_contact_number) {
+            $this-> reference_contact_number = $reference_contact_number;
+        }
+        
+        public function getGovernmentIssuedId() {
+            return $this-> government_issued_id;
+        }
+
+        public function setGovernmentIssuedId($government_issued_id) {
+            $this-> government_issued_id = $government_issued_id;
+        }
+
+        public function getIdLicensePassportNumber() {
+            return $this-> id_license_passport_number;
+        }
+
+        public function setIdLicensePassportNumber($id_license_passport_number) {
+            $this-> id_license_passport_number = $id_license_passport_number;
+        }
+
+        public function getGovernmentDateIssuance() {
+            return $this-> government_date_issuance;
+        }
+
+        public function setGovernmentDateIssuance($government_date_issuance) {
+            $this-> government_date_issuance = $government_date_issuance;
+        }
+
+        public function getGovernmentPlaceIssuance() {
+            return $this-> government_place_issuance;
+        }
+
+        public function setGovernmentPlaceIssuance($government_place_issuance) {
+            $this-> government_place_issuance = $government_place_issuance;
+        }
+       
+        public function getOath() {
+            return $this-> oath;
+        }
+
+        public function setOath($oath) {
+            $this-> oath = $oath;
+        }
         
 
     
