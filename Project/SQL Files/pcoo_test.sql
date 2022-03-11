@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2022 at 09:32 AM
+-- Generation Time: Mar 11, 2022 at 09:54 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Table structure for table `admintbl`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `admintbl` (
   `adminID` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
@@ -37,10 +37,67 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employee`
+-- Table structure for table `employee2tbl`
 --
 
-CREATE TABLE `employee` (
+CREATE TABLE `employee2tbl` (
+  `employeeID` varchar(8) NOT NULL,
+  `career_examination_date` date NOT NULL,
+  `career_examination_place` varchar(100) NOT NULL,
+  `career_number` varchar(20) NOT NULL,
+  `career_validity_date` date NOT NULL,
+  `work_inclusive_dates_from` varchar(50) NOT NULL,
+  `work_inclusive_dates_to` varchar(50) NOT NULL,
+  `work_position_title` varchar(100) NOT NULL,
+  `work_department` varchar(50) NOT NULL,
+  `work_monthly_salary` varchar(20) NOT NULL,
+  `work_salary` varchar(20) NOT NULL,
+  `work_status_appointment` varchar(20) NOT NULL,
+  `work_govt_service` varchar(50) NOT NULL,
+  `voluntary_organization_name` varchar(100) NOT NULL,
+  `voluntary_organization_address` varchar(100) NOT NULL,
+  `voluntary_inclusive_date_from` varchar(50) NOT NULL,
+  `voluntary_inclusive_date_to` varchar(50) NOT NULL,
+  `voluntary_number_hours` varchar(20) NOT NULL,
+  `voluntary_position` varchar(100) NOT NULL,
+  `training_program` varchar(100) NOT NULL,
+  `training_inclusive_date_from` varchar(50) NOT NULL,
+  `training_inclusive_date_to` varchar(50) NOT NULL,
+  `training_number_hours` varchar(20) NOT NULL,
+  `training_ld_type` varchar(50) NOT NULL,
+  `training_conducted` varchar(100) NOT NULL,
+  `special_skills` varchar(100) NOT NULL,
+  `recognition` varchar(100) NOT NULL,
+  `membership_association` varchar(100) NOT NULL,
+  `q1a` varchar(4) NOT NULL,
+  `q1b` varchar(4) NOT NULL,
+  `q2a` varchar(4) NOT NULL,
+  `q2b` varchar(4) NOT NULL,
+  `q3` varchar(4) NOT NULL,
+  `q4` varchar(4) NOT NULL,
+  `q5a` varchar(4) NOT NULL,
+  `q5b` varchar(4) NOT NULL,
+  `q6` varchar(4) NOT NULL,
+  `q7a` varchar(4) NOT NULL,
+  `q7b` varchar(4) NOT NULL,
+  `q7c` varchar(4) NOT NULL,
+  `reference_name` varchar(100) NOT NULL,
+  `reference_address` varchar(100) NOT NULL,
+  `reference_contact_number` varchar(13) NOT NULL,
+  `government_issued_id` varchar(50) NOT NULL,
+  `id_license_passport_number` varchar(30) NOT NULL,
+  `government_date_issuance` date NOT NULL,
+  `government_place_issuance` varchar(100) NOT NULL,
+  `oath` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employeetbl`
+--
+
+CREATE TABLE `employeetbl` (
   `employeeID` varchar(8) NOT NULL,
   `surName` varchar(50) NOT NULL,
   `firstName` varchar(50) NOT NULL,
@@ -139,67 +196,10 @@ CREATE TABLE `employee` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employee2`
+-- Table structure for table `hrtbl`
 --
 
-CREATE TABLE `employee2` (
-  `employeeID` varchar(8) NOT NULL,
-  `career_examination_date` date NOT NULL,
-  `career_examination_place` varchar(100) NOT NULL,
-  `career_number` varchar(20) NOT NULL,
-  `career_validity_date` date NOT NULL,
-  `work_inclusive_dates_from` varchar(50) NOT NULL,
-  `work_inclusive_dates_to` varchar(50) NOT NULL,
-  `work_position_title` varchar(100) NOT NULL,
-  `work_department` varchar(50) NOT NULL,
-  `work_monthly_salary` varchar(20) NOT NULL,
-  `work_salary` varchar(20) NOT NULL,
-  `work_status_appointment` varchar(20) NOT NULL,
-  `work_govt_service` varchar(50) NOT NULL,
-  `voluntary_organization_name` varchar(100) NOT NULL,
-  `voluntary_organization_address` varchar(100) NOT NULL,
-  `voluntary_inclusive_date_from` varchar(50) NOT NULL,
-  `voluntary_inclusive_date_to` varchar(50) NOT NULL,
-  `voluntary_number_hours` varchar(20) NOT NULL,
-  `voluntary_position` varchar(100) NOT NULL,
-  `training_program` varchar(100) NOT NULL,
-  `training_inclusive_date_from` varchar(50) NOT NULL,
-  `training_inclusive_date_to` varchar(50) NOT NULL,
-  `training_number_hours` varchar(20) NOT NULL,
-  `training_ld_type` varchar(50) NOT NULL,
-  `training_conducted` varchar(100) NOT NULL,
-  `special_skills` varchar(100) NOT NULL,
-  `recognition` varchar(100) NOT NULL,
-  `membership_association` varchar(100) NOT NULL,
-  `q1a` varchar(4) NOT NULL,
-  `q1b` varchar(4) NOT NULL,
-  `q2a` varchar(4) NOT NULL,
-  `q2b` varchar(4) NOT NULL,
-  `q3` varchar(4) NOT NULL,
-  `q4` varchar(4) NOT NULL,
-  `q5a` varchar(4) NOT NULL,
-  `q5b` varchar(4) NOT NULL,
-  `q6` varchar(4) NOT NULL,
-  `q7a` varchar(4) NOT NULL,
-  `q7b` varchar(4) NOT NULL,
-  `q7c` varchar(4) NOT NULL,
-  `reference_name` varchar(100) NOT NULL,
-  `reference_address` varchar(100) NOT NULL,
-  `reference_contact_number` varchar(13) NOT NULL,
-  `government_issued_id` varchar(50) NOT NULL,
-  `id_license_passport_number` varchar(30) NOT NULL,
-  `government_date_issuance` date NOT NULL,
-  `government_place_issuance` varchar(100) NOT NULL,
-  `oath` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hr`
---
-
-CREATE TABLE `hr` (
+CREATE TABLE `hrtbl` (
   `hrID` int(11) NOT NULL,
   `employeeID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -209,27 +209,27 @@ CREATE TABLE `hr` (
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table `admintbl`
 --
-ALTER TABLE `admin`
+ALTER TABLE `admintbl`
   ADD PRIMARY KEY (`adminID`);
 
 --
--- Indexes for table `employee`
+-- Indexes for table `employee2tbl`
 --
-ALTER TABLE `employee`
+ALTER TABLE `employee2tbl`
   ADD PRIMARY KEY (`employeeID`);
 
 --
--- Indexes for table `employee2`
+-- Indexes for table `employeetbl`
 --
-ALTER TABLE `employee2`
+ALTER TABLE `employeetbl`
   ADD PRIMARY KEY (`employeeID`);
 
 --
--- Indexes for table `hr`
+-- Indexes for table `hrtbl`
 --
-ALTER TABLE `hr`
+ALTER TABLE `hrtbl`
   ADD PRIMARY KEY (`hrID`),
   ADD KEY `employeeID` (`employeeID`);
 
@@ -238,9 +238,9 @@ ALTER TABLE `hr`
 --
 
 --
--- AUTO_INCREMENT for table `hr`
+-- AUTO_INCREMENT for table `hrtbl`
 --
-ALTER TABLE `hr`
+ALTER TABLE `hrtbl`
   MODIFY `hrID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
