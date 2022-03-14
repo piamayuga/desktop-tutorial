@@ -36,19 +36,10 @@
     }
 
     .nav-tabs .nav-link:hover {
-      border: 2px solid var(--custom-primary);
       background-color: var(--custom-primary);
-      color: #000;
+      color: #fff;
     }
 
-    .nav-tabs {
-      border-bottom: 1px solid var(--custom-primary);
-    }
-
-    .tab-content {
-      border-top: 1px solid var(--custom-primary);
-      padding: 20px;
-    }
   </style>
 </head>
 
@@ -138,59 +129,66 @@
     <div class="text">Settings</div>
 
     <div class="container mt-2">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-md-4 col-lg-2">
 
-      <div class="tab-content">
-
-        <div class="tab-pane active" id="home">
-          <div class="row border g-0 rounded shadow-sm">
-            <div class="col p-4">
-              <h3>Home</h3>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
-            </div>
-            <div class="col-auto">
-              <img src="images/sample.png" class="img-thumbnail dimension">
-            </div>
-          </div>
+          <ul class="nav nav-tabs d-flex flex-column">
+            <li class="nav-item my-1">
+              <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item my-1">
+              <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item my-1">
+              <a class="nav-link" data-bs-toggle="tab" href="#contact">Password</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="tab-pane" id="profile">
-          <div class="row border g-0 rounded shadow-sm">
-            <div class="col p-4">
-              <h3>Profile</h3>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
+        <div class="col-md-8 col-lg-10">
+          <div class="tab-content">
+
+            <div class="tab-pane active" id="home">
+              <div class="row border g-0 rounded shadow-sm">
+                <div class="col-lg-8 p-4">
+                  <h3>Home</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/sample.png" class="img-thumbnail dimension">
+                </div>
+              </div>
             </div>
-            <div class="col-auto">
-              <img src="images/pcoo_logo.png" class="img-thumbnail dimension">
+
+            <div class="tab-pane" id="profile">
+              <div class="row border g-0 rounded shadow-sm">
+                <div class="col-lg-8 p-4">
+                  <h3>Profile</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <img src="images/pcoo_logo.png" class="img-thumbnail dimension">
+                </div>
+              </div>
             </div>
+
+            <div class="tab-pane" id="contact">
+              <div class="row border g-0 rounded shadow-sm">
+                <div class="col p-4">
+                  <h3>Password</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, qui! Aperiam, aut repellendus similique id dolor quae porro et, explicabo earum nemo modi cumque molestias perspiciatis dicta labore ipsa iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium reiciendis, rem tenetur asperiores illo quod voluptas similique, animi nam ipsum alias nemo ea perferendis est ut, dolor eos? Repellat.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-
-        <div class="tab-pane" id="contact">
-          <div class="row border g-0 rounded shadow-sm">
-            <div class="col p-4">
-              <h3>Contact</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, qui! Aperiam, aut repellendus similique id dolor quae porro et, explicabo earum nemo modi cumque molestias perspiciatis dicta labore ipsa iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium reiciendis, rem tenetur asperiores illo quod voluptas similique, animi nam ipsum alias nemo ea perferendis est ut, dolor eos? Repellat.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </main>
