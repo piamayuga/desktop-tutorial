@@ -434,7 +434,7 @@ input::-webkit-inner-spin-button {
 
 /* alert */
 .custom-alert {
-  position: absolute;
+  position: fixed;
   min-width: 350px;
   bottom: 20px;
   opacity: .9;
