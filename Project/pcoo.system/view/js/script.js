@@ -26,6 +26,31 @@ function request_type() {
 }
 // request type dropdown -- tab4
 
+// request date of separation -- tab4
+function showDateSep() {
+  document.getElementById('reqPer_dateSeparated').style.display = "block"
+}
+function hideDateSep() {
+  document.getElementById('reqPer_dateSeparated').style.display = "none"
+  document.getElementById('reqPer_dateSeparated').value = ""
+}
+
+function showOptionsCTC() {
+  if (document.getElementById('reqPer_ctc').checked == true) {
+    document.getElementById('reqPer_apptPaper').disabled = '';
+    document.getElementById('reqPer_oath').disabled = '';
+  }
+}
+function hideOptionsCTC() {
+  if (document.getElementById('reqPer_ctc').checked != true) {
+    document.getElementById('reqPer_apptPaper').disabled = true;
+    document.getElementById('reqPer_oath').disabled = true;
+    document.getElementById('reqPer_apptPaper').checked = false
+    document.getElementById('reqPer_oath').checked = false
+  }
+}
+// request date of separation -- tab4
+
 // sidebar
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
