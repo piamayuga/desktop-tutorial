@@ -552,7 +552,6 @@
 
 
 
-        $dbQuery-> pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix_name,$birth_date,$birth_place,$sex,$civil_status,
         $dbQuery-> pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix,$birth_date,$birth_place,$gender,$civil_status,
         $height,$weight,$bloodType,$gsisID,$pagibigID,$philhealthID,$sssID,$tinID,$employeeNo,$telephone_number,$cellphone_number,
         $email_add,$citizenship,$immigrant,$country,$residential_house_number,$residential_street,$residential_subdivision,$residential_barangay,
