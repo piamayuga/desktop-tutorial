@@ -1,37 +1,28 @@
 <?php
+    //start session
     session_start();
-    $read = new Read();
-    $dbConnection = new DBConnection();
-    $dbQuery = new DBQuery();
-    class index_controller extends DBConnection{
-        
-
-    
-
-        private $username = $_REQUEST['index_username'];
-        private $password = $_REQUEST['index_password'];
-
-        public function check_database_connection($check_db_connection){
-            if ($dbConnection == true) {
-                echo 'connected';
-                if($_SERVER["REQUEST_METHOD"] == "POST") {
-                // username and password sent from form 
-                
-                    $username = mysqli_real_escape_string($connection, $_POST['username']);
-                    $password = mysqli_real_escape_string($connection, $_POST['password']); 
-                    
-                    $dbQuery-> check_login($username, $password)
-                        
-                    
-                }
-            }
-        }
-    
+     
+    include_once('../model/DBQuery.php');
+     
+    $user = new User();
+     
+    if(isset($_POST['login'])){
+    	$username = $user->escape_string($_POST['index_username']);
+    	$password = $user->escape_string($_POST['index_password']);
+     
+    	$auth = $user->check_login($username, $password);
+     
+    	if(!$auth){
+    		$_SESSION['message'] = 'Invalid username or password';
+        	header('location:index.php');
+    	}
+    	else{
+    		$_SESSION['user'] = $auth;
+    		header('location:home.php');
+    	}
     }
-    // Log in, log-out https://www.tutorialspoint.com/php/php_mysql_login.htm
-
-
-    
-    
-
- ?>
+    else{
+    	$_SESSION['message'] = 'You need to login first';
+    	header('location:index.php');
+    }
+    ?>

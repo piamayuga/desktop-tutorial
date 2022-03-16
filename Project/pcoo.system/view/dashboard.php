@@ -1,3 +1,19 @@
+<?php
+session_start();
+//return to login if not logged in
+if (!isset($_SESSION['user']) ||(trim ($_SESSION['user']) == '')){
+	header('location:index.php');
+}
+ 
+include_once('../model/User.php');
+ 
+$user = new User();
+ 
+//fetch user data
+$sql = "SELECT * FROM admintbl WHERE id = '".$_SESSION['user']."'";
+$row = $user->details($sql);
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +55,7 @@
 
       <!-- links -->
       <li>
-        <a href="dashboard.html" class="highlight">
+        <a href="dashboard.php" class="highlight">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>

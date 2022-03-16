@@ -1,3 +1,12 @@
+<?php
+	//start session
+	session_start();
+ 
+	//redirect if logged in
+	if(isset($_SESSION['user'])){
+		header('location:dashboard.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +24,7 @@
 </head>
 
 <body>
+
 
   <main class="container-fluid p-lg-3 p-md-5">
 
@@ -34,7 +44,7 @@
           </div>
 
           <div class="col my-2">
-            <form action="index_controller.php" method="post" autocomplete="off">
+            <form action="../controller/index_controller.php" method="post" autocomplete="off">
 
               <div class="form-group my-1">
                 <label class="text-label" for="username">Username</label>
@@ -56,7 +66,7 @@
               </div>
 
               <div class="d-flex mt-5 justify-content-center">
-                <button class="button custom-btn"><span><span>Sign In</span></span></button>
+                <button type = 'submit' name = 'login' class="button custom-btn"><span><span>Sign In</span></span></button>
               </div>
 
               <!-- <span class="d-block text-center my-3 text-muted">
@@ -76,6 +86,17 @@
   <script src="js/login/main.js"></script>
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
+  <?php
+		    	if(isset($_SESSION['message'])){
+		    		?>
+		    			<div class="alert alert-info text-center">
+					        <?php echo $_SESSION['message']; ?>
+					    </div>
+		    		<?php
+ 
+		    		unset($_SESSION['message']);
+		    	}
+		    ?>
 </body>
 
 </html>
