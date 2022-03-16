@@ -1,19 +1,13 @@
-<?php 
-    class DBConnection {
-
-        
-        // servername => localhost
-        // username => test
-        // password => admin
-        // database name => pcoo_test
-
+<?php
+    class DBConnection{
+     
         private $host = 'localhost';
-        private $username = 'test';
-        private $password = 'admin';
-        private $database = 'pcoo_test';
-
+        private $username = 'root';
+        private $password = '';
+        private $database = 'test';
+     
         protected $connection;
- 
+     
         public function __construct(){
      
             if (!isset($this->connection)) {
@@ -28,9 +22,5 @@
      
             return $this->connection;
         }
-
-
-
     }
-
-?>
+    ?>

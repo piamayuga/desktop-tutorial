@@ -1,4 +1,6 @@
 <?php
+    include_once('DBConnection.php');
+    
     class DBQuery extends DBconnection {
         // trying this https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
 
@@ -16,19 +18,7 @@
             parent::__construct();
         }
 
-        public function check_login($username, $password){
- 
-            $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-            $query = $this->connection->query($sql);
-     
-            if($query->num_rows > 0){
-                $row = $query->fetch_array();
-                return $row['id'];
-            }
-            else{
-                return false;
-            }
-        }
+    
           
         public function pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix,$birth_date,$birth_place,$gender,$civil_status,
         $height,$weight,$bloodType,$gsisID,$pagibigID,$philhealthID,$sssID,$tinID,$employeeNo,$telephone_number,$cellphone_number,
@@ -90,8 +80,8 @@
 
         }
         
-        public function index_login($username, $password) {
-            $sql = "SELECT id FROM employeeTbl WHERE username = '$username' and password = '$password'";
+        public function check_login($username, $password) {
+            $sql = "SELECT * FROM admintbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
             $result = mysqli_query($connection, $sql);
             $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             $active = $row['active'];
