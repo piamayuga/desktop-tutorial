@@ -53,17 +53,27 @@
 
             $sql = "INSERT INTO employee7tbl VALUES (`$reference_name`, `$reference_address`, `$reference_contact_number`, `$government_issued_id`, `$id_license_passport_number`, `$government_date_issuance`, `$government_place_issuance`, `$oath`)";
 
-            if(mysqli_query($conn, $sql)){
-                echo "<h3>data stored in a database successfully." 
-                    . " Please browse your localhost php my admin" 
-                    . " to view the updated data</h3>"; 
 
-                echo nl2br("\n$first_name\n $last_name\n "
-                    . "$gender\n $address\n $email");
-            } else{
-                echo "ERROR: Hush! Sorry $sql. " 
-                    . mysqli_error($conn);
-            }
+            //TO MAKE MULTIPLE QUERY WORK
+            if ($conn->multi_query($sql) === TRUE) {
+                echo "New records created successfully";
+              } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+              }
+
+
+
+            #if(mysqli_query($conn, $sql)){
+                #echo "<h3>data stored in a database successfully." 
+                    #. " Please browse your localhost php my admin" 
+                    #. " to view the updated data</h3>"; 
+
+                #echo nl2br("\n$first_name\n $last_name\n "
+                    #. "$gender\n $address\n $email");
+            #} else{
+               # echo "ERROR: Hush! Sorry $sql. " 
+                    #. mysqli_error($conn);
+            #}
 
         }
         
