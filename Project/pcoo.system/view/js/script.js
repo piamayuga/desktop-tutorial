@@ -14,6 +14,7 @@ var dropdown = document.getElementById("select_request");
 var idReqDiv = document.getElementById("id_request_div");
 var perReqDiv = document.getElementById("personnel_request_div");
 
+
 function request_type() {
   if (dropdown.value == "ID Request Form") {
     idReqDiv.style.display = "block";

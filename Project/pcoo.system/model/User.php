@@ -15,7 +15,7 @@
      
             if($query->num_rows > 0){
                 $row = $query->fetch_array();
-                return $row['id'];
+                return $row['username'];
             }
             else{
                 return false;
@@ -26,9 +26,9 @@
      
             $query = $this->connection->query($sql);
      
-            $row = $query->fetch_array();
+            //$row = $query->fetch_array();
      
-            return $row;       
+            //return $row;       
         }
      
         public function escape_string($value){

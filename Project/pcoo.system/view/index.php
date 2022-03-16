@@ -44,7 +44,7 @@
           </div>
 
           <div class="col my-2">
-            <form action="../controller/index_controller.php" method="post" autocomplete="off">
+            <form action="../controller/index_controller.php" method="POST" autocomplete="off">
 
               <div class="form-group my-1">
                 <label class="text-label" for="username">Username</label>
@@ -66,7 +66,7 @@
               </div>
 
               <div class="d-flex mt-5 justify-content-center">
-                <button type = 'submit' name = 'login' class="button custom-btn"><span><span>Sign In</span></span></button>
+                <button type="submit" name="login" class="button custom-btn"><span><span>Sign In</span></span></button>
               </div>
 
               <!-- <span class="d-block text-center my-3 text-muted">
@@ -77,16 +77,7 @@
           </div>
 
         </div>
-      </div>
-
-    </div>
-
-  </main>
-  <script src="js/login/jquery-3.3.1.min.js"></script>
-  <script src="js/login/main.js"></script>
-  <script src="js/script.js"></script>
-  <script src="res/bs-js/bootstrap.bundle.js"></script>
-  <?php
+        <?php
 		    	if(isset($_SESSION['message'])){
 		    		?>
 		    			<div class="alert alert-info text-center">
@@ -97,6 +88,16 @@
 		    		unset($_SESSION['message']);
 		    	}
 		    ?>
+      </div>
+
+    </div>
+
+  </main>
+  <script src="js/login/jquery-3.3.1.min.js"></script>
+  <script src="js/login/main.js"></script>
+  <script src="js/script.js"></script>
+  <script src="res/bs-js/bootstrap.bundle.js"></script>
+  
 </body>
 
 </html>
