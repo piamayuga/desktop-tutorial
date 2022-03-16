@@ -192,6 +192,8 @@ CREATE TABLE `employeetbl` (
   `career_service` varchar(100) NOT NULL,
   `career_rating` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  ENGINE=InnoDB_log_file_size = 512M;
+  ENGINE=InnoDB_strict_mode = 0;
 
 -- --------------------------------------------------------
 
