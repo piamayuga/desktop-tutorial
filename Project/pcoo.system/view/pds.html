@@ -183,7 +183,7 @@
 
               <div class="col-6">
                 <label for="gsisId" class="text-muted small ms-2">GSIS ID NO. <span class="text-danger">*</span></label>
-                <input name="pds_gsis_id" id="gsisId" type="text" class="form-control" required>
+                <input name="pds_gsis_id" onInput="lengthValidation(this)" maxLength="10" id="gsisId" type="text" class="form-control" required>
               </div>
 
               <div class="col-6">
@@ -198,12 +198,12 @@
 
               <div class="col-6">
                 <label for="sssId" class="text-muted small ms-2">SSS NO. <span class="text-danger">*</span></label>
-                <input name="pds_sss_id" id="sssId" type="text" class="form-control" required>
+                <input name="pds_sss_id" onInput="lengthValidation(this)" maxLength="10" id="sssId" type="text" class="form-control" required>
               </div>
 
               <div class="col-6">
                 <label for="tinId" class="text-muted small ms-2">TIN NO. <span class="text-danger">*</span></label>
-                <input name="pds_tin_id" id="tinId" type="text" class="form-control" required>
+                <input name="pds_tin_id" onInput="lengthValidation(this)" maxLength="12" id="tinId" type="text" class="form-control" required>
               </div>
 
               <div class="col-12">

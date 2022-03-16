@@ -6,7 +6,6 @@ employeeTbl
 - employeeID PRIMARY KEY *
 - surname *
 - middle_name
-- middleName
 - suffix_name
 
 - birth_date*
@@ -182,12 +181,12 @@ hrTbl
 - employeeID * FOREIGN KEY 
 - username *
 - password *
-- email *
+- email_add *
 
 admin
 - adminID * PRIMARY KEY
 - employeeID * FOREIGN KEY 
 - username *
 - password *
-- email *
+- email_add *
 
