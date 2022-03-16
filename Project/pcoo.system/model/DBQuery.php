@@ -1,19 +1,33 @@
 <?php
-    class DBQuery {
+    class DBQuery extends DBconnection {
         // trying this https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
 
         
 
         // servername => localhost
-        // username => root
-        // password => empty
+        // username => test
+        // password => admin
         // database name => pcoo_test
-        $conn = mysqli_connect("localhost", "root", "", "staff");
+        
           
         // Check connection
-        if($conn === false){
-            die("ERROR: Could not connect. " 
-                . mysqli_connect_error());
+        public function __construct(){
+ 
+            parent::__construct();
+        }
+
+        public function check_login($username, $password){
+ 
+            $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+            $query = $this->connection->query($sql);
+     
+            if($query->num_rows > 0){
+                $row = $query->fetch_array();
+                return $row['id'];
+            }
+            else{
+                return false;
+            }
         }
           
         public function pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix,$birth_date,$birth_place,$gender,$civil_status,
@@ -40,7 +54,6 @@
             // here our table name is employee
             $sql = "INSERT INTO employeetbl VALUES (`$surName`, `$firstName`, `$middleName`, `$suffix`, `$birthDate`, `$birthPlace`, `$gender`, `$civilStatus`, `$height`, `$weight`, `$bloodType`, `$gsisID`, `$pagibigID`, `$philhealthID`, `$sssID`, `$tinID`, `$employeeNo`, `$telephone_number`, `$cellphone_number`, `$email_add`, `$citizenship`, `$immigrant`, `$country`, `$residential_house_number`, `$residential_street`, `$residential_subdivision`, `$residential_barangay`, `$residential_city`, `$residential_province`, `$residential_zip_code`, `$permanent_house_number`, `$permanent_street`, `$permanent_subdivision`, `$permanent_barangay`, `$permanent_city`, `$permanent_province`, `$permanent_zip_code`)";
             
-
             $sql = "INSERT INTO employee2tbl VALUES (`$spouse_surname`, `$spouse_first_name`, `$spouse_middle_name`, `$spouse_suffix`, `$spouse_occupation`, `$spouse_business_name`, `$spouse_business_address`, `$spouse_telephone_number`, `$father_surname`, `$father_first_name`, `$father_middle_name`, `$father_suffix`, `$mother_surname`, `$mother_first_name`, `$mother_middle_name`, `$mother_suffix`, `$name_child`, `$child_birth_date`)";
 
             $sql = "INSERT INTO employee3tbl VALUES (`$elementary_school_name`, `$elementary_basic_education`, `$elementary_period_attendance_from`, `$elementary_period_attendance_to`, `$elementary_highest_level`, `$elementary_year_graduated`, `$elementary_scholarship`, `$secondary_school_name`, `$secondary_basic_education`, `$secondary_period_attendance_from`, `$secondary_period_attendance_to`, `$secondary_highest_level`, `$secondary_year_graduated`, `$secondary_scholarship`, `$vocational_school_name`, `$vocational_basic_education`, `$vocational_period_attendance_from`, `$vocational_period_attendance_to`, `$vocational_highest_level`, `$vocational_year_graduated`, `$vocational_scholarship`, `$college_school_name`, `$college_basic_education`, `$college_period_attendance_from`, `$college_period_attendance_to`, `$college_highest_level`, `$college_year_graduated`, `$college_scholarship`, `$graduate_school_name`, `$graduate_basic_education`, `$graduate_period_attendance_from`, `$graduate_period_attendance_to`, `$graduate_highest_level`, `$graduate_year_graduated`, `$graduate_scholarship`)";
@@ -55,10 +68,10 @@
 
 
             //TO MAKE MULTIPLE QUERY WORK
-            if ($conn->multi_query($sql) === TRUE) {
+            if ($connection->multi_query($sql) === TRUE) {
                 echo "New records created successfully";
               } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $sql . "<br>" . $connection->error;
               }
 
 
@@ -79,7 +92,7 @@
         
         public function index_login($username, $password) {
             $sql = "SELECT id FROM employeeTbl WHERE username = '$username' and password = '$password'";
-            $result = mysqli_query($conn, $sql);
+            $result = mysqli_query($connection, $sql);
             $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             $active = $row['active'];
 

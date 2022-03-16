@@ -34,11 +34,11 @@
           </div>
 
           <div class="col my-2">
-            <form action="dashboard.html" method="post" autocomplete="off">
+            <form action="index_controller.php" method="post" autocomplete="off">
 
               <div class="form-group my-1">
                 <label class="text-label" for="username">Username</label>
-                <input type="text" class="form-control" id="username" required autofocus>
+                <input type="text" name="index_username" class="form-control" id="username" required autofocus>
               </div>
 
               <div class="form-group my-3">
@@ -46,7 +46,7 @@
                 <label for="showPassword" class="position-absolute fs-4 text-black-50" style="bottom:10px; right:15px;">
                   <i class='bx bx-low-vision' style="cursor: pointer;"></i>
                 </label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" name="index_password" class="form-control" id="password" required>
               </div>
 
               <input class="form-check-input d-none" type="checkbox" id="showPassword" onclick="showPass()">
