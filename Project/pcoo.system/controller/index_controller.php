@@ -5,6 +5,8 @@
     include_once('../model/DBQuery.php');
      
     $user = new User();
+
+    //tangina mo jaboy
      
     if(isset($_POST['login'])){
     	$username = $user->escape_string($_POST['index_username']);
