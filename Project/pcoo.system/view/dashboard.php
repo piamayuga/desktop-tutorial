@@ -112,7 +112,8 @@ $row = $user->details($sql);
           </div>
         </div>
 
-        <i type="button" class='bx bx-log-out' id="log_out" onclick="location.href='index.html'"></i>
+        <!-- location.href='index.html' -->
+        <a href="../controller/logout.php"><i type="button" class='bx bx-log-out' id="log_out" onClick=""></i></a>
         
       </li>
 
