@@ -253,7 +253,7 @@
         }
 
         public function getBirthPlace() {
-            return $this-> birth_date;
+            return $this-> birth_place;
         }
 
         public function setBirthPlace($birth_place) {
@@ -1208,7 +1208,7 @@
             return $this-> q4;
         }
 
-        public function setQ4($q3) {
+        public function setQ4($q4) {
             $this-> q4 = $q4;
         }
 
@@ -1324,7 +1324,7 @@
             $this-> oath = $oath;
         }
         
-
+    }
     
 
 ?>

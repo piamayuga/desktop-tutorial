@@ -8,8 +8,26 @@
             parent::__construct();
         }
      
-        public function check_login($username, $password){
-     
+        public function check_login($username, $password) {
+
+            $sql3 = "SELECT * FROM admintbl WHERE username='$username' AND password='$password'";
+            $sql2 = "SELECT * FROM hrtbl WHERE username='$username' OR employeeID='$username' AND password='$password'";
+            $sql = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID='$username' AND password='$password'";
+            
+            
+
+            $query = $this->connection->query($sql);
+
+            if($query->num_rows > 0){
+                $row = $query->fetch_array();
+                return $row['username'];
+
+            }
+        }
+        
+    
+
+            /*
             $sql1 = "SELECT * FROM admintbl WHERE username = '$username' AND password = '$password'";
             $sql2 = "SELECT * FROM hrtbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
             $sql3 = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
@@ -33,7 +51,8 @@
             } else {
                 return false;
             }
-        }
+            */
+        
      
         public function details($sql){
      
