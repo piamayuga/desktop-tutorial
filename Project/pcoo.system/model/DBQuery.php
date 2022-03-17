@@ -1,24 +1,39 @@
 <?php
     include_once('DBConnection.php');
+    $dbConnection = new DBConnection();
     
+
     class DBQuery extends DBconnection {
         // trying this https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
-
-        
 
         // servername => localhost
         // username => test
         // password => admin
         // database name => pcoo_test
         
-          
+        
+
+
         // Check connection
         public function __construct(){
  
             parent::__construct();
         }
 
-    
+        public function insertPds($table_name, $data)  
+        {  
+            $string = "INSERT INTO ".$table_name." (";            
+            $string .= implode(",", array_keys($data)) . ') VALUES (';            
+            $string .= "'" . implode("','", array_values($data)) . "')";  
+            if(mysqli_query($this->con, $string))  
+            {  
+                    return true;  
+            }  
+            else  
+            {  
+                    echo mysqli_error($this->con);  
+            }  
+        }  
           
         public function pds_add_employee_sheet($surname, $first_name, $middle_name, $suffix,$birth_date,$birth_place,$gender,$civil_status,
         $height,$weight,$bloodType,$gsisID,$pagibigID,$philhealthID,$sssID,$tinID,$employeeNo,$telephone_number,$cellphone_number,
@@ -40,6 +55,7 @@
         $training_inclusive_date_from,$training_inclusive_date_to,$training_number_hours,$training_ld_type,$training_conducted, $special_skills, $recognition, 
         $membership_association, $q1a, $q1b, $q2a, $q2b, $q3, $q4, $q5a, $q5b, $q6, $q7a, $q7b, $q7c, $reference_name, $reference_address, $reference_contact_number,
         $government_issued_id, $id_license_passport_number, $government_date_issuance, $government_place_issuance, $oath) {
+        
         // Performing insert query execution
         // here our table name is employee
         $sql = "INSERT INTO employeetbl VALUES (`$surname`, `$first_name`, `$middle_name`, `$suffix`, `$birth_date`, `$birth_place`, `$gender`, `$civil_status`, `$height`, `$weight`, `$bloodType`, `$gsisID`, `$pagibigID`, `$philhealthID`, `$sssID`, `$tinID`, `$employeeNo`, `$telephone_number`, `$cellphone_number`, `$email_add`, `$citizenship`, `$immigrant`, `$country`, `$residential_house_number`, `$residential_street`, `$residential_subdivision`, `$residential_barangay`, `$residential_city`, `$residential_province`, `$residential_zip_code`, `$permanent_house_number`, `$permanent_street`, `$permanent_subdivision`, `$permanent_barangay`, `$permanent_city`, `$permanent_province`, `$permanent_zip_code`)";
@@ -57,6 +73,9 @@
         $sql = "INSERT INTO employee7tbl VALUES (`$reference_name`, `$reference_address`, `$reference_contact_number`, `$government_issued_id`, `$id_license_passport_number`, `$government_date_issuance`, `$government_place_issuance`, `$oath`)";
 
 
+
+        $connection = parent::__construct();
+
         //TO MAKE MULTIPLE QUERY WORK
         if ($connection->multi_query($sql) === TRUE) {
             echo "New records created successfully";
@@ -66,32 +85,35 @@
 
 
 
-        #if(mysqli_query($conn, $sql)){
-            #echo "<h3>data stored in a database successfully." 
-                #. " Please browse your localhost php my admin" 
-                #. " to view the updated data</h3>"; 
-
-            #echo nl2br("\n$first_name\n $last_name\n "
-                #. "$gender\n $address\n $email");
-        #} else{
-            # echo "ERROR: Hush! Sorry $sql. " 
-                #. mysqli_error($conn);
-        #}
-
         }
         
+        /*
         public function check_login($username, $password) {
-            $sql = "SELECT * FROM admintbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
-            $result = mysqli_query($connection, $sql);
-            $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-            $active = $row['active'];
+            $connection = parent::__construct();
+
+            $sql = "SELECT * FROM admintbl, hrtbl, employeetbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
+            
+            $query = $this->connection->query($sql);
+ 
+            if($query->num_rows > 0){
+                $row = $query->fetch_array();
+                return $row['id'];
+            } else{
+                return false;
+            }
+        }
+
+            
+
+
+            
 
             $count = mysqli_num_rows($result);
             
             // If result matched $username and $password, table row must be 1 row
                 
             if($count == 1) {
-                session_register("username");
+                //session_register("username");
                 $_SESSION['login_user'] = $username;
                 
                 header("location: dashboard.html");
@@ -100,7 +122,7 @@
             }
         }
             
-        
+        */
     }
     
 

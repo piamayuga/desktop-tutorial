@@ -10,14 +10,27 @@
      
         public function check_login($username, $password){
      
-            $sql = "SELECT * FROM admintbl WHERE username = '$username' AND password = '$password'";
-            $query = $this->connection->query($sql);
+            $sql1 = "SELECT * FROM admintbl WHERE username = '$username' AND password = '$password'";
+            $sql2 = "SELECT * FROM hrtbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
+            $sql3 = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
+            
+            $query1 = $this->connection->query($sql1);
+            $query2 = $this->connection->query($sql2);
+            $query3 = $this->connection->query($sql3);
      
-            if($query->num_rows > 0){
-                $row = $query->fetch_array();
+            if($query1->num_rows > 0){
+                $row = $query1->fetch_array();
                 return $row['username'];
-            }
-            else{
+
+            } else if ($query2->num_rows > 0){
+                $row = $query2->fetch_array();
+                return $row['username'];
+
+            } else if ($query3->num_rows > 0){
+                $row = $query2->fetch_array();
+                return $row['username'];
+
+            } else {
                 return false;
             }
         }
