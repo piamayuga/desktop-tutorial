@@ -19,11 +19,13 @@
             if (!isset($this->connection)) {
      
                 $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
-     
+                
                 if (!$this->connection) {
                     echo 'Cannot connect to database server';
                     exit;
-                } 
+                } else {
+                    return true;
+                }
             }    
      
             return $this->connection;

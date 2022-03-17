@@ -480,7 +480,7 @@
             return $this-> permanent_barangay;
         }
 
-        public function setPermanentSubdivision($permanent_barangay) {
+        public function setPermanentBarangay($permanent_barangay) {
             $this-> permanent_barangay = $permanent_barangay;
         }
         
