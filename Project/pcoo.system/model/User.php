@@ -9,7 +9,7 @@
         }
      
         public function check_login($username, $password) {
-
+/*
             $sql3 = "SELECT * FROM admintbl WHERE username='$username' AND password='$password'";
             $sql2 = "SELECT * FROM hrtbl WHERE username='$username' OR employeeID='$username' AND password='$password'";
             $sql = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID='$username' AND password='$password'";
@@ -25,9 +25,9 @@
             }
         }
         
-    
+    */
 
-            /*
+            
             $sql1 = "SELECT * FROM admintbl WHERE username = '$username' AND password = '$password'";
             $sql2 = "SELECT * FROM hrtbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
             $sql3 = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
@@ -40,18 +40,18 @@
                 $row = $query1->fetch_array();
                 return $row['username'];
 
-            } else if ($query2->num_rows > 0){
+            } elseif ($query2->num_rows > 0){
                 $row = $query2->fetch_array();
                 return $row['username'];
 
-            } else if ($query3->num_rows > 0){
+            } elseif ($query3->num_rows > 0){
                 $row = $query2->fetch_array();
                 return $row['username'];
 
             } else {
                 return false;
             }
-            */
+        }
         
      
         public function details($sql){
