@@ -1,3 +1,12 @@
+<?php
+	//start session
+	session_start();
+ 
+	//redirect if logged in
+	if(isset($_SESSION['user'])){
+		header('location:dashboard.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +24,7 @@
 </head>
 
 <body>
+
 
   <main class="container-fluid p-lg-3 p-md-5">
 
@@ -34,11 +44,11 @@
           </div>
 
           <div class="col my-2">
-            <form action="dashboard.html" method="post" autocomplete="off">
+            <form action="../controller/index_controller.php" method="POST" autocomplete="off">
 
               <div class="form-group my-1">
                 <label class="text-label" for="username">Username</label>
-                <input type="text" class="form-control" id="username" required autofocus>
+                <input type="text" name="index_username" class="form-control" id="username" required autofocus>
               </div>
 
               <div class="form-group my-3">
@@ -46,7 +56,7 @@
                 <label for="showPassword" class="position-absolute fs-4 text-black-50" style="bottom:10px; right:15px;">
                   <i class='bx bx-low-vision' style="cursor: pointer;"></i>
                 </label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" name="index_password" class="form-control" id="password" required>
               </div>
 
               <input class="form-check-input d-none" type="checkbox" id="showPassword" onclick="showPass()">
@@ -56,7 +66,7 @@
               </div>
 
               <div class="d-flex mt-5 justify-content-center">
-                <button class="button custom-btn"><span><span>Sign In</span></span></button>
+                <button type="submit" name="login" class="button custom-btn"><span><span>Sign In</span></span></button>
               </div>
 
               <!-- <span class="d-block text-center my-3 text-muted">
@@ -67,6 +77,17 @@
           </div>
 
         </div>
+        <?php
+		    	if(isset($_SESSION['message'])){
+		    		?>
+		    			<div class="alert alert-info text-center">
+					        <?php echo $_SESSION['message']; ?>
+					    </div>
+		    		<?php
+ 
+		    		unset($_SESSION['message']);
+		    	}
+		    ?>
       </div>
 
     </div>
@@ -76,6 +97,7 @@
   <script src="js/login/main.js"></script>
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
+  
 </body>
 
 </html>

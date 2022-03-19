@@ -3,28 +3,32 @@
 
         
         // servername => localhost
-        // username => root
-        // password => empty
-        // database name => staff
-        $conn = mysqli_connect("localhost", "root", "", "staff");           
+        // username => test
+        // password => admin
+        // database name => pcoo_test
 
+        private $host = 'localhost';
+        private $username = 'root';
+        private $password = '';
+        private $database = 'pcoo_test';
 
-        public function boolean check_database_connection($check_db_connection) {
-            // Check connection
-            if($conn === false){
-                die("ERROR: Could not connect. " 
-                    . mysqli_connect_error());
-                return false;
-            } else {
+        protected $connection;
+ 
+        public function __construct(){
+     
+            if (!isset($this->connection)) {
+     
+                $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
                 
-                return true;
-            }
-
-        }
-
-        public function close_database_connection() {
-            // Close connection
-            mysqli_close($conn);
+                if (!$this->connection) {
+                    echo 'Cannot connect to database server';
+                    exit;
+                } else {
+                    return true;
+                }
+            }    
+     
+            return $this->connection;
         }
 
 
