@@ -1,18 +1,18 @@
 <?php
 session_start();
 //return to login if not logged in
-if (!isset($_SESSION['user']) ||(trim ($_SESSION['user']) == '')){
-	header('location:index.php');
+if (!isset($_SESSION['user']) || (trim($_SESSION['user']) == '')) {
+  header('location:index.php');
 }
- 
+
 include_once('../model/User.php');
- 
+
 $user = new User();
- 
+
 //fetch user data
-$sql = "SELECT * FROM admintbl WHERE id = '".$_SESSION['user']."'";
+$sql = "SELECT * FROM admintbl WHERE id = '" . $_SESSION['user'] . "'";
 $row = $user->details($sql);
- 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +114,7 @@ $row = $user->details($sql);
 
         <!-- location.href='index.html' -->
         <a href="../controller/logout.php"><i type="button" class='bx bx-log-out' id="log_out" onClick=""></i></a>
-        
+
       </li>
 
     </ul>
