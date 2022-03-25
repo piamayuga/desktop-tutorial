@@ -65,7 +65,9 @@ class Mysidebar extends HTMLElement {
             </div>
           </div>
   
-          <a href="../controller/logout.php"><i type="button" class='bx bx-log-out' id="log_out" onClick=""></i></a>
+          <a href="../controller/logout.php">
+            <i type="button" class='bx bx-log-out' id="log_out" onClick=""></i>
+          </a>
   
         </li>
   
