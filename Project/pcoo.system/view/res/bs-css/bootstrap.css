@@ -231,6 +231,12 @@ strong {
 small, .small {
   font-size: 0.875em;
 }
+.smaller {
+  font-size: 0.675em;
+}
+.smallest {
+  font-size: 0.615em;
+}
 
 mark, .mark {
   padding: 0.2em;
