@@ -33,6 +33,7 @@
           <option value="" selected hidden></option>
           <option value="ID Request Form">ID Request Form</option>
           <option value="Personnel Request Form">Personnel Request Form</option>
+          <option value="Other Request">Other Request</option>
         </select>
       </section>
 
@@ -140,6 +141,15 @@
               <input name="reqID_contactPersonNo" id="reqID_contactPersonNo" type="text" class="form-control">
             </div>
 
+            <div class="col-md-6">
+              <label class="text-muted small ms-2" for="">Upload image of Valid ID</label>
+              <input type="file" class="form-control" name="" id="" accept="image/*" required>
+            </div>
+            <div class="col-md-6">
+              <label class="text-muted small ms-2" for="">Upload image of Signature</label>
+              <input type="file" class="form-control" name="" id="" accept="image/*" required>
+            </div>
+
             <div class="col my-4 d-flex justify-content-end">
               <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
             </div>
@@ -149,7 +159,7 @@
 
 
       <!-- Personnel Request Form -->
-      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display: none;">
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display:none;">
         <h5 class="text-primary">Personnel Request Form</h5>
 
         <form action="" id="personnel_request_form" autocomplete="off">
@@ -287,15 +297,34 @@
 
           </div>
           <!-- request selection -->
+
+          <!-- purpose -->
+          <h6 class="mt-3">Purpose to your request:</h6>
+          <textarea class="form-control" name="reqPer_purpose" id="" rows="5" style="min-height: 100px;"></textarea>
+          <!-- purpose -->
+
+          <div class="col my-4 d-flex justify-content-end">
+            <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
+          </div>
+
         </form>
       </section>
       <!-- Personnel Request Form -->
+
+
+      <!-- Other Request -->
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display:none;">
+        <h5 class="text-primary">Other Request</h5>
+
+
+      </section>
+      <!-- Other Request -->
     </div>
 
   </main>
 
   <script>
-    
+
   </script>
   <!-- scripts -->
   <script src="js/assets.js"></script>

@@ -162,7 +162,12 @@
         <form class="modal-body row gy-2" id="summaryUploadForm" action="" autocomplete="off">
           <div class="col-12">
             <label class="text-muted small ms-2" for="summaryUpload">Summary</label>
-            <input type="text" class="form-control" name="summaryUpload" id="summaryUpload" required>
+            <select class="form-select" id="select_request" name="" required>
+              <option value="" selected hidden></option>
+              <option value="Training Certificates">Training Certificates</option>
+              <option value="Licenses, IDs">Licenses, IDs</option>
+              <option value="Diploma">Diploma</option>
+            </select>
           </div>
           <div class="col-12">
             <label class="text-muted small ms-2" for="fileUpload">Select Files to upload</label>
