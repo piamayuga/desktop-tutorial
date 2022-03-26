@@ -19,8 +19,14 @@
       --custom-primary: #2a448f;
     }
 
-    .dimension {
-      width: 300px;
+    .img-thumbnail {
+      width: 220px;
+      border-radius: 100%;
+      border-color: var(--custom-primary);
+      border-width: 3px;
+      object-fit: cover;
+      object-position: center;
+      background-color: #fff;
     }
 
     .nav-tabs .nav-link.active {
@@ -45,84 +51,7 @@
 
 <body>
   <!-- sidebar -->
-  <div class="sidebar">
-
-    <div class="logo-details">
-      <i class='icon'>
-        <img src="images/pcoo_logo.png">
-      </i>
-      <div class="logo_name">PCOO</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-
-    <ul class="nav-list ">
-
-      <!-- links -->
-      <li>
-        <a href="dashboard.php">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-
-      <li>
-        <a href="pds.html">
-          <i class='bx bx-spreadsheet'></i>
-          <span class="links_name">Personal Data Sheet</span>
-        </a>
-        <span class="tooltip">Personal Data Sheet</span>
-      </li>
-
-      <li>
-        <a href="einfo.html">
-          <i class='bx bx-user'></i>
-          <span class="links_name">Employment Info</span>
-        </a>
-        <span class="tooltip">Employment Info</span>
-      </li>
-
-      <li>
-        <a href="erecords.html">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Employment Records</span>
-        </a>
-        <span class="tooltip">Employment Records</span>
-      </li>
-
-      <li>
-        <a href="request.html">
-          <i class='bx bx-file-blank'></i>
-          <span class="links_name">Request Form</span>
-        </a>
-        <span class="tooltip">Request Form</span>
-      </li>
-
-      <li>
-        <a href="settings.html" class="highlight">
-          <i class='bx bx-cog'></i>
-          <span class="links_name">Settings</span>
-        </a>
-        <span class="tooltip">Settings</span>
-      </li>
-      <!-- links -->
-
-      <li class="profile">
-        <div class="profile-details">
-          <img src="images/sample.png" alt="profileImg">
-          <div class="name_job">
-            <div class="name">Kyle De Mesa</div>
-            <div class="job">Secretary</div>
-          </div>
-        </div>
-
-        <a href="../controller/logout.php"><i type="button" class='bx bx-log-out' id="log_out" onClick=""></i></a>
-
-      </li>
-
-    </ul>
-
-  </div>
+  <my-sidebar></my-sidebar>
   <!-- sidebar -->
 
   <main class="home-section">
@@ -130,14 +59,14 @@
 
     <div class="container mt-2">
       <div class="row">
-        <div class="col-md-4 col-lg-2">
+        <div class="col-lg-4 col-xl-2">
 
           <ul class="nav nav-tabs d-flex flex-column">
-            <li class="nav-item my-1">
+            <!-- <li class="nav-item my-1">
               <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-            </li>
+            </li> -->
             <li class="nav-item my-1">
-              <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
+              <a class="nav-link active" data-bs-toggle="tab" href="#profile">Profile</a>
             </li>
             <li class="nav-item my-1">
               <a class="nav-link" data-bs-toggle="tab" href="#contact">Password</a>
@@ -145,10 +74,10 @@
           </ul>
         </div>
 
-        <div class="col-md-8 col-lg-10">
+        <div class="col-lg-8 col-xl-10">
           <div class="tab-content">
 
-            <div class="tab-pane active" id="home">
+            <!-- <div class="tab-pane active" id="home">
               <div class="row border g-0 rounded shadow-sm">
                 <div class="col-lg-8 p-4">
                   <h3>Home</h3>
@@ -160,31 +89,57 @@
                   <img src="images/sample.png" class="img-thumbnail dimension">
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="tab-pane" id="profile">
+            <div class="tab-pane active" id="profile">
               <div class="row border g-0 rounded shadow-sm">
+                
                 <div class="col-lg-8 p-4">
                   <h3>Profile</h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
+                  <div class="row gy-2">
+                    <div class="col">
+                      <label class="text-muted small ms-2" for="">Name</label>
+                      <input type="text" class="form-control" name="" id="">
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                  <img src="images/pcoo_logo.png" class="img-thumbnail dimension">
+                <div class="col-12">
+                  <img src="images/sample.png" class="img-thumbnail">
                 </div>
               </div>
             </div>
 
             <div class="tab-pane" id="contact">
-              <div class="row border g-0 rounded shadow-sm">
+              <form class="row border g-0 rounded shadow-sm" action="#" autocomplete="off">
+
                 <div class="col p-4">
                   <h3>Password</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, qui! Aperiam, aut repellendus similique id dolor quae porro et, explicabo earum nemo modi cumque molestias perspiciatis dicta labore ipsa iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium reiciendis, rem tenetur asperiores illo quod voluptas similique, animi nam ipsum alias nemo ea perferendis est ut, dolor eos? Repellat.
-                  </p>
+
+                  <div class="row gy-3">
+
+                    <div class="col-lg-6 mt-5">
+                      <label class="text-muted small ms-2" for="">Old password</label>
+                      <input type="text" class="form-control" name="" id="">
+                    </div>
+                    <div class="col-lg-6"></div>
+
+                    <div class="col-lg-6">
+                      <label class="text-muted small ms-2" for="">New password</label>
+                      <input type="text" class="form-control" name="" id="">
+                    </div>
+                    <div class="col-lg-6">
+                      <label class="text-muted small ms-2" for="">Confirm new password</label>
+                      <input type="text" class="form-control" name="" id="">
+                    </div>
+
+                    <div class="col-12 mt-5">
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
+                
+              </form>
             </div>
 
           </div>
@@ -194,6 +149,7 @@
   </main>
 
   <!-- scripts -->
+  <script src="js/assets.js"></script>
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
   <script src="res/dataTables/js/jquery-3.5.1.js"></script>

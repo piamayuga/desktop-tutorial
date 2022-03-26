@@ -4,7 +4,8 @@
  
 	//redirect if logged in
 	if(isset($_SESSION['user'])){
-		header('location:dashboard.php');
+		// header('location:dashboard.php');
+		header('location:einfo.html');
 	}
 ?>
 <!DOCTYPE html>

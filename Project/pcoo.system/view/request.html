@@ -18,84 +18,7 @@
 
 <body>
   <!-- sidebar -->
-  <div class="sidebar">
-
-    <div class="logo-details">
-      <i class='icon'>
-        <img src="images/pcoo_logo.png">
-      </i>
-      <div class="logo_name">PCOO</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-
-    <ul class="nav-list ">
-
-      <!-- links -->
-      <li>
-        <a href="dashboard.php">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-
-      <li>
-        <a href="pds.html">
-          <i class='bx bx-spreadsheet'></i>
-          <span class="links_name">Personal Data Sheet</span>
-        </a>
-        <span class="tooltip">Personal Data Sheet</span>
-      </li>
-
-      <li>
-        <a href="einfo.html">
-          <i class='bx bx-user'></i>
-          <span class="links_name">Employment Info</span>
-        </a>
-        <span class="tooltip">Employment Info</span>
-      </li>
-
-      <li>
-        <a href="erecords.html">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Employment Records</span>
-        </a>
-        <span class="tooltip">Employment Records</span>
-      </li>
-
-      <li>
-        <a href="request.html" class="highlight">
-          <i class='bx bx-file-blank'></i>
-          <span class="links_name">Request Form</span>
-        </a>
-        <span class="tooltip">Request Form</span>
-      </li>
-
-      <li>
-        <a href="settings.html">
-          <i class='bx bx-cog'></i>
-          <span class="links_name">Settings</span>
-        </a>
-        <span class="tooltip">Settings</span>
-      </li>
-      <!-- links -->
-
-      <li class="profile">
-        <div class="profile-details">
-          <img src="images/sample.png" alt="profileImg">
-          <div class="name_job">
-            <div class="name">Kyle De Mesa</div>
-            <div class="job">Secretary</div>
-          </div>
-        </div>
-
-        <a href="../controller/logout.php"><i type="button" class='bx bx-log-out' id="log_out" onClick=""></i></a>
-
-      </li>
-
-    </ul>
-
-  </div>
+  <my-sidebar></my-sidebar>
   <!-- sidebar -->
 
   <main class="home-section">
@@ -110,6 +33,7 @@
           <option value="" selected hidden></option>
           <option value="ID Request Form">ID Request Form</option>
           <option value="Personnel Request Form">Personnel Request Form</option>
+          <option value="Other Request">Other Request</option>
         </select>
       </section>
 
@@ -217,6 +141,15 @@
               <input name="reqID_contactPersonNo" id="reqID_contactPersonNo" type="text" class="form-control">
             </div>
 
+            <div class="col-md-6">
+              <label class="text-muted small ms-2" for="">Upload image of Valid ID</label>
+              <input type="file" class="form-control" name="" id="" accept="image/*" required>
+            </div>
+            <div class="col-md-6">
+              <label class="text-muted small ms-2" for="">Upload image of Signature</label>
+              <input type="file" class="form-control" name="" id="" accept="image/*" required>
+            </div>
+
             <div class="col my-4 d-flex justify-content-end">
               <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
             </div>
@@ -226,7 +159,7 @@
 
 
       <!-- Personnel Request Form -->
-      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display: none;">
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display:none;">
         <h5 class="text-primary">Personnel Request Form</h5>
 
         <form action="" id="personnel_request_form" autocomplete="off">
@@ -364,17 +297,37 @@
 
           </div>
           <!-- request selection -->
+
+          <!-- purpose -->
+          <h6 class="mt-3">Purpose to your request:</h6>
+          <textarea class="form-control" name="reqPer_purpose" id="" rows="5" style="min-height: 100px;"></textarea>
+          <!-- purpose -->
+
+          <div class="col my-4 d-flex justify-content-end">
+            <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
+          </div>
+
         </form>
       </section>
       <!-- Personnel Request Form -->
+
+
+      <!-- Other Request -->
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display:none;">
+        <h5 class="text-primary">Other Request</h5>
+
+
+      </section>
+      <!-- Other Request -->
     </div>
 
   </main>
 
   <script>
-    
+
   </script>
   <!-- scripts -->
+  <script src="js/assets.js"></script>
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
   <script src="res/dataTables/js/jquery-3.5.1.js"></script>
