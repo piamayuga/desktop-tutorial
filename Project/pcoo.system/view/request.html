@@ -313,10 +313,38 @@
 
 
       <!-- Other Request -->
-      <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display:none;">
+      <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display: none;">
         <h5 class="text-primary">Other Request</h5>
 
+        <form action="" id="other_request_form" autocomplete="off">
+          
+          <div class="row gy-2 gx-2">
+            <div class="col-md-6">
+              <label for="reqOther_fullName" class="text-muted small ms-2">Complete Name </label>
+              <input type="text" name="reqOther_fullName" id="reqOther_fullName" class="form-control" onkeyup="lettersOnly(this)" required>
+            </div>
+            <div class="col-md-6">
+              <label for="reqOther_date" class="text-muted small ms-2">DATE </label>
+              <input type="text" name="reqOther_date" id="reqOther_date" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+            </div>
 
+            <div class="col-12">
+              <label for="reqOther_indicate" class="text-muted small ms-2">PLEASE SPECIFY YOUR REQUEST</label>
+              <textarea class="form-control" name="reqOther_indicate" id="" rows="5" style="min-height: 100px;"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label for="reqOther_indicate" class="text-muted small ms-2">Purpose to your request:</label>
+              <textarea class="form-control" name="reqOther_purpose" id="" rows="3" style="min-height: 100px;"></textarea>
+            </div>
+
+            <div class="col my-4 d-flex justify-content-end">
+              <button type="submit" form="other_request_form" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+
+        </form>
       </section>
       <!-- Other Request -->
     </div>

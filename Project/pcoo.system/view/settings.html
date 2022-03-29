@@ -20,13 +20,27 @@
     }
 
     .img-thumbnail {
-      width: 220px;
+      width: 180px;
+      height: 180px;
       border-radius: 100%;
       border-color: var(--custom-primary);
       border-width: 3px;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       background-color: #fff;
+      cursor: pointer;
+    }
+
+    #previewLabel .img-thumbnail:hover {
+      transform: scale(1.02);
+      filter: brightness(95%);
+      transition: all .5s ease;
+    }
+
+    #previewLabel p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transition: all .5s ease;
     }
 
     .nav-tabs .nav-link.active {
@@ -45,7 +59,6 @@
       background-color: var(--custom-primary);
       color: #fff;
     }
-
   </style>
 </head>
 
@@ -59,12 +72,9 @@
 
     <div class="container mt-2">
       <div class="row">
+        <!-- tab link -->
         <div class="col-lg-4 col-xl-2">
-
           <ul class="nav nav-tabs d-flex flex-column">
-            <!-- <li class="nav-item my-1">
-              <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-            </li> -->
             <li class="nav-item my-1">
               <a class="nav-link active" data-bs-toggle="tab" href="#profile">Profile</a>
             </li>
@@ -73,72 +83,109 @@
             </li>
           </ul>
         </div>
+        <!-- tab link -->
 
         <div class="col-lg-8 col-xl-10">
           <div class="tab-content">
 
-            <!-- <div class="tab-pane active" id="home">
-              <div class="row border g-0 rounded shadow-sm">
-                <div class="col-lg-8 p-4">
-                  <h3>Home</h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                </div>
-                <div class="col-lg-4">
-                  <img src="images/sample.png" class="img-thumbnail dimension">
-                </div>
-              </div>
-            </div> -->
-
             <div class="tab-pane active" id="profile">
-              <div class="row border g-0 rounded shadow-sm">
-                
-                <div class="col-lg-8 p-4">
-                  <h3>Profile</h3>
-                  <div class="row gy-2">
-                    <div class="col">
-                      <label class="text-muted small ms-2" for="">Name</label>
-                      <input type="text" class="form-control" name="" id="">
-                    </div>
+              <form class="row border g-0 p-4 rounded shadow-sm" action="" autocomplete="off">
+                <h3>Profile</h3>
+
+                <div class="row gy-2">
+                  <input type="file" class="form-control d-none" id="upload" accept="image/*">
+                  <!-- img preview -->
+                  <div class="col-12 p-3 d-flex justify-content-center">
+                    <label for="upload" id="previewLabel">
+                      <div id="imagePreview">
+                        <img src="..." class="img-fluid image-preview__image img-thumbnail" style="display: none;">
+                        <span class="image-preview__default">
+                          <img src="images/sample.png" class="img-thumbnail"> <!-- default image -->
+                        </span>
+                      </div>
+                      <p class="text-center text-muted mt-2">Change Photo</p>
+                    </label>
+                  </div>
+                  <!-- img preview -->
+
+
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">SURNAME</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">FIRSTNAME</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">MIDDLE NAME</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">SUFFIX (JR,SR)</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">DATE OF BIRTH</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">GENDER</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">CIVIL STATUS</label>
+                    <input type="text" class="form-control" name="" id="">
+                  </div>
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">CONTACT NUMBER</label>
+                    <input type="text" class="form-control" name="" id="">
+                  </div>
+
+                  <div class="col">
+                    <label class="text-muted small ms-2" for="">ADDRESS</label>
+                    <input type="text" class="form-control" name="" id="">
+                  </div>
+
+                  <div class="col-12 mt-5">
+                    <button type="submit" class="btn btn-primary">Update</button>
                   </div>
                 </div>
-                <div class="col-12">
-                  <img src="images/sample.png" class="img-thumbnail">
-                </div>
-              </div>
+
+
+
+
+              </form>
             </div>
 
             <div class="tab-pane" id="contact">
-              <form class="row border g-0 rounded shadow-sm" action="#" autocomplete="off">
+              <form class="row border g-0 p-4 rounded shadow-sm" action="#" autocomplete="off">
+                <h3>Password</h3>
 
-                <div class="col p-4">
-                  <h3>Password</h3>
+                <div class="row gy-3">
 
-                  <div class="row gy-3">
+                  <div class="col-lg-6 mt-5">
+                    <label class="text-muted small ms-2" for="">Old password</label>
+                    <input type="text" class="form-control" name="" id="">
+                  </div>
+                  <div class="col-lg-6"></div>
 
-                    <div class="col-lg-6 mt-5">
-                      <label class="text-muted small ms-2" for="">Old password</label>
-                      <input type="text" class="form-control" name="" id="">
-                    </div>
-                    <div class="col-lg-6"></div>
-
-                    <div class="col-lg-6">
-                      <label class="text-muted small ms-2" for="">New password</label>
-                      <input type="text" class="form-control" name="" id="">
-                    </div>
-                    <div class="col-lg-6">
-                      <label class="text-muted small ms-2" for="">Confirm new password</label>
-                      <input type="text" class="form-control" name="" id="">
-                    </div>
-
-                    <div class="col-12 mt-5">
-                      <button type="submit" class="btn btn-primary">Update</button>
-                    </div>
+                  <div class="col-lg-6">
+                    <label class="text-muted small ms-2" for="">New password</label>
+                    <input type="text" class="form-control" name="" id="">
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="text-muted small ms-2" for="">Confirm new password</label>
+                    <input type="text" class="form-control" name="" id="">
                   </div>
 
+                  <div class="col-12 mt-5">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                  </div>
                 </div>
-                
               </form>
             </div>
 
@@ -157,6 +204,33 @@
   <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
   <script src="res/dataTables/js/main.js"></script>
 
+  <script>
+    const upload = document.getElementById("upload");
+    const previewContainer = document.getElementById("imagePreview");
+    const previewImage = document.querySelector(".image-preview__image");
+    const previewText = previewContainer.querySelector(".image-preview__default");
+
+    upload.addEventListener("change", function () {
+      const file = this.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        previewText.style.display = "none";
+        previewImage.style.display = "block";
+
+        reader.addEventListener("load", function () {
+          previewImage.setAttribute("src", this.result);
+        })
+
+        reader.readAsDataURL(file)
+      } else {
+        previewText.style.display = null;
+        previewImage.style.display = null;
+        previewImage.setAttribute("src", "");
+      }
+    });
+  </script>
 </body>
 
 </html>
