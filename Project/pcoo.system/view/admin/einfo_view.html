@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidential Communications Operations Office</title>
+  <!-- css -->
+  <link rel="icon" href="../images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../res/bs-css/bootstrap.css">
+
+  <!-- links -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- sidebar -->
+  <my-sidebar></my-sidebar>
+  <!-- sidebar -->
+
+
+  <main class="home-section">
+    <div class="text">Employment Information</div>
+
+    <section class="container-xl">
+      <!-- button -->
+      <div class="row mb-3">
+        <div class="col">
+          <button class="btn btn-primary" onclick="location.href='einfo.html'">
+            Employee list
+            <i class='bx bx-arrow-back'></i>
+          </button>
+        </div>
+      </div>
+      <!-- button -->
+
+      <form class="modal-body" id="editEmpForm" action="" autocomplete="off">
+        <!-- account -->
+        <div class="row gx-2 m-0">
+          <h5>Account Information</h5>
+          <div class="col-6">
+            <label for="" class="text-muted small ms-2">USERNAME</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <!-- account -->
+        <hr>
+        <!-- personal -->
+        <div class="row gy-2 gx-2 m-0">
+          <h5>Personal Information</h5>
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">SURNAME</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">FIRSTNAME</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">MIDDLE NAME</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">SUFFIX (JR,SR)</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">DATE OF BIRTH</label>
+            <input type="text" name="e" id="" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
+          </div>
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">GENDER</label>
+            <select name="" id="" class="form-select">
+              <option value="" selected hidden></option>
+              <option value="">MALE</option>
+              <option value="">FEMALE</option>
+            </select>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">CIVIL STATUS</label>
+            <select name="" id="" class="form-select">
+              <option value="" selected hidden></option>
+              <option value="">SINGLE</option>
+              <option value="">MARRIED</option>
+            </select>
+          </div>
+          <div class="col-lg-3 col-6">
+            <label class="text-muted small ms-2" for="">CONTACT NUMBER</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+
+          <div class="col-6">
+            <label class="text-muted small ms-2" for="">EMAIL</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+          <div class="col-md-6">
+            <label class="text-muted small ms-2" for="">ADDRESS</label>
+            <input type="text" class="form-control" name="" id="">
+          </div>
+        </div>
+        <!-- personal -->
+        <hr>
+        <!-- employment -->
+        <div class="row gy-2 gx-2 m-0">
+          <h5>Employment Information</h5>
+          <div class="col-6">
+            <label for="" class="text-muted small ms-2">Engagement Duration</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+
+          <div class="col-6">
+            <label for="" class="text-muted small ms-2">Employment Status</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+
+          <div class="col-6">
+            <label for="" class="text-muted small ms-2">Designation</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+
+          <div class="col-6">
+            <label for="" class="text-muted small ms-2">Salary</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+
+          <div class="col">
+            <label for="credits" class="text-muted small ms-2">History of Personnel</label>
+            <textarea class="form-control" name="credits" id="credits" rows="5"></textarea>
+          </div>
+
+        </div>
+
+        <div class="col d-flex justify-content-end my-3 pt-0 border-0">
+          <button type="submit" form="addEmpForm" class="btn btn-primary mx-1">Update</button>
+        </div>
+        <!-- employment -->
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../res/bs-js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

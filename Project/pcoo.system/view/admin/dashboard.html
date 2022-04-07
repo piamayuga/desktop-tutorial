@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidential Communications Operations Office</title>
+  <!-- css -->
+  <link rel="icon" href="../images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../res/bs-css/bootstrap.css">
+
+  <!-- links -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- sidebar -->
+  <my-sidebar></my-sidebar>
+  <!-- sidebar -->
+
+
+  <main class="home-section">
+    <div class="text">Dashboard</div>
+
+    <div class="row m-0 px-2">
+
+      <div class="col-lg-9 border border-warning py-3">
+        <div class="row px-3">
+          <div class="col-lg-6 border">
+            <div class="card h-100 border-0">
+              <div class="card-header border-0 bg-transparent">
+                <span class="me-2"><i class="bi bi-people-fill"></i></span>
+                Age Group
+              </div>
+              <div class="card-body d-flex align-items-end">
+                <canvas id="barChart" width="400" height="250"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 border">
+            <div class="card h-100 border-0">
+              <div class="card-header border-0 bg-transparent">
+                <span class="me-2"><i class="bi bi-flag-fill"></i></span>
+                Age Group
+              </div>
+              <div class="card-body d-flex align-items-end">
+                <canvas id="lineChart" width="400" height="250"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 border border-success py-3">
+        <h6>Sex group</h6>
+
+        <div class="small d-flex justify-content-between px-2 mt-3">
+          Male Employees
+          <div class="small float-right"><b><span>999</span> of <span>999</span> Employees</b></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="small d-flex justify-content-between px-2 mt-3">
+          Female Employees
+          <div class="small float-right"><b><span>999</span> of <span>999</span> Employees</b></div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../res/bs-js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="../js/graphs.js"></script>
+</body>
+
+</html>
