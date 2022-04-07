@@ -1,12 +1,12 @@
 <?php
-	//start session
-	session_start();
- 
-	//redirect if logged in
-	if(isset($_SESSION['user'])){
-		// header('location:dashboard.php');
-		header('location:einfo.html');
-	}
+//start session
+session_start();
+
+//redirect if logged in
+if (isset($_SESSION['user'])) {
+  // header('location:dashboard.php');
+  header('location:einfo.html');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +44,17 @@
             <h2 class="text-center">Sign In</h2>
           </div>
 
+          <?php
+          if (isset($_SESSION['message'])) {
+          ?>
+            <div class="alert alert-danger text-center mt-2 text-capitalize">
+              <?php echo $_SESSION['message']; ?>
+            </div>
+          <?php
+            unset($_SESSION['message']);
+          }
+          ?>
+
           <div class="col my-2">
             <form action="../controller/index_controller.php" method="POST" autocomplete="off">
 
@@ -78,17 +89,7 @@
           </div>
 
         </div>
-        <?php
-		    	if(isset($_SESSION['message'])){
-		    		?>
-		    			<div class="alert alert-info text-center">
-					        <?php echo $_SESSION['message']; ?>
-					    </div>
-		    		<?php
- 
-		    		unset($_SESSION['message']);
-		    	}
-		    ?>
+
       </div>
 
     </div>
@@ -98,7 +99,7 @@
   <script src="js/login/main.js"></script>
   <script src="js/script.js"></script>
   <script src="res/bs-js/bootstrap.bundle.js"></script>
-  
+
 </body>
 
 </html>
