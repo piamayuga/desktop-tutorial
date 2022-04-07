@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Presidential Communications Operations Office</title>
   <!-- css -->
-  <link rel="icon" href="images/pcoo_logo.png" type="image">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="res/bs-css/bootstrap.css">
+  <link rel="icon" href="../images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../res/bs-css/bootstrap.css">
+  <link rel="stylesheet" href="../res/dataTables/css/dataTables.bootstrap5.min.css">
 
   <!-- links -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -59,12 +60,14 @@
       color: #fff;
     }
   </style>
+
 </head>
 
 <body>
   <!-- sidebar -->
   <my-sidebar></my-sidebar>
   <!-- sidebar -->
+
 
   <main class="home-section">
     <div class="text">Settings</div>
@@ -99,7 +102,7 @@
                       <div id="imagePreview">
                         <img src="..." class="img-fluid image-preview__image img-thumbnail" style="display: none;">
                         <span class="image-preview__default">
-                          <img src="images/sample.png" class="img-thumbnail"> <!-- default image -->
+                          <img src="../images/sample.png" class="img-thumbnail"> <!-- default image -->
                         </span>
                       </div>
                       <p class="text-center text-muted mt-2">Change Photo</p>
@@ -107,6 +110,13 @@
                   </div>
                   <!-- img preview -->
 
+                  <div class="col-6">
+                    <label class="text-muted small ms-2" for="">USERNAME</label>
+                    <input type="text" class="form-control" name="" id="" disabled>
+                  </div>
+                  <div class="col-6"></div>
+
+                  <hr>
 
                   <div class="col-6">
                     <label class="text-muted small ms-2" for="">SURNAME</label>
@@ -126,37 +136,7 @@
                     <input type="text" class="form-control" name="" id="" disabled>
                   </div>
 
-                  <div class="col-6">
-                    <label class="text-muted small ms-2" for="">DATE OF BIRTH</label>
-                    <input type="text" class="form-control" name="" id="" disabled>
-                  </div>
-                  <div class="col-6">
-                    <label class="text-muted small ms-2" for="">GENDER</label>
-                    <input type="text" class="form-control" name="" id="" disabled>
-                  </div>
-
-                  <div class="col-6">
-                    <label class="text-muted small ms-2" for="">CIVIL STATUS</label>
-                    <select name="" id="" class="form-select">
-                      <option value="" selected hidden></option>
-                      <option value="">SINGLE</option>
-                      <option value="">MARRIED</option>
-                    </select>
-                  </div>
-                  <div class="col-6">
-                    <label class="text-muted small ms-2" for="">CONTACT NUMBER</label>
-                    <input type="text" class="form-control" name="" id="">
-                  </div>
-
-                  <div class="col-6">
-                    <label class="text-muted small ms-2" for="">EMAIL</label>
-                    <input type="text" class="form-control" name="" id="">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="text-muted small ms-2" for="">ADDRESS</label>
-                    <input type="text" class="form-control" name="" id="">
-                  </div>
-
+                  
                   <div class="col-12 mt-5">
                     <button type="submit" class="btn btn-primary">Update</button>
                   </div>
@@ -199,38 +179,13 @@
     </div>
   </main>
 
-  <!-- scripts -->
-  <script src="js/assets.js"></script>
-  <script src="js/script.js"></script>
-  <script src="res/bs-js/bootstrap.bundle.js"></script>
-
-  <script>
-    const upload = document.getElementById("upload");
-    const previewContainer = document.getElementById("imagePreview");
-    const previewImage = document.querySelector(".image-preview__image");
-    const previewText = previewContainer.querySelector(".image-preview__default");
-
-    upload.addEventListener("change", function () {
-      const file = this.files[0];
-
-      if (file) {
-        const reader = new FileReader();
-
-        previewText.style.display = "none";
-        previewImage.style.display = "block";
-
-        reader.addEventListener("load", function () {
-          previewImage.setAttribute("src", this.result);
-        })
-
-        reader.readAsDataURL(file)
-      } else {
-        previewText.style.display = null;
-        previewImage.style.display = null;
-        previewImage.setAttribute("src", "");
-      }
-    });
-  </script>
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../res/bs-js/bootstrap.bundle.js"></script>
+  <script src="../res/dataTables/js/jquery-3.5.1.js"></script>
+  <script src="../res/dataTables/js/jquery.dataTables.min.js"></script>
+  <script src="../res/dataTables/js/dataTables.bootstrap5.min.js"></script>
+  <script src="../res/dataTables/js/main.js"></script>
 </body>
 
 </html>

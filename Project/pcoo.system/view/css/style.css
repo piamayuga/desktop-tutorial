@@ -166,45 +166,6 @@ html {
   display: none;
 }
 
-.sidebar input {
-  font-size: 15px;
-  color: #FFF;
-  font-weight: 400;
-  outline: none;
-  height: 50px;
-  width: 100%;
-  width: 50px;
-  border: none;
-  border-radius: 12px;
-  transition: all 0.5s ease;
-  background: var(--pcoo-secondary);
-}
-
-.sidebar.open input {
-  padding: 0 20px 0 50px;
-  width: 100%;
-}
-
-.sidebar .bx-search {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  background: var(--pcoo-secondary);
-  color: #FFF;
-}
-
-.sidebar.open .bx-search:hover {
-  background: var(--pcoo-secondary);
-  color: #FFF;
-}
-
-.sidebar .bx-search:hover {
-  background: #FFF;
-  color: var(--pcoo-primary);
-}
-
 .sidebar li a {
   display: flex;
   height: 100%;
