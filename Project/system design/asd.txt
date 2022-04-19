@@ -1,0 +1,19 @@
+
+-----hr-----
+Dashboard, 
+Employment Info (Add Employee),
+Requests, 
+Settings
+
+Requests - (Pending Service Request)(Can accept Request forms)
+
+Age Group (Graph)
+Sex Group (Graph)
+
+
+
+-----admin------
+Dashboard, 
+Users Table, 
+Reports
+Settings
