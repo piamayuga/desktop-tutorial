@@ -918,27 +918,3 @@ function hideSevenC() {
   document.getElementById('sevenTextC').value = '';
 }
 // show Question seven
-
-// appoinment status
-function showPermanent() {
-  document.getElementById('reqID_appointment_show_permanent').style.display = 'block';
-  document.getElementById('reqID_appointment_show_iss').style.display = 'none';
-  document.getElementById('reqID_appointment_show_contractService').style.display = 'none';
-  document.getElementById('reqID_appointment_text_iss').value = '';
-  document.getElementById('reqID_appointment_text_contractService').value = '';
-}
-function showISS() {
-  document.getElementById('reqID_appointment_show_iss').style.display = 'block';
-  document.getElementById('reqID_appointment_show_permanent').style.display = 'none';
-  document.getElementById('reqID_appointment_show_contractService').style.display = 'none';
-  document.getElementById('reqID_appointment_text_permanent').value = '';
-  document.getElementById('reqID_appointment_text_contractService').value = '';
-}
-function showcontractService() {
-  document.getElementById('reqID_appointment_show_permanent').style.display = 'none';
-  document.getElementById('reqID_appointment_show_iss').style.display = 'none';
-  document.getElementById('reqID_appointment_show_contractService').style.display = 'block';
-  document.getElementById('reqID_appointment_text_permanent').value = '';
-  document.getElementById('reqID_appointment_text_iss').value = '';
-}
-// appoinment status
