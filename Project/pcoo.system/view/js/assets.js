@@ -60,7 +60,7 @@ class Mysidebar extends HTMLElement {
           <div class="profile-details">
             <img src="images/sample.png" alt="profileImg">
             <div class="name_job">
-              <div class="name">Kyle De Mesa</div>
+              <div class="name"></div>
               <div class="job">Secretary</div>
             </div>
           </div>
