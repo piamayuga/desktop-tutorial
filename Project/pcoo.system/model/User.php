@@ -28,25 +28,15 @@
     */
 
             
-            $sql1 = "SELECT * FROM admintbl WHERE username = '$username' AND password = '$password'";
-            $sql2 = "SELECT * FROM hrtbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
-            $sql3 = "SELECT * FROM employeetbl WHERE username = '$username' OR employeeID = '$username' AND password = '$password'";
+            $sql1 = "SELECT * FROM usertbl WHERE `employee_ID` = '$username' AND password = '$password'";
+            
             
             $query1 = $this->connection->query($sql1);
-            $query2 = $this->connection->query($sql2);
-            $query3 = $this->connection->query($sql3);
+            
      
             if($query1->num_rows > 0){
                 $row = $query1->fetch_array();
-                return $row['username'];
-
-            } elseif ($query2->num_rows > 0){
-                $row = $query2->fetch_array();
-                return $row['username'];
-
-            } elseif ($query3->num_rows > 0){
-                $row = $query2->fetch_array();
-                return $row['username'];
+                return $row['employee_ID'];
 
             } else {
                 return false;

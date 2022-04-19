@@ -10,7 +10,7 @@ include_once('../model/User.php');
 $user = new User();
 
 //fetch user data
-$sql = "SELECT * FROM admintbl WHERE id = '" . $_SESSION['user'] . "'";
+$sql = "SELECT * FROM usertbl WHERE `employee_ID` = '" . $_SESSION['user'] . "'";
 $row = $user->details($sql);
 
 ?>
@@ -107,7 +107,7 @@ $row = $user->details($sql);
         <div class="profile-details">
           <img src="images/sample.png" alt="profileImg">
           <div class="name_job">
-            <div class="name">Kyle De Mesa</div>
+            <div class="name"></div>
             <div class="job">Secretary</div>
           </div>
         </div>
