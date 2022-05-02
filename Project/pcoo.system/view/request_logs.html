@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidential Communications Operations Office</title>
+  <!-- css -->
+  <link rel="icon" href="images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="res/bs-css/bootstrap.css">
+  <link rel="stylesheet" href="res/dataTables/css/dataTables.bootstrap5.min.css">
+  <!-- links -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    :root {
+      --custom-primary: #2a448f;
+    }
+
+    .img-thumbnail {
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+      border-color: var(--custom-primary);
+      border-width: 3px;
+      object-fit: contain;
+      object-position: center;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    #previewLabel .img-thumbnail:hover {
+      transform: scale(1.02);
+      filter: brightness(95%);
+      transition: all .5s ease;
+    }
+
+    #previewLabel p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transition: all .5s ease;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: var(--custom-primary);
+      color: #fff;
+      border: 2px solid var(--custom-primary);
+    }
+
+    .nav-tabs .nav-link {
+      background-color: #fff;
+      color: var(--custom-primary);
+      margin-right: .2rem;
+    }
+
+    .nav-tabs .nav-link:hover {
+      background-color: var(--custom-primary);
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- sidebar -->
+  <my-sidebar></my-sidebar>
+  <!-- sidebar -->
+
+  <main class="home-section">
+    <div class="text">Request Logs</div>
+
+    <div class="container-xl px-4">
+      <div class="table-responsive mt-5" style="overflow:hidden">
+        <table class="table table-striped table-light table-hover data-table py-3 w-100">
+          <thead>
+            <tr>
+              <th class="bg-primary text-light">Request Type</th>
+              <th class="bg-primary text-light">Date added</th>
+              <th class="bg-primary text-light">Quantity</th>
+              <th class="bg-primary text-light">Status</th>
+              <th class="bg-primary text-light"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>ID REQUEST</td>
+              <td>Apr 2, 2022</td>
+              <td>3</td>
+              <td>
+                <span class="smaller bg-success text-light rounded-3 px-3 py-1 m-0">Completed</span>
+                <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Pending</span> -->
+                <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span> -->
+              </td>
+              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+            </tr>
+
+            <tr>
+              <td>PERSONNEL REQUEST</td>
+              <td>Apr 2, 2022</td>
+              <td>1</td>
+              <td>
+                <!-- <span class="smaller bg-success text-light rounded-3 px-3 py-1 m-0">Completed</span> -->
+                <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Pending</span> -->
+                <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span>
+              </td>
+              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+            </tr>
+
+            <tr>
+              <td>OTHER REQUEST</td>
+              <td>Apr 2, 2022</td>
+              <td>2</td>
+              <td>
+                <!-- <span class="smaller bg-success text-light rounded-3 px-3 py-1 m-0">Completed</span> -->
+                <span class="smaller bg-warning text-light rounded-3 px-4 py-1 m-0">Pending</span>
+                <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span> -->
+              </td>
+              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- scripts -->
+  <script src="js/assets.js"></script>
+  <script src="js/script.js"></script>
+  <script src="res/bs-js/bootstrap.bundle.js"></script>
+  <script src="res/dataTables/js/jquery-3.5.1.js"></script>
+  <script src="res/dataTables/js/jquery.dataTables.min.js"></script>
+  <script src="res/dataTables/js/dataTables.bootstrap5.min.js"></script>
+  <script src="res/dataTables/js/main.js"></script>
+</body>
+
+</html>

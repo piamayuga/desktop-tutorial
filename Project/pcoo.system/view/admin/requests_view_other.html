@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidential Communications Operations Office</title>
+  <!-- css -->
+  <link rel="icon" href="../images/pcoo_logo.png" type="image">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../res/bs-css/bootstrap.css">
+  <link rel="stylesheet" href="../res/dataTables/css/dataTables.bootstrap5.min.css">
+
+  <!-- links -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- sidebar -->
+  <my-sidebar-admin></my-sidebar-admin>
+  <!-- sidebar -->
+
+
+  <main class="home-section">
+    <div class="text">Employee Requests</div>
+
+    <section class="container-xl">
+      <!-- Other Request -->
+      <div class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div">
+        <h5 class="text-primary">Other Request</h5>
+
+        <form action="" id="other_request_form" autocomplete="off">
+
+          <div class="row gy-2 gx-2">
+            <div class="col-md-6">
+              <label class="text-muted small ms-2">Complete Name </label>
+              <input type="text" name="" id="" class="form-control" value="" readonly>
+            </div>
+            <div class="col-md-6">
+              <label class="text-muted small ms-2">Date </label>
+              <input type="text" name="" id="" class="form-control" value="" readonly>
+            </div>
+
+            <div class="col-12">
+              <label class="text-muted small ms-2">PLEASE SPECIFY YOUR REQUEST</label>
+              <textarea class="form-control" name="" id="" rows="5" value="" style="min-height: 100px;" readonly></textarea>
+            </div>
+
+            <div class="col-12">
+              <label class="text-muted small ms-2">Purpose to your request:</label>
+              <textarea class="form-control" name="" id="" rows="3" value="" style="min-height: 100px;" readonly></textarea>
+            </div>
+
+            <div class="col my-4 d-flex justify-content-end">
+              <!-- <button type="" class="btn btn-secondary mx-1" form="">Print</button>
+              <button type="" class="btn btn-danger mx-1" form="">Decline</button>
+              <button type="" class="btn btn-primary mx-1" form="">Completed</button> -->
+              <button type="" class="btn btn-outline-primary mx-1" disabled>Marked as Declined</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+      <!-- Other Request -->
+    </section>
+
+  </main>
+
+  <!-- Image Viewer Modal -->
+  <div class="modal fade" id="gallery-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content px-4 px-sm-2 m-auto border-0 bg-transparent" style="max-width: fit-content;">
+        <div class="modal-body position-relative p-1">
+          <img src="#" class="modal-img custom-view bg-light" alt="modal img" style="max-height: 800px; object-fit: contain;">
+          <button type="button" class="btn-close  bg-dark shadow-none position-absolute" data-bs-dismiss="modal" style="right:2%; top:2%"></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Image Viewer Modal -->
+  
+  <script src="../js/assets.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../res/bs-js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

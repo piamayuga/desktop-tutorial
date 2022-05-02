@@ -14,6 +14,13 @@
 
   <!-- links -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: button;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,327 +33,424 @@
     <div class="text">Request Form</div>
 
     <div class="container-xl px-4">
+      <!-- tabs -->
+      <ul class="nav nav-tabs d-flex justify-content-end mb-3">
+        <li class="nav-item my-1">
+          <a class="nav-link active" data-bs-toggle="tab" href="#requestForm">Request Form</a>
+        </li>
+        <li class="nav-item my-1">
+          <a data-bs-toggle="tab" href="#requestList" class="nav-link position-relative">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            See Requests
+          </a>
+        </li>
+      </ul>
+      <!-- tabs -->
 
-      <section class="col-md-6 mb-4">
-        <label class="text-muted lead ms-2" for="">Select Request Type</label>
-        <select class="form-select" id="select_request" name="" onchange="request_type()">
-          <option value="" selected hidden></option>
-          <option value="ID Request Form">ID Request Form</option>
-          <option value="Personnel Request Form">Personnel Request Form</option>
-          <option value="Other Request">Other Request</option>
-        </select>
-      </section>
+      <!-- tab content -->
+      <div class="tab-content">
 
-      <!-- ID Request Form -->
-      <section class="py-2 border-4 border-top border-primary rounded" id="id_request_div" style="display: none;">
-        <h4 class="text-primary">ID Request Form</h5>
-          <h6 class="mt-3">Personal Information (required)</h6>
+        <!-- request form -->
+        <div class="tab-pane active" id="requestForm">
+          <section class="col-md-6 mb-4">
+            <label class="text-muted lead ms-2" for="">Select Request Type</label>
+            <select class="form-select" id="select_request" name="" onchange="request_type()">
+              <option value="" selected hidden></option>
+              <option value="ID Request Form">ID Request Form</option>
+              <option value="Personnel Request Form">Personnel Request Form</option>
+              <option value="Other Request">Other Request</option>
+            </select>
+          </section>
 
-          <form action="" id="id_request_form" class="row gy-2 gx-2" autocomplete="off">
-            <div class="col-md-4">
-              <label for="reqID_surname" class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
-              <input type="text" name="reqID_surname" id="reqID_surname" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-            <div class="col-md-4">
-              <label for="reqID_firstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
-              <input type="text" name="reqID_first_name" id="reqID_firstName" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-            <div class="col-md-4">
-              <label for="reqID_middleName" class="text-muted small ms-2">MIDDLE NAME</label>
-              <input type="text" name="reqID_middle_name" id="reqID_middleName" onkeyup="lettersOnly(this)" class="form-control">
-            </div>
+          <!-- ID Request Form -->
+          <section class="py-2 border-4 border-top border-primary rounded" id="id_request_div" style="display: none;">
+            <h4 class="text-primary">ID Request Form</h5>
+              <h6 class="mt-3">Personal Information (required)</h6>
 
-            <div class="col-6 col-md-4">
-              <label for="reqID_birthDate" class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
-              <input type="text" name="reqID_birth_date" id="reqID_birthDate" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-            </div>
-            <div class="col-4 col-md-4">
-              <label for="reqID_contact" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
-              <input name="reqID_contact" onInput="lengthValidation(this)" id="reqID_contact" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
-            </div>
-            <div class="col-2 col-md-4">
-              <label for="bloodType" class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
-              <input name="pds_blood_type" id="bloodType" type="text" class="form-control" required>
-            </div>
-
-            <div class="col-12">
-              <label for="reqID_address" class="text-muted small ms-2">ADDRESS <span class="text-danger">*</span></label>
-              <input name="reqID_address" id="reqID_address" type="text" class="form-control">
-            </div>
-
-            <div class="col-6">
-              <label for="reqID_position" class="text-muted small ms-2">POSITION <span class="text-danger">*</span></label>
-              <input name="reqID_position" id="reqID_position" type="text" class="form-control">
-            </div>
-            <div class="col-6">
-              <label for="reqID_GSIS/SSS" class="text-muted small ms-2">GSIS/SSS No <span class="text-danger">*</span></label>
-              <input name="reqID_GSIS/SSS" id="reqID_GSIS/SSS" type="text" class="form-control">
-            </div>
-            <div class="col-6">
-              <label for="reqID_tin" class="text-muted small ms-2">TAX IDENTIFICATION NO. <span class="text-danger">*</span></label>
-              <input name="reqID_tin" id="reqID_tin" type="text" class="form-control">
-            </div>
-            <div class="col-6">
-              <label for="reqID_fund" class="text-muted small ms-2">FUND SOURCE <span class="text-danger">*</span></label>
-              <input name="reqID_fund" id="reqID_fund" type="text" class="form-control">
-            </div>
-
-            <label class="text-muted small ms-2">APPOINTMENT STATUS: <span class="text-danger">*</span></label>
-            <!-- PERMANENT -->
-            <div class="col-4 ">
-              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
-                <input class="form-check-input" type="radio" id="reqID_permanent" name="appointmentStatus" onclick="showPermanent()" value="">
-                <label class="form-check-label" for="reqID_permanent">PERMANENT</label>
-              </div>
-              <div id="reqID_appointment_show_permanent" style="display:none">
-                <label class="text-muted small ms-2">Date of appointment:</label>
-                <input class="form-control" type="date" name="" id="reqID_appointment_text_permanent">
-              </div>
-            </div>
-            <!-- PERMANENT -->
-
-            <!-- ISS/COTERMINOUS -->
-            <div class="col-4">
-              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
-                <input class="form-check-input" type="radio" id="reqID_iss" name="appointmentStatus" onclick="showISS()" value="">
-                <label class="form-check-label" for="reqID_iss">ISS/COTERMINOUS</label>
-              </div>
-              <div id="reqID_appointment_show_iss" style="display: none;">
-                <label class="text-muted small ms-2">Date of appointment:</label>
-                <input class="form-control" type="date" name="" id="reqID_appointment_text_iss">
-              </div>
-            </div>
-            <!-- ISS/COTERMINOUS -->
-
-            <!-- CONTRACT OF SERVICE -->
-            <div class="col-4">
-              <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
-                <input class="form-check-input" type="radio" id="reqID_contractService" name="appointmentStatus" onclick="showcontractService()" value="">
-                <label class="form-check-label" for="reqID_contractService">CONTRACT OF SERVICE</label>
-              </div>
-              <div id="reqID_appointment_show_contractService" style="display: none;">
-                <label class="text-muted small ms-2">Date of appointment:</label>
-                <input class="form-control" type="text" name="" id="reqID_appointment_text_contractService">
-              </div>
-            </div>
-            <!-- CONTRACT OF SERVICE -->
-
-            <div class="col-md-6">
-              <label for="reqID_contactPerson" class="text-muted small ms-2">CONTACT PERSON <span class="text-danger">*</span></label>
-              <input name="reqID_contactPerson" id="reqID_contactPerson" type="text" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-              <label for="reqID_contactPersonNo" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
-              <input name="reqID_contactPersonNo" id="reqID_contactPersonNo" type="text" class="form-control">
-            </div>
-
-            <div class="col-md-6">
-              <label class="text-muted small ms-2" for="">Upload image of Valid ID</label>
-              <input type="file" class="form-control" name="" id="" accept="image/*" required>
-            </div>
-            <div class="col-md-6">
-              <label class="text-muted small ms-2" for="">Upload image of Signature</label>
-              <input type="file" class="form-control" name="" id="" accept="image/*" required>
-            </div>
-
-            <div class="col my-4 d-flex justify-content-end">
-              <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
-      </section>
-      <!-- ID Request Form -->
-
-
-      <!-- Personnel Request Form -->
-      <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display:none;">
-        <h5 class="text-primary">Personnel Request Form</h5>
-
-        <form action="" id="personnel_request_form" autocomplete="off">
-          <!-- textfields -->
-          <div class="row gy-2 gx-2">
-            <div class="col-md-6">
-              <label for="reqPer_fullName" class="text-muted small ms-2">Complete Name </label>
-              <input type="text" name="reqPer_fullName" id="reqPer_fullName" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-            <div class="col-md-6">
-              <label for="reqPer_date" class="text-muted small ms-2">DATE </label>
-              <input type="text" name="reqPer_date" id="reqPer_date" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-            </div>
-            <div class="col-md-6">
-              <label for="reqPer_position" class="text-muted small ms-2">Position/Designation </label>
-              <input type="text" name="reqPer_position" id="reqPer_position" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-            <div class="col-md-6">
-              <label for="reqPer_office" class="text-muted small ms-2">Office </label>
-              <input type="text" name="reqPer_office" id="reqPer_office" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-          </div>
-          <!-- textfields -->
-
-          <h6 class="mt-3">Employment Status:</h6>
-
-          <!-- employment status -->
-          <div class="row gy-2 gx-2 px-3 px-md-5">
-
-            <div class="col-6">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_contractOfService" name="employmentStatus" onclick="hideDateSep()" value="">
-                <label class="form-check-label" for="reqPer_contractOfService">Contract of Service</label>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_ISS" name="employmentStatus" onclick="hideDateSep()" value="">
-                <label class="form-check-label" for="reqPer_ISS">ISS/Coterminous</label>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_regular" name="employmentStatus" onclick="hideDateSep()" value="">
-                <label class="form-check-label" for="reqPer_regular">Regular</label>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_separated" name="employmentStatus" onclick="showDateSep()" value="">
-                <label class="form-check-label" for="reqPer_separated">Separated</label>
-                <input type="text" name="reqPer_dateSeparated" id="reqPer_dateSeparated" class="form-control ms-3 w-75" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Date of Separation" style="display: none;" required>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_contractual" name="employmentStatus" onclick="hideDateSep()" value="">
-                <label class="form-check-label" for="reqPer_contractual">Contractual/Casual</label>
-              </div>
-            </div>
-
-          </div>
-          <!-- employment status -->
-
-          <h6 class="mt-3">Please select the button corresponding to your request:</h6>
-
-          <!-- request selection -->
-          <div class="row gy-2 gx-2 px-3 px-md-5">
-
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_coe" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_coe">Certificate of Employment/Engagement (COE)</label>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_coeCompensation" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_coeCompensation">Certificate of Employment/Engagement with compensation</label>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_colc" name="requestType" onclick="hideOptionsCTC()" value="">
-                <label class="form-check-label" for="reqPer_colc">Certificate of Leave Credits (For Officials/Regular employees only)</label>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_ctc" name="requestType" onclick="showOptionsCTC()" value="">
-                <label class="form-check-label" for="reqPer_ctc">Certified true copy of:</label>
-              </div>
-              <div class="col-md-6 px-md-5 px-4">
-                <div class="form-check form-check-inline d-flex gap-2">
-                  <input class="form-check-input" type="radio" id="reqPer_apptPaper" name="ctc" onclick="" value="" disabled>
-                  <label class="form-check-label" for="reqPer_apptPaper">Appointment Paper</label>
+              <form action="" id="id_request_form" class="row gy-2 gx-2" autocomplete="off">
+                <div class="col-md-4">
+                  <label for="reqID_surname" class="text-muted small ms-2">SURNAME <span class="text-danger">*</span></label>
+                  <input type="text" name="reqID_surname" id="reqID_surname" class="form-control" onkeyup="lettersOnly(this)" required>
                 </div>
-                <div class="form-check form-check-inline d-flex gap-2">
-                  <input class="form-check-input" type="radio" id="reqPer_oath" name="ctc" onclick="" value="" disabled>
-                  <label class="form-check-label" for="reqPer_oath">Oath of Office</label>
+                <div class="col-md-4">
+                  <label for="reqID_firstName" class="text-muted small ms-2">FIRST NAME <span class="text-danger">*</span></label>
+                  <input type="text" name="reqID_first_name" id="reqID_firstName" class="form-control" onkeyup="lettersOnly(this)" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="reqID_middleName" class="text-muted small ms-2">MIDDLE NAME</label>
+                  <input type="text" name="reqID_middle_name" id="reqID_middleName" onkeyup="lettersOnly(this)" class="form-control">
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <label for="reqID_birthDate" class="text-muted small ms-2">DATE OF BIRTH <span class="text-danger">*</span></label>
+                  <input type="text" name="reqID_birth_date" id="reqID_birthDate" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-4 col-md-4">
+                  <label for="reqID_contact" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
+                  <input name="reqID_contact" onInput="lengthValidation(this)" id="reqID_contact" type="number" maxlength="11" class="form-control" pattern="[0]{1}[9]{1}[0-9]{9}" required>
+                </div>
+                <div class="col-2 col-md-4">
+                  <label for="bloodType" class="text-muted small ms-2">BLOOD TYPE <span class="text-danger">*</span></label>
+                  <input name="pds_blood_type" id="bloodType" type="text" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="reqID_address" class="text-muted small ms-2">ADDRESS <span class="text-danger">*</span></label>
+                  <input name="reqID_address" id="reqID_address" type="text" class="form-control">
+                </div>
+
+                <div class="col-6">
+                  <label for="reqID_position" class="text-muted small ms-2">POSITION <span class="text-danger">*</span></label>
+                  <input name="reqID_position" id="reqID_position" type="text" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label for="reqID_GSIS/SSS" class="text-muted small ms-2">GSIS/SSS No <span class="text-danger">*</span></label>
+                  <input name="reqID_GSIS/SSS" id="reqID_GSIS/SSS" type="text" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label for="reqID_tin" class="text-muted small ms-2">TAX IDENTIFICATION NO. <span class="text-danger">*</span></label>
+                  <input name="reqID_tin" id="reqID_tin" type="text" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label for="reqID_fund" class="text-muted small ms-2">FUND SOURCE <span class="text-danger">*</span></label>
+                  <input name="reqID_fund" id="reqID_fund" type="text" class="form-control">
+                </div>
+
+                <label class="text-muted small ms-2">APPOINTMENT STATUS: <span class="text-danger">*</span></label>
+                <!-- PERMANENT -->
+                <div class="col-4 ">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                    <input class="form-check-input" type="radio" id="reqID_permanent" name="appointmentStatus" onclick="showPermanent()" value="">
+                    <label class="form-check-label" for="reqID_permanent">PERMANENT</label>
+                  </div>
+                  <div id="reqID_appointment_show_permanent" style="display:none">
+                    <label class="text-muted small ms-2">Date of appointment:</label>
+                    <input class="form-control" type="date" name="" id="reqID_appointment_text_permanent">
+                  </div>
+                </div>
+                <!-- PERMANENT -->
+
+                <!-- ISS/COTERMINOUS -->
+                <div class="col-4">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                    <input class="form-check-input" type="radio" id="reqID_iss" name="appointmentStatus" onclick="showISS()" value="">
+                    <label class="form-check-label" for="reqID_iss">ISS/COTERMINOUS</label>
+                  </div>
+                  <div id="reqID_appointment_show_iss" style="display: none;">
+                    <label class="text-muted small ms-2">Date of appointment:</label>
+                    <input class="form-control" type="date" name="" id="reqID_appointment_text_iss">
+                  </div>
+                </div>
+                <!-- ISS/COTERMINOUS -->
+
+                <!-- CONTRACT OF SERVICE -->
+                <div class="col-4">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2 justify-content-center">
+                    <input class="form-check-input" type="radio" id="reqID_contractService" name="appointmentStatus" onclick="showcontractService()" value="">
+                    <label class="form-check-label" for="reqID_contractService">CONTRACT OF SERVICE</label>
+                  </div>
+                  <div id="reqID_appointment_show_contractService" style="display: none;">
+                    <label class="text-muted small ms-2">Date of appointment:</label>
+                    <input class="form-control" type="text" name="" id="reqID_appointment_text_contractService">
+                  </div>
+                </div>
+                <!-- CONTRACT OF SERVICE -->
+
+                <div class="col-md-6">
+                  <label for="reqID_contactPerson" class="text-muted small ms-2">CONTACT PERSON <span class="text-danger">*</span></label>
+                  <input name="reqID_contactPerson" id="reqID_contactPerson" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="reqID_contactPersonNo" class="text-muted small ms-2">CONTACT NO. <span class="text-danger">*</span></label>
+                  <input name="reqID_contactPersonNo" id="reqID_contactPersonNo" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="text-muted small ms-2" for="">Upload image of Valid ID</label>
+                  <input type="file" class="form-control" name="" id="" accept="image/*" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="text-muted small ms-2" for="">Upload image of Signature</label>
+                  <input type="file" class="form-control" name="" id="" accept="image/*" required>
+                </div>
+
+                <div class="col-md-6"></div>
+
+                <div class="col-md-6 d-flex justify-content-end py-3">
+                  <div class="col-5"></div>
+                  <div class="col-4">
+                    <input name="reqID_quantity" id="reqID_quantity" type="number" class="form-control" placeholder="QUANTITY"  min="1" max="5" maxlength="1" required>
+                  </div>
+                  <div class="col-3 d-flex justify-content-end">
+                    <button type="submit" form="id_request_form" class="btn btn-primary">Add Request</button>
+                  </div>
+                </div>
+              </form>
+          </section>
+          <!-- ID Request Form -->
+
+
+          <!-- Personnel Request Form -->
+          <section class="py-2 border-4 border-top border-primary rounded-top" id="personnel_request_div" style="display:none;">
+            <h5 class="text-primary">Personnel Request Form</h5>
+
+            <form action="" class="row gy-2 gx-2" id="personnel_request_form" autocomplete="off">
+              <!-- textfields -->
+              <div class="row gy-2 gx-2">
+                <div class="col-md-6">
+                  <label for="reqPer_fullName" class="text-muted small ms-2">Complete Name </label>
+                  <input type="text" name="reqPer_fullName" id="reqPer_fullName" class="form-control" onkeyup="lettersOnly(this)" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="reqPer_date" class="text-muted small ms-2">DATE </label>
+                  <input type="text" name="reqPer_date" id="reqPer_date" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="reqPer_position" class="text-muted small ms-2">Position/Designation </label>
+                  <input type="text" name="reqPer_position" id="reqPer_position" class="form-control" onkeyup="lettersOnly(this)" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="reqPer_office" class="text-muted small ms-2">Office </label>
+                  <input type="text" name="reqPer_office" id="reqPer_office" class="form-control" onkeyup="lettersOnly(this)" required>
                 </div>
               </div>
-            </div>
+              <!-- textfields -->
 
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_conpc" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_conpc">Certificate of No Pending Case (For Officials/Regular employees only)</label>
+              <h6 class="mt-3">Employment Status:</h6>
+
+              <!-- employment status -->
+              <div class="row gy-2 gx-2 px-3 px-md-5">
+
+                <div class="col-6">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_contractOfService" name="employmentStatus" onclick="hideDateSep()" value="">
+                    <label class="form-check-label" for="reqPer_contractOfService">Contract of Service</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_ISS" name="employmentStatus" onclick="hideDateSep()" value="">
+                    <label class="form-check-label" for="reqPer_ISS">ISS/Coterminous</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_regular" name="employmentStatus" onclick="hideDateSep()" value="">
+                    <label class="form-check-label" for="reqPer_regular">Regular</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_separated" name="employmentStatus" onclick="showDateSep()" value="">
+                    <label class="form-check-label" for="reqPer_separated">Separated</label>
+                    <input type="text" name="reqPer_dateSeparated" id="reqPer_dateSeparated" class="form-control ms-3 w-75" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Date of Separation" style="display: none;" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_contractual" name="employmentStatus" onclick="hideDateSep()" value="">
+                    <label class="form-check-label" for="reqPer_contractual">Contractual/Casual</label>
+                  </div>
+                </div>
+
               </div>
-            </div>
+              <!-- employment status -->
 
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_csa" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_csa">Contract Service Agreement:</label>
+              <h6 class="mt-3">Please select the button corresponding to your request:</h6>
+
+              <!-- request selection -->
+              <div class="row gy-2 gx-2 px-3 px-md-5">
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_coe" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_coe">Certificate of Employment/Engagement (COE)</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_coeCompensation" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_coeCompensation">Certificate of Employment/Engagement with compensation</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_colc" name="requestType" onclick="hideOptionsCTC()" value="">
+                    <label class="form-check-label" for="reqPer_colc">Certificate of Leave Credits (For Officials/Regular employees only)</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_ctc" name="requestType" onclick="showOptionsCTC()" value="">
+                    <label class="form-check-label" for="reqPer_ctc">Certified true copy of:</label>
+                  </div>
+                  <div class="col-md-6 px-md-5 px-4">
+                    <div class="form-check form-check-inline d-flex gap-2">
+                      <input class="form-check-input" type="radio" id="reqPer_apptPaper" name="ctc" onclick="" value="" disabled>
+                      <label class="form-check-label" for="reqPer_apptPaper">Appointment Paper</label>
+                    </div>
+                    <div class="form-check form-check-inline d-flex gap-2">
+                      <input class="form-check-input" type="radio" id="reqPer_oath" name="ctc" onclick="" value="" disabled>
+                      <label class="form-check-label" for="reqPer_oath">Oath of Office</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_conpc" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_conpc">Certificate of No Pending Case (For Officials/Regular employees only)</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_csa" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_csa">Contract Service Agreement:</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_saln" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_saln">SALN Copy </label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-check-inline form-switch d-flex gap-2">
+                    <input class="form-check-input" type="radio" id="reqPer_sr" name="requestType" onclick="" value="">
+                    <label class="form-check-label" for="reqPer_sr">Service Record (For Officials/Regular employees only)</label>
+                  </div>
+                </div>
+
               </div>
-            </div>
+              <!-- request selection -->
 
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_saln" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_saln">SALN Copy </label>
+              <!-- purpose -->
+              <h6 class="mt-3">Purpose to your request:</h6>
+              <textarea class="form-control" name="reqPer_purpose" id="" rows="5" style="min-height: 100px;"></textarea>
+              <!-- purpose -->
+
+
+              <div class="col-md-6"></div>
+
+              <div class="col-md-6 d-flex justify-content-end py-3">
+                <div class="col-5"></div>
+                <div class="col-4">
+                  <input name="reqPer_quantity" id="reqPer_quantity" type="number" class="form-control" placeholder="QUANTITY" min="1" max="5" maxlength="1" required>
+                </div>
+                <div class="col-3 d-flex justify-content-end">
+                  <button type="submit" form="personnel_request_form" class="btn btn-primary">Add Request</button>
+                </div>
               </div>
-            </div>
 
-            <div class="col-12">
-              <div class="form-check form-check-inline form-switch d-flex gap-2">
-                <input class="form-check-input" type="radio" id="reqPer_sr" name="requestType" onclick="" value="">
-                <label class="form-check-label" for="reqPer_sr">Service Record (For Officials/Regular employees only)</label>
+            </form>
+          </section>
+          <!-- Personnel Request Form -->
+
+
+          <!-- Other Request -->
+          <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display: none;">
+            <h5 class="text-primary">Other Request</h5>
+
+            <form action="" id="other_request_form" autocomplete="off">
+
+              <div class="row gy-2 gx-2">
+                <div class="col-md-6">
+                  <label for="reqOther_fullName" class="text-muted small ms-2">Complete Name </label>
+                  <input type="text" name="reqOther_fullName" id="reqOther_fullName" class="form-control" onkeyup="lettersOnly(this)" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="reqOther_date" class="text-muted small ms-2">DATE </label>
+                  <input type="text" name="reqOther_date" id="reqOther_date" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="reqOther_indicate" class="text-muted small ms-2">PLEASE SPECIFY YOUR REQUEST</label>
+                  <textarea class="form-control" name="reqOther_indicate" id="" rows="5" style="min-height: 100px;"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label for="reqOther_indicate" class="text-muted small ms-2">Purpose to your request:</label>
+                  <textarea class="form-control" name="reqOther_purpose" id="" rows="3" style="min-height: 100px;"></textarea>
+                </div>
+
+                <div class="col-md-6"></div>
+
+                <div class="col-md-6 d-flex justify-content-end py-3">
+                  <div class="col-5"></div>
+                  <div class="col-4">
+                    <input name="reqOther_quantity" id="reqOther_quantity" type="number" class="form-control" placeholder="QUANTITY" min="1" max="5" maxlength="1" required>
+                  </div>
+                  <div class="col-3 d-flex justify-content-end">
+                    <button type="submit" form="other_request_form" class="btn btn-primary">Add Request</button>
+                  </div>
+                </div>
+
               </div>
+
+            </form>
+          </section>
+          <!-- Other Request -->
+        </div>
+        <!-- request form -->
+
+        <!-- datatable -->
+        <div class="tab-pane" id="requestList">
+
+          <div class="table-responsive">
+            <table class="table table-striped table-light table-hover data-table py-3 w-100">
+              <thead>
+                <tr>
+                  <th class="bg-primary text-light">Request Type</th>
+                  <th class="bg-primary text-light">Date added</th>
+                  <th class="bg-primary text-light">Quantity</th>
+                  <th class="bg-primary text-light">
+                    <!-- leave blank -->
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>ID REQUEST</td>
+                  <td>Apr 2, 2022</td>
+                  <td>3</td>
+                  <td><button class="btn btn-danger px-3 py-0 d-block m-auto"><i class='bx bxs-trash small'></i></button></td>
+                </tr>
+                <tr>
+                  <td>PERSONNEL REQUEST</td>
+                  <td>Apr 2, 2022</td>
+                  <td>1</td>
+                  <td><button class="btn btn-danger px-3 py-0 d-block m-auto"><i class='bx bxs-trash small'></i></button></td>
+                </tr>
+                <tr>
+                  <td>OTHER REQUEST</td>
+                  <td>Apr 2, 2022</td>
+                  <td>2</td>
+                  <td><button class="btn btn-danger px-3 py-0 d-block m-auto"><i class='bx bxs-trash small'></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="border-top border-primary mt-3 px-3 pt-3 fs-5 lead">
+              Total Quantity of Request: <strong>6</strong>
             </div>
 
+            <div class="d-flex justify-content-end p-3">
+              <button class="btn btn-primary px-3 py-2">Submit Request forms</button>
+            </div>
           </div>
-          <!-- request selection -->
 
-          <!-- purpose -->
-          <h6 class="mt-3">Purpose to your request:</h6>
-          <textarea class="form-control" name="reqPer_purpose" id="" rows="5" style="min-height: 100px;"></textarea>
-          <!-- purpose -->
-
-          <div class="col my-4 d-flex justify-content-end">
-            <button type="submit" form="id_request_form" class="btn btn-primary">Submit</button>
-          </div>
-
-        </form>
-      </section>
-      <!-- Personnel Request Form -->
-
-
-      <!-- Other Request -->
-      <section class="py-2 border-4 border-top border-primary rounded-top" id="other_request_div" style="display: none;">
-        <h5 class="text-primary">Other Request</h5>
-
-        <form action="" id="other_request_form" autocomplete="off">
-          
-          <div class="row gy-2 gx-2">
-            <div class="col-md-6">
-              <label for="reqOther_fullName" class="text-muted small ms-2">Complete Name </label>
-              <input type="text" name="reqOther_fullName" id="reqOther_fullName" class="form-control" onkeyup="lettersOnly(this)" required>
-            </div>
-            <div class="col-md-6">
-              <label for="reqOther_date" class="text-muted small ms-2">DATE </label>
-              <input type="text" name="reqOther_date" id="reqOther_date" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-            </div>
-
-            <div class="col-12">
-              <label for="reqOther_indicate" class="text-muted small ms-2">PLEASE SPECIFY YOUR REQUEST</label>
-              <textarea class="form-control" name="reqOther_indicate" id="" rows="5" style="min-height: 100px;"></textarea>
-            </div>
-
-            <div class="col-12">
-              <label for="reqOther_indicate" class="text-muted small ms-2">Purpose to your request:</label>
-              <textarea class="form-control" name="reqOther_purpose" id="" rows="3" style="min-height: 100px;"></textarea>
-            </div>
-
-            <div class="col my-4 d-flex justify-content-end">
-              <button type="submit" form="other_request_form" class="btn btn-primary">Submit</button>
-            </div>
-
-          </div>
-
-        </form>
-      </section>
-      <!-- Other Request -->
+        </div>
+        <!-- datatable -->
+      </div>
+      <!-- tab content -->
     </div>
 
   </main>
