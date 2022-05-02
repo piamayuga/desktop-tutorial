@@ -1101,7 +1101,7 @@
           </div>
         </div>
 
-        <div class="row gy-2 gx-2 mb-5">
+        <div class="row gy-2 gx-2 mb-3">
           <div class="col-8 col-md-5 order-0">
             <label class="text-muted small ms-2">Name</label>
             <input type="text" class="form-control" onkeyup="lettersOnly(this)">
@@ -1119,7 +1119,7 @@
         <h4>GOVERNMENT ISSUED ID</h4>
         <div class="small mb-3">(i.e.Passport, GSIS, SSS, PRC, Driver's License, etc.) </div>
 
-        <div class="row gx-2 eq-border pb-4">
+        <div class="row gx-2 eq-border pb-3">
           <div class="col-md-6">
             <label for="governmentIssuedId" class="text-muted small ms-2">Government Issued ID: </label>
             <input name="pds_government_issued_id" id="governmentIssuedId" type="text" class="form-control">
@@ -1141,7 +1141,14 @@
           </div>
         </div>
 
-        <div class="row mt-5 px-3">
+        <div class="row mt-3  eq-border pb-3">
+          <div class="col-lg-6">
+            <label class="text-muted small ms-2" for="fileUpload">Upload your image<span class="text-danger">*</span></label>
+            <input type="file" class="form-control" name="#" id="#" required>
+          </div>
+        </div>
+
+        <div class="row mt-3 px-3">
           <div class="form-check">
             <input class="form-check-input" name="pds_oath" type="checkbox" value="" id="oath" required>
             <label class="form-check-label fs-5" for="oath">
@@ -1150,9 +1157,11 @@
           </div>
         </div>
 
+        
         <div class="col my-4 mb-5 d-flex justify-content-between">
           <button type="button" class="ms-md-5 ms-2 px-4 btn btn-primary previous-btn">Previous</button>
-          <button type="submit" class="me-md-5 me-2 px-4 btn btn-primary submit-btn">Submit</button>
+          <!-- <button type="submit" class="me-md-5 me-2 px-4 btn btn-primary submit-btn">Submit</button> -->
+          <a href="pdsForm.html" class="me-md-5 me-2 px-4 btn btn-primary submit-btn" target="_blank">Submit Form</a>
         </div>
       </div>
 
@@ -1346,10 +1355,10 @@
   </div>
   <!-- -----------------------------------HTML TEMPLATES-FOR-DYNAMIC-ADD----------------------------------- -->
 
-  <nav class="container my-5 interactive-btn">
+  <!-- <nav class="container my-5 interactive-btn">
     <a href="pdsForm.html" class="btn btn-primary" target="_blank">View Form</a>
     <button type="button" class="btn btn-success">Edit Form</button>
-  </nav>
+  </nav> -->
 
 
   <!-- ----------------------------------------Scripts---------------------------------------- -->

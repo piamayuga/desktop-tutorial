@@ -46,6 +46,14 @@ class Mysidebar extends HTMLElement {
           </a>
           <span class="tooltip">Request Form</span>
         </li>
+
+        <li>
+          <a href="request_logs.html">
+            <i class='bx bx-file'></i>
+            <span class="links_name">Request Logs</span>
+          </a>
+          <span class="tooltip">Request Logs</span>
+        </li>
   
         <li>
           <a href="settings.html">
@@ -142,7 +150,7 @@ class a_sidebar extends HTMLElement {
           </div>
         </div>
 
-        <a href="">
+        <a href="login.html">
           <i type="button" class='bx bx-log-out' id="log_out"></i>
         </a>
 
