@@ -92,7 +92,7 @@
                 <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Pending</span> -->
                 <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span> -->
               </td>
-              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+              <td><a href="#details" data-bs-toggle="modal" class="link-primary text-decoration-none small">Details</a></td>
             </tr>
 
             <tr>
@@ -104,7 +104,7 @@
                 <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Pending</span> -->
                 <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span>
               </td>
-              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+              <td><a href="#details" data-bs-toggle="modal" class="link-primary text-decoration-none small">Details</a></td>
             </tr>
 
             <tr>
@@ -116,7 +116,7 @@
                 <span class="smaller bg-warning text-light rounded-3 px-4 py-1 m-0">Pending</span>
                 <!-- <span class="smaller bg-danger text-light rounded-3 px-4 py-1 m-0">Declined</span> -->
               </td>
-              <td><a href="#" class="link-primary text-decoration-none small">Details</a></td>
+              <td><a href="#details" data-bs-toggle="modal" class="link-primary text-decoration-none small">Details</a></td>
             </tr>
           </tbody>
         </table>
@@ -124,6 +124,40 @@
       </div>
     </div>
   </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="details" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-light">
+          <h5 class="modal-title">Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+
+        <div class="modal-footer pt-0">
+          <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
 
   <!-- scripts -->
   <script src="js/assets.js"></script>
